@@ -90,4 +90,3 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashbord', [App\Http\Controllers\HomeController::class, 'dashbord'])->name('dashbord');
 
-Route::get('/dashbord', [App\Http\Controllers\HomeController::class, 'dashb.......ord'])->name('dashbord');
