@@ -89,4 +89,5 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashbord', [App\Http\Controllers\HomeController::class, 'dashbord'])->name('dashbord');
+Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
 

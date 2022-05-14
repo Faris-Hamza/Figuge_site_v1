@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -30,5 +32,12 @@ class HomeController extends Controller
     public function dashbord()
     {
         return view('home');
+    }
+
+
+    public function users()
+    {
+        $users = User::all();
+        return view('users.index')->with('users',$users);
     }
 }
