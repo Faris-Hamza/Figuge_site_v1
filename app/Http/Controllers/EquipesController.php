@@ -35,9 +35,9 @@ class EquipesController extends Controller
             'photo'      => 'required|image|mimes:jpg,png,jpeg|max:2048|'
         ]);
 
-        $photo = $request->photo;
-        $newPhoto = time().$photo->getClientOriginalName();
-        $photo->move('uploads/equipes',$newPhoto);
+       
+        $newPhoto = time().$request->photo->getClientOriginalName();
+        $request->photo->move('uploads/equipes',$newPhoto);
         
         $team = Equipes::create([
             'nom'  => $request->nom,

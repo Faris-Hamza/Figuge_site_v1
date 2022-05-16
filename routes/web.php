@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Home Route
+Route::get('/',[App\Http\Controllers\Home::class, 'index'])->name('Accuiel');
+Route::get('/about',[App\Http\Controllers\Home::class, 'about'])->name('about');
+Route::get('/activites',[App\Http\Controllers\Home::class, 'activites'])->name('activites');
+Route::get('/showActivite/{id}',[App\Http\Controllers\Home::class, 'showActivite'])->name('showActivite');
+Route::get('/showProjet/{id}',[App\Http\Controllers\Home::class, 'showProjet'])->name('showProjet');
+Route::get('/p_rojet',[App\Http\Controllers\Home::class, 'projets'])->name('p_rojet');
+Route::get('/soutenezNous',[App\Http\Controllers\Home::class, 'soutenezNous'])->name('soutenezNous');
+Route::get('/getInsc',[App\Http\Controllers\Home::class, 'getInsc'])->name('getInsc');
 
 // info Routes
 Route::get('/info', [App\Http\Controllers\InfoController::class, 'edit'])->name('info');
@@ -87,7 +96,7 @@ Route::get('projet/destroy/{id}', [App\Http\Controllers\ProjetsController::class
  
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashbord', [App\Http\Controllers\HomeController::class, 'dashbord'])->name('dashbord');
 Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
 

@@ -28,7 +28,7 @@
                 @csrf
                 <div class="mb-3">
                 <label for="nom" class="form-label">Nom</label>
-                <input type="text" class="form-control"name="nom" placeholder="entrer votre nom" >
+                <input type="text" class="form-control" name="nom" placeholder="entrer votre nom" >
                 </div>
                 <div class="mb-3">
                 <label for="statu" class="form-label">Statu</label>

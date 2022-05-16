@@ -27,8 +27,10 @@
               </tr>
             </thead>
             <tbody>
+               
              @foreach ($equipes as $item)
              <tr >
+                 
                 <th class="align-middle" scope="row">{{$i++}}</th>
                 <td><img style="height: 50px; border-radius: 30px;" src="{{asset($item->photo)}}" alt=""></td>
                 <td class="align-middle">{{$item->nom}}</td>
