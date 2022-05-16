@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Demande;
 use Illuminate\Http\Request;
+use App\Http\Controllers\File;
 
 class DemandeController extends Controller
 {
@@ -113,7 +114,7 @@ class DemandeController extends Controller
             'nbrRamed'     =>'required',
             'genreDemande' =>'required',
             'montant'      =>'required',
-            'pieceJustifs' =>'required|max:5000',
+            'pieceJustifs' =>'max:5000',
         ]);
 
         if ($request->has('pieceJustifs')) {
