@@ -1,305 +1,34 @@
-@include('frontEnd.inc.headerMin')
+@include('frontEnd.inc.headerMin',['name' => 'Projets'])
 
   <!--main-->
   <main class="">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
 
-    <section class="container grand_activite">
-      <div >
-        <a class="grid-2" href="#">
-          <img src="assets/images/SECTION/active.png" alt="">
-          <div class="activite_info">
-            <p class="activite_cate">Santé</p>
-            <h2 class="activite_title">Titre Projet</h2>
-            <p class="activite_date">Lieu / 01/01/2020</p>
-            <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-          </div>
-        </a>
-      </div>
-    </section>
+    
 
     <section class="container sec5 wow fadeup-animation">
-      <h1 class="sec2_title">Notre équipe</h1>
-      <h4 class="sec2_Suntitle">Soldats invisibles</h4>
+      <h1 class="sec2_title">Nos Projets</h1>
+      {{-- <h4 class="sec2_Suntitle">Soldats invisibles</h4> --}}
       <div class="grid-3 sec2_div page-content">
 
         <div class="page active">
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
+          @foreach ($projets as $item)
+            <a href="{{route('showProjet',$item->id)}}">
+              <div class="col slide">
+                <div class="card">
+                  <img src="{{$item->Media()->where('types','photo')->first()->URL}}" alt="photo">
+                  <h3>{{$item->titre}}</h3>
+                  <p>{{$item->lieu}} / {{$item->date_debut}}</p>
+                  <p class="activite_desc">
+                    {{$item->detail}}
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-         
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
+            </a>
+          @endforeach
         </div>
-        <div class="page">
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="page">
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-          <a href="Activités_projet.html">
-            <div class="col slide">
-              <div class=" card">
-                <img src="assets/images/SECTION/photo-1545693315-85b6be26a3d6 1.png" alt="photo">
-                <h3>Projet BJOJNA NKADRO</h3>
-                <p>Agadir / DD/MM/YYYY</p>
-                <p class="activite_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book......</p>
-              </div>
-            </div>
-          </a>
-        </div>
+        
+        
         
       </div>
       <div class="pagination-container">
@@ -312,16 +41,16 @@
     <section class="container wow fadeup-animation categoriee">
       <div class="categorie">
         <div class="row categorie_div">
-          <img class="col-2" src="assets/images/SECTION/Vector (1).png" alt="">
-          <h1 class="sec2_title col">Rejoignez-nous</h1>
+          <img class="col-2" width="20px" src="assets/images/SECTION/Vector (1).png" alt="">
+          <h1 class="sec2_title col">Classification </h1>
 
         </div>
         <div class="type_cate grid-2">
+          @foreach ($Axes as $item)
+              <button class="activite_cate">{{$item->nom}}</button>
+          @endforeach
           
-          <button class="activite_cate">Santé</button>
-          <button class="activite_cate">Santé</button>
-          <button class="activite_cate">Santé</button>
-          <button class="activite_cate">Santé</button>
+         
         </div>
         
       </div>

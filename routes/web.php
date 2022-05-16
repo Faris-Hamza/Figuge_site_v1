@@ -41,6 +41,14 @@ Route::get('equipes/edit/{id}', [App\Http\Controllers\EquipesController::class, 
 Route::post('equipes/update/{id}', [App\Http\Controllers\EquipesController::class, 'update'])->name('equipes/update');
 Route::get('equipes/destroy/{id}', [App\Http\Controllers\EquipesController::class, 'destroy'])->name('equipes/destroy');
 
+// demande Routes
+Route::get('demandes', [App\Http\Controllers\DemandeController::class, 'index'])->name('demandes');
+Route::get('demande/create', [App\Http\Controllers\DemandeController::class, 'create'])->name('demande/create');
+Route::post('demande/store', [App\Http\Controllers\DemandeController::class, 'store'])->name('demande/store');
+Route::get('demande/edit/{id}', [App\Http\Controllers\DemandeController::class, 'edit'])->name('demande/edit');
+Route::post('demande/update/{id}', [App\Http\Controllers\DemandeController::class, 'update'])->name('demande/update');
+Route::get('demande/destroy/{id}', [App\Http\Controllers\DemandeController::class, 'destroy'])->name('demande/destroy');
+
 // Axe Routes
 Route::get('Axe', [App\Http\Controllers\AxesController::class, 'index'])->name('Axe');
 Route::get('Axe/create', [App\Http\Controllers\AxesController::class, 'create'])->name('Axe/create');

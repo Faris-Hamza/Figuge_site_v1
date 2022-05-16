@@ -44,24 +44,27 @@
       
     </section>  
 
-    <section class="container  carousel_equipe" id="équipe">
-      <h1 class="sec2_title wow fadeup-animation">Notre équipe</h1>
-      <h4 class="sec2_Suntitle wow fadeup-animation">Soldats invisibles</h4>
-      <div class="carousel row">
-       @foreach ($Equipe as $item)
-       <div class="carousel-item  col-7 col-md-6 col-lg-4" href="#">
-          <div class="testi">
-              <div class="img-area">
-                  <img src="{{asset($item->photo)}}">
+    <section class="container sec5" id="équipe">
+      <h1 class="sec2_title">Notre équipe</h1>
+      <h4 class="sec2_Suntitle">Soldats invisibles</h4>
+      <div class="grid-3 sec2_div wow fadeup-animation">
+        @foreach ($Equipe as $item)
+        <div class="sec5_blog1">
+            <div class="grid-2 sec5_blog1_title">
+              <img src="{{asset($item->photo)}}" alt="photo">
+              <div class="sec5_blog1_title1">
+                <div >
+                  <h3>{{$item->nom}}</h3>
+                  <p>{{$item->statu}}</p>
+                </div>
               </div>
-              <h2>{{$item->nom}}</h2>
-              <p>{{$item->statu}}</p>
+            </div>
+            
           </div>
-        </div>
-       @endforeach
-     
-          
-    </section>
+        @endforeach
+        
+      </div>
+    </section> 
 
     <section class="container wow fadeup-animation" >
       <div class="rejoin">

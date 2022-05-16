@@ -26,4 +26,6 @@ class Projets extends Model
         return $this->hasMany(Media::class,'id_proj');
     }
 
+   
+
 }

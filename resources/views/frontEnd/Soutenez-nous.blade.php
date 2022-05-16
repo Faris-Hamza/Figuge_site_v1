@@ -1,4 +1,4 @@
-@include('frontEnd.inc.headerMin')
+@include('frontEnd.inc.headerMin',['name' => 'Soutenez-nous'])
 
   <!--main-->
   <main class=""> 
@@ -8,11 +8,13 @@
       
       <div class="grid-1 Project_row1 wow fadeup-right">
         <div class="about wow right-animation">
-          <h1 >Galerie de photos</h1>
-          <h5>Sub Title</h5>
+          <h1 >Comment pouvez-vous soutenir?</h1>
+          {{-- <h5>Sub Title</h5> --}}
         </div>
         <div >
-            <img src="assets/images/SECTION/Rectangle 46.png" alt="Dog" title="Dog">                 
+           <p>
+             {{$info->txtSetunez}}
+          </p>            
         </div>
       </div>
         
@@ -20,11 +22,11 @@
 
     <section class="container sec_Information wow fadeup-animation">
       <div class="Information">
-        <h1 class="sec2_title">Information du banque</h1>
+        <h1 class="sec2_title">Contactez Nous</h1>
               <div class="grid-1 temp">
-                <input type="text" placeholder="RIB : 222222514563321155445266541">
-                <input type="text" placeholder="Nom Du Banque: Banque Populaire">
-                <input type="text" placeholder="Entrer votre Email">
+                <input type="text" disabled placeholder="FB : {{$info->fb}}">
+                <input type="text" disabled placeholder="Téléphone: {{$info->whatsapp}}">
+                <input type="text" disabled placeholder="Email : {{$info->email}}">
               </div>
       </div>
       

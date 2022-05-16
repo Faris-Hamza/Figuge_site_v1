@@ -44,32 +44,38 @@ class Home extends Controller
     public function activites()
     {
         $Acts = Activite::paginate(9);
-        
-        return view('frontEnd.Activites')->with('Activites',$Acts);
+        $Axes = Axes::paginate(9);
+        return view('frontEnd.Activites')->with('Activites',$Acts)->with('Axes',$Axes);
     }
 
     public function projets()
     {
-        $projets = Projets::paginate(3);
-        return view('frontEnd.Project')->with('projets',$projets);
+        $projets = Projets::paginate(9);
+        $Axes = Axes::paginate(5);
+        return view('frontEnd.Project')->with('projets',$projets)->with('Axes',$Axes);
     }
 
 
     public function showActivite($id)
     {
         $Acts = Activite::where('id',$id)->first();
-        return view('frontEnd.Titre_Activite')->with('Activite',$Acts);
+        $Photos = $Acts->Media->where('types','photo');
+        $Videos = $Acts->Media->where('types','video');
+        return view('frontEnd.Titre_Activite')->with('Activite',$Acts)->with('Photos', $Photos)->with('Videos', $Videos);
     }
 
 
     public function showProjet($id)
     {
         $Projet = Projets::where('id',$id)->first();
-        return view('frontEnd.Activités_projet')->with('Projets',$Projet);
+        $Photos = $Projet->Media->where('types','photo');
+        $Videos = $Projet->Media->where('types','video');
+        return view('frontEnd.Activités_projet')->with('Projets',$Projet)->with('Photos', $Photos)->with('Videos', $Videos);
     }
 
     public function getInsc()
     {
-        return view('frontEnd.inscription');
+        $Info = info::latest()->first();
+        return view('frontEnd.inscription')->with('info',$Info);
     }
 }

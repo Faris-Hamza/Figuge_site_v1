@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Axes extends Model
 {
     protected $fillable = ['nom', 'icon'];
+    
 
     public function Activite()
     {
