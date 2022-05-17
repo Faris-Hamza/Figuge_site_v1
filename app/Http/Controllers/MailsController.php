@@ -29,10 +29,10 @@ class MailsController extends Controller
         $this->validate($request, [
             'mail'=>'required|email'            
         ]);
-         //dd($request);
          $mail = Mails::create([
             'mail'  => $request->mail
         ]);
+        NotificationsController::store("mail");
         return redirect()->back();
     }
 
