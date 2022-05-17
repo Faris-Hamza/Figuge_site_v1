@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class RevenuController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
         $Revenus = Revenu::all();
@@ -19,22 +15,13 @@ class RevenuController extends Controller
         return view('revenus.index')->with('revenus', $Revenus);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         return view('revenus.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -50,12 +37,7 @@ class RevenuController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Revenu  $revenu
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show(Revenu $revenu)
     {
        
@@ -64,7 +46,7 @@ class RevenuController extends Controller
     public function edit( $id)
     {
         $Revenu = Revenu::where('id', $id)->first();
-        return view('revenus.edit');
+        return view('revenus.edit')->with('revenu', $Revenu);
     }
 
   
@@ -84,17 +66,12 @@ class RevenuController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Revenu  $revenu
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(Revenu $revenu)
     {
         
         $Revenu = Revenu::where('id', $id)->first();
-        $Revenu->forecDelete();
+        $Revenu->forceDelete();
         return redirect()->back();
     }
 }

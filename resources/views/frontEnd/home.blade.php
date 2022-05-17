@@ -1,4 +1,4 @@
-@include('frontEnd.inc.headerMin',['name' => 'Activités'])
+@include('frontEnd.inc.header')
 <!--main-->
 <main class="container">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>

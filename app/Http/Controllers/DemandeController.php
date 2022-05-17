@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Demande;
 use Illuminate\Http\Request;
-use App\Http\Controllers\File;
+use Illuminate\Support\Facades\File;
+
+
 
 class DemandeController extends Controller
 {
@@ -151,9 +153,9 @@ class DemandeController extends Controller
     public function destroy($id)
     {
         $demande = Demande::where('id', $id)->first();
-        if (File::exists(public_path($equipes->pieceJustifs)))
+        if (File::exists(public_path($demande->pieceJustifs)))
             {
-                File::delete(public_path($equipes->pieceJustifs));
+                File::delete(public_path($demande->pieceJustifs));
             }
         $demande->forceDelete();
         return redirect()->back();
