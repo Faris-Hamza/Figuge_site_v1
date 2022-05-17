@@ -18,6 +18,7 @@ class Home extends Controller
 {
     public function index()
     {
+        InfoController::edit();
         $Info = info::latest()->first();
         $Acts = Activite::all();
         $Axes = Axes::all();

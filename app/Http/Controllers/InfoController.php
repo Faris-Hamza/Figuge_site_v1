@@ -17,13 +17,11 @@ class InfoController extends Controller
        $info = Info:: create();
     }
 
-
-
     public function edit()
     {
         $info = info::first();
         if ($info == null) {
-            $this->create();
+            Info::create();
         }
         return view('infos.edit')->with('info', $info);
     }
@@ -32,7 +30,6 @@ class InfoController extends Controller
     public function update(Request $request,$id)
     {
         $info = Info::where('id',$id)->first();
-        // dd($info);
         $this->validate($request, [
             'Apropo'         => 'required',
             'bienvenu'       =>'required', 
