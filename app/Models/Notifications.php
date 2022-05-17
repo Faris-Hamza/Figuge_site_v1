@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Notifications extends Model
 {
-    use HasFactory;
+    protected $fillable = ['Type','Veu'];
 }
