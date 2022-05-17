@@ -60,7 +60,7 @@ Route::get('projet/edit/{id}', [App\Http\Controllers\ProjetsController::class, '
 Route::post('projet/update/{id}', [App\Http\Controllers\ProjetsController::class, 'update'])->name('projet/update');
 Route::get('projet/destroy/{id}', [App\Http\Controllers\ProjetsController::class, 'destroy'])->name('projet/destroy');
 
-//projet _ routes
+//revenu _ routes
 Route::get('revenus', [App\Http\Controllers\RevenuController::class, 'index'])->name('revenus');
 Route::get('revenu/create', [App\Http\Controllers\RevenuController::class, 'create'])->name('revenu/create');
 Route::post('revenu/store', [App\Http\Controllers\RevenuController::class, 'store'])->name('revenu/store');
@@ -68,6 +68,15 @@ Route::get('revenu/show/{id}', [App\Http\Controllers\RevenuController::class, 's
 Route::get('revenu/edit/{id}', [App\Http\Controllers\RevenuController::class, 'edit'])->name('revenu/edit');
 Route::post('revenu/update/{id}', [App\Http\Controllers\RevenuController::class, 'update'])->name('revenu/update');
 Route::get('revenu/destroy/{id}', [App\Http\Controllers\RevenuController::class, 'destroy'])->name('revenu/destroy');
+
+//depense _ routes
+Route::get('depenses', [App\Http\Controllers\DepenseController::class, 'index'])->name('depenses');
+Route::get('depense/create', [App\Http\Controllers\DepenseController::class, 'create'])->name('depense/create');
+Route::post('depense/store', [App\Http\Controllers\DepenseController::class, 'store'])->name('depense/store');
+Route::get('depense/show/{id}', [App\Http\Controllers\DepenseController::class, 'show'])->name('depense/show');
+Route::get('depense/edit/{id}', [App\Http\Controllers\DepenseController::class, 'edit'])->name('depense/edit');
+Route::post('depense/update/{id}', [App\Http\Controllers\DepenseController::class, 'update'])->name('depense/update');
+Route::get('depense/destroy/{id}', [App\Http\Controllers\DepenseController::class, 'destroy'])->name('depense/destroy');
 
 //activite_routes
  Route::get('activite', [App\Http\Controllers\ActiviteController::class, 'index'])->name('activite');

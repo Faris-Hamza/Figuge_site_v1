@@ -11,7 +11,6 @@ class RevenuController extends Controller
     public function index()
     {
         $Revenus = Revenu::all();
-
         return view('revenus.index')->with('revenus', $Revenus);
     }
 
@@ -71,7 +70,6 @@ class RevenuController extends Controller
     
     public function destroy( $id)
     {
-        
         $Revenu = Revenu::where('id', $id)->first();
         $Revenu->forceDelete();
         return redirect()->back();
