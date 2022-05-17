@@ -25,7 +25,6 @@ class RevenuController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'id'      =>'required',  
             'libelle' =>'required',
             'date'    =>'required', 
             'montant' =>'required',
@@ -53,21 +52,24 @@ class RevenuController extends Controller
     public function update(Request $request, $id)
     {
         $Revenu = Revenu::where('id', $id)->first();
-        $this->validate($request,[
-            'id'      =>'required',  
+        $this->validate($request,[  
             'libelle' =>'required',
             'date'    =>'required', 
             'montant' =>'required',
             'source'  =>'required'
         ]);
 
-        $Revenu = Revenu::upadate($request->all());
-        
+        $Revenu->libelle = $request->libelle;
+        $Revenu->date = $request->date;
+        $Revenu->montant = $request->montant;
+        $Revenu->source = $request->source;
+        $Revenu->save();
+
         return redirect()->back();
     }
 
     
-    public function destroy(Revenu $revenu)
+    public function destroy( $id)
     {
         
         $Revenu = Revenu::where('id', $id)->first();
