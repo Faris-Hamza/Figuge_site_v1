@@ -5,38 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Demande;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 39070fbd29eeddf50cbed5a756947d5c4feecf6b
 
 class DemandeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
        $demandes = Demande::all();
        return view('demandes.index')->with('demandes', $demandes);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('demandes.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
        $this->validate($request, [
@@ -73,36 +61,17 @@ class DemandeController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
     public function edit( $id)
     {
         $demande = Demande::where('id',$id)->first();
         return view('demandes.edit')->with('demande',$demande);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $demande = Demande::where('id', $id)->first();
@@ -144,12 +113,6 @@ class DemandeController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Demande  $demande
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $demande = Demande::where('id', $id)->first();
