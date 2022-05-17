@@ -78,11 +78,7 @@
                                 Supprimer
                               </a>
                             </td>
-                            <td class="align-middle">
-                              <a href="{{route('revenu/show',$item->id)}}" class="badge badge-sm bg-gradient-primary" data-toggle="tooltip" data-original-title="Edit user">
-                                Afficher
-                              </a>
-                            </td>
+                           
                           </tr>
                         @endforeach
                       
@@ -92,6 +88,10 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col search">
+              <div class="button_save">
+              <a class="btn bg-gradient-success mt-3 w-100" href="{{route('revenu/pdfRevenu')}}">Rapport des Revenus</a>
             </div>
         </div>
     </div>

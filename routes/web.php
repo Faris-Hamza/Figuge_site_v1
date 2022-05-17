@@ -68,6 +68,7 @@ Route::get('revenu/show/{id}', [App\Http\Controllers\RevenuController::class, 's
 Route::get('revenu/edit/{id}', [App\Http\Controllers\RevenuController::class, 'edit'])->name('revenu/edit');
 Route::post('revenu/update/{id}', [App\Http\Controllers\RevenuController::class, 'update'])->name('revenu/update');
 Route::get('revenu/destroy/{id}', [App\Http\Controllers\RevenuController::class, 'destroy'])->name('revenu/destroy');
+Route::get('revenu/pdfRevenu', [App\Http\Controllers\RevenuController::class, 'pdfRevenu'])->name('revenu/pdfRevenu');
 
 //depense _ routes
 Route::get('depenses', [App\Http\Controllers\DepenseController::class, 'index'])->name('depenses');
@@ -77,6 +78,7 @@ Route::get('depense/show/{id}', [App\Http\Controllers\DepenseController::class, 
 Route::get('depense/edit/{id}', [App\Http\Controllers\DepenseController::class, 'edit'])->name('depense/edit');
 Route::post('depense/update/{id}', [App\Http\Controllers\DepenseController::class, 'update'])->name('depense/update');
 Route::get('depense/destroy/{id}', [App\Http\Controllers\DepenseController::class, 'destroy'])->name('depense/destroy');
+Route::get('depense/pdfDepense', [App\Http\Controllers\DepenseController::class, 'pdfDepense'])->name('depense/pdfDepense');
 
 //activite_routes
  Route::get('activite', [App\Http\Controllers\ActiviteController::class, 'index'])->name('activite');

@@ -4,10 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Revenu;
 use Illuminate\Http\Request;
+use PDF;
 
 class RevenuController extends Controller
 {
-   
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function pdfRevenu()
+    {
+        $Revenus = Revenu::all();
+       $pdf = PDF::loadView('revenus/pdfRevenu', compact('Revenus'));
+       $pdf->setPaper('A4', 'landscape');
+       return $pdf->stream('Rp_des_depense.pdf');
+       
+    }
+
     public function index()
     {
         $Revenus = Revenu::all();
@@ -31,7 +45,6 @@ class RevenuController extends Controller
         ]);
 
         $Revenu = Revenu::create($request->all());
-        
         return redirect()->back();
     }
 

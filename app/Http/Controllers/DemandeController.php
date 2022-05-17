@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Demande;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 39070fbd29eeddf50cbed5a756947d5c4feecf6b
-
 class DemandeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
        $demandes = Demande::all();

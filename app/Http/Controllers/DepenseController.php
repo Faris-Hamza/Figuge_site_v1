@@ -6,10 +6,25 @@ namespace App\Http\Controllers;
 use App\Models\Depense;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-
+use PDF;
 
 class DepenseController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function pdfDepense()
+    {
+        $Depenses = Depense::all();
+       $pdf = PDF::loadView('depenses/pdfDepense', compact('Depenses'));
+       $pdf->setPaper('A4', 'landscape');
+       return $pdf->stream('invoice.pdf');
+       
+    }
+
     public function index()
     {
         $Depenses = Depense::all();

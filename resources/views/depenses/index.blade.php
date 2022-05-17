@@ -100,7 +100,7 @@
             </div>
             <div class="col search">
                 <div class="button_save">
-                    <a class="btn bg-gradient-success mt-3 w-100" href="">Rapport des dépenses</a>
+                    <a class="btn bg-gradient-success mt-3 w-100" href="{{route("depense/pdfDepense")}}">Rapport des dépenses</a>
                 </div>
             </div>
     </div>
