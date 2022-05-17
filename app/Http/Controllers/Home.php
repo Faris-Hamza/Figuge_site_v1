@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
 use App\Models\Axes;
@@ -13,13 +14,26 @@ use App\Models\Partenaire;
 use App\Models\Mails;
 use App\Models\Media;
 use App\Models\Equipes;
+use App\Models\User;
 
 class Home extends Controller
 {
     public function index()
     {
-        InfoController::edit();
-        $Info = info::latest()->first();
+        $user = User::all()->first();
+        if ($user==null) {
+             User::create([
+                'name' => "Admin",
+                'email' => "Admin@gmail.com",
+                'password' => Hash::make("Admin"),
+            ]);
+        }
+
+        
+        $Info = info::all()->first();
+        if ($Info==null) {
+            $Info = info::create();
+        }
         $Acts = Activite::all();
         $Axes = Axes::all();
         $Presse = Presse::all();
