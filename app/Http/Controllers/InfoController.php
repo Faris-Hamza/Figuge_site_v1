@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class InfoController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
     }
-
     public function create()
     {
        $info = Info:: create();
@@ -19,30 +19,25 @@ class InfoController extends Controller
 
     public function edit()
     {
-        $info = info::first();
-        if ($info == null) {
-            Info::create();
-        }
         return view('infos.edit')->with('info', $info);
     }
 
- 
     public function update(Request $request,$id)
     {
         $info = Info::where('id',$id)->first();
         $this->validate($request, [
             'Apropo'         => 'required',
-            'bienvenu'       =>'required', 
+            'bienvenu'       =>'required',
             'whatsapp'       =>'required',
-            'fb'             =>'required', 
-            'instagram'      =>'required', 
-            'youtube'        =>'required', 
+            'fb'             =>'required',
+            'instagram'      =>'required',
+            'youtube'        =>'required',
             'vision'         =>'required',
             'stratigie'      =>'required',
-            'programmes'     =>'required', 
-            'Linkedin'       =>'required', 
+            'programmes'     =>'required',
+            'Linkedin'       =>'required',
             'twitter'        =>'required',
-            'txtAdherent'    =>'required', 
+            'txtAdherent'    =>'required',
             'txtSetunez'     =>'required',
         ]);
 
@@ -59,7 +54,7 @@ class InfoController extends Controller
         $info->twitter = $request->twitter;
         $info->txtAdherent = $request->txtAdherent;
         $info->txtSetunez = $request->txtSetunez;;
-     
+
         $info->save();
         return redirect()->back();
     }
