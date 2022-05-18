@@ -35,12 +35,9 @@
     </style>
   </head>
   <body>
-    <div style="text-align: center;width:100%">
-          <img src="assets\images\LOGO\logo.png" width="50px"  alt="">
-
-    </div>
+    {{-- <img src="assets\images\LOGO\logo.png" width="50px" alt=""> --}}
     <h4 style="text-align: center">Fondation Oriental Figug</h4>
-    <h1 style="text-align: center">Rapport des dépenses</h1>
+    <h1 style="text-align: center">Rapport des Revenus</h1>
     <h6 >{{date('Y-m-d')}}</h6>
     <table style="width: 100%;  text-align: center;">
       <thead>
@@ -49,45 +46,16 @@
           <th style="width: 30px">..</th>
           <th style="width: 150px">Date</th>
           <th style="width: 250px">Libellé</th>
-          <th style="width: 150px">Contarante</th>
-          <th >Bénéficiaire</th>
-          <th >Mode de payment</th>
           <th >Monatant</th>
+          <th >Source</th>
           
         </tr>
       </thead>
-      <tbody>
-        @php
-            $i=1;
-            $total=0;
-        @endphp
-        @foreach ($Depenses as $item)
-            <tr>
-              
-              <td >{{$i++}}</td>
-              <td >{{$item->date}}</td>
-              <td>{{$item->libelle}}</td>
-              <td>{{$item->contrante}}</td>
-              <td>{{$item->Beneficiaire}}</td>
-              <td>{{$item->modePayment}}</td>
-              <td>{{$item->montant}}</td>
-            </tr>
-            @php
-                $total +=$item->montant;
-            @endphp
-        @endforeach
-
-        
-        
-        
-        
-        
-      </tbody>
+      
     </table>
     <div class="total">
       <button class="btn" type="button" >
-      Total : {{$total}}
+      Total :
     </button>
-  </div>
   </body>
 </html>

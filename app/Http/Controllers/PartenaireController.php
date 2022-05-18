@@ -17,7 +17,7 @@ class PartenaireController extends Controller
     public function index()
     {
         $partenaire = Partenaire:: all();
-        return view('partenaires.index')->with('partenaire', $partenaire);
+        return view('partenaires.index')->with('partenaires', $partenaire);
     }
 
     public function create()

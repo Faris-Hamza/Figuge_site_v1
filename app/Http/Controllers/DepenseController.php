@@ -102,7 +102,7 @@ class DepenseController extends Controller
             }
             $newFile = time().$request->justif->getClientOriginalName();
             $request->justif->move('uploads/Depenses',$newFile);
-            $request->justif = 'uploads/Depenses'.$newFile;
+            $request->justif = 'uploads/Depenses/'.$newFile;
         }
 
         $Depense->libelle       = $request-> libelle;

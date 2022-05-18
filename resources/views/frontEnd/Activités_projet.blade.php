@@ -1,4 +1,4 @@
-@include('frontEnd.inc.headerMin',['name' => 'fff'])
+@include('frontEnd.inc.headerMin',['name' => $Projets->titre])
 
   <!--main-->
   <main class="container"> 

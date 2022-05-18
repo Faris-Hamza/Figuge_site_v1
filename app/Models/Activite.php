@@ -30,4 +30,9 @@ class Activite extends Model
     {
         return $this->hasMany(Media::class,'id_activite');
     }
+
+    public function rapport()
+    {
+        return $this->hasOne(Rapport_Activite::class);
+    }
  }

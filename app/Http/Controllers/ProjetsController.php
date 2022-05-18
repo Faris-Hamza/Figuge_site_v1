@@ -21,7 +21,7 @@ class ProjetsController extends Controller
     public function index()
     {
         $projet = Projets::all();
-        return view('projets.index')->with('projet', $projet);
+        return view('projets.index')->with('projets', $projet);
     }
 
     public function create()
