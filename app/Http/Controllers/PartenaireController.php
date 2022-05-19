@@ -90,7 +90,6 @@ class PartenaireController extends Controller
     public function destroy($id)
     {
         $partenaire = Partenaire::where('id', $id)->first();
-
         if (File::exists(public_path($partenaire->logo))) {
             File::delete(public_path($partenaire->logo));
         }

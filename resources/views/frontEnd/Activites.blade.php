@@ -22,8 +22,6 @@
 
     <section class="container sec5 wow fadeup-animation">
       <h1 class="sec2_title">Nos Activités</h1>
-      {{-- <h4 class="sec2_Suntitle">Soldats invisibles</h4> --}}
-
         <div class="grid-3 sec2_div list-wrapper">
           @php
               $i=0;
