@@ -17,8 +17,9 @@ class Rapport_Activite extends Model
         'reference'
     ];
 
-    public function activites(): BelongsTo
+    
+    public function activite()
     {
-        return $this->belongsTo(Activite::class, 'id_act');
+        return $this->belongsTo(Activite::class,'id_act');
     }
 }
