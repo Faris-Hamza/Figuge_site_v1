@@ -8,30 +8,33 @@
                 <h2 cl>A Propos Oriental</h2>
                 <h5>Oriental en quelques mots</h5>
                 <p class="about_p">
-                    {{$info->bienvenu}}
+                    {{ $info->bienvenu }}
                 </p>
-                <a class="about_link" href="{{route('about')}}">En savoir plus<i class="fa-solid fa-right-long"></i></a>
+                <a class="about_link" href="{{ route('about') }}">EN SAVOIR PLUS <i
+                        class="fa-solid fa-right-long"></i></a>
             </div>
             <div class="sec1_blog">
-                <div class="sec1_blog_div wow left-animation">
+                <div class="sec1_blog_div wow left-animation a_la_une">
                     <h2>À LA UNE</h2>
-                    <div class="grid-1">
+                    <div class="grid-1 a_la_une_content">
                         @foreach ($Acts as $item)
-                          <div class="row grid-2">
-                            <div class="col">
-                                <img width="100%" src="{{$item->Media->where("types","photo")->first()->URL}}" alt="">
+                            <div class="row a_la_une_grid">
+                                <div class="col">
+                                    <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}"
+                                        alt="">
+                                </div>
+                                <div class="col a_la_une_content_div">
+                                    <h3>{{ $item->name }}</h3>
+                                    <p>{{ $item->date_debut }} - {{ $item->lieu }}</p>
+                                    <p>{{ $item->detail }}</p>
+                                </div>
                             </div>
-                            <div class="col">
-                                  <h3>{{$item->name}}</h3>
-                                  <p>{{$item->date_debut}}  - {{$item->lieu}}</p>
-                                  <p>{{$item->detail}}</p>
-                            </div>
-                        </div>
                         @endforeach
-                      
-          
-                      </div>
-                    <a class="blog_about_link" href="{{route('activites')}}">En savoir plus <i class="fa-solid fa-right-long"></i></a>
+
+
+                    </div>
+                    <a class="blog_about_link" href="{{ route('activites') }}">En savoir plus <i
+                            class="fa-solid fa-right-long"></i></a>
                 </div>
             </div>
 
@@ -51,17 +54,17 @@
             </div>
             <div class="main-testimonial-slider">
                 <div class="row servece-slider">
-                    <div class="row servece-slider">
-                        @foreach ($Projet as $item)
-                          <div class="col slide">
-                              <div class="sec2_blog1 card">
-                                <img width="100%" src="{{$item->Media->where("types","photo")->first()->URL}}" alt="">
-                              <h3>{{$item->titre}}</h3>
-                              <p>{{$item->lieu}} / {{$item->date_debut}}</p>
-                              </div>
-                          </div>
-                        @endforeach
-                    </div>
+                    @foreach ($Projet as $item)
+                        <div class="col slide">
+                            <div class="sec2_blog1 card">
+                                <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}" alt="">
+                                <div class="card_div">
+                                    <h3>{{ $item->titre }}</h3>
+                                    <p>{{ $item->lieu }} / {{ $item->date_debut }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
 
             </div>
@@ -81,8 +84,8 @@
             <div class="grid-3">
                 @foreach ($Axes as $item)
                     <div class="grid-1 axe">
-                        <img src="{{asset($item->icon)}}" alt="">
-                        <h2>{{$item->nom}}</h2>
+                        <img width="100%" src="{{ asset($item->icon) }}" alt="">
+                        <h2>{{ $item->nom }}</h2>
                     </div>
                 @endforeach
 
@@ -110,11 +113,11 @@
                     </div>
                 </div>
                 <div class="main-testimonial-slider wow fadeup-right">
-                    <div class="row servece-slider1 ">
+                    <div class="row servece-slider1 partenaire">
                         @foreach ($Part as $item)
-                            <a href="$item->url">
-                                <div class="col slide">
-                                    <img src="{{asset($item->logo)}}" alt="photo">
+                            <a class="col slide" href="$item->url">
+                                <div>
+                                    <img width="100%" src="{{ asset($item->logo) }}" alt="photo">
                                 </div>
                             </a>
                         @endforeach
@@ -136,18 +139,19 @@
             <div class="main-testimonial-slider">
                 <div class="row servece-slider">
                     @foreach ($Presse as $item)
-                        <div class="col slide">
-                            <div class="sec7_blog1">
-                                <img src="{{asset($item->logo)}}" alt="photo">
-                                <div>
-                                    <h3 class="sec2_title">{{$item->name}}</h3>
-                                    <p class="sec2_Suntitle">{{$item->lieu}} / {{$item->date}}</p>
+                        <div class="col slide ">
+                            <div class="sec7_blog1 Media_Presse">
+                                <img src="{{ asset($item->logo) }}" alt="photo">
+                                <div class="press">
+                                    <h3 class="sec2_title">{{ $item->name }}</h3>
+                                    <p class="sec2_Suntitle">{{ $item->lieu }} / {{ $item->date }}</p>
+                                    <a href="{{ $item->lieu }}">URL d’article</a>
+
                                 </div>
-                                <a href="{{$item->lieu}}">URL d’article</a>
                             </div>
                         </div>
                     @endforeach
-                    
+
 
 
                 </div>

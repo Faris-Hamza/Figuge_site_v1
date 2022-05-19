@@ -24,7 +24,7 @@
         <div class="nav_Mob">
             <i class="fa-solid fa-bars" id="icon_bar"></i>
         </div>
-        {{-- <nav class="header_nav_Mob" id="nav_mob">
+       <nav class="header_nav_Mob" id="nav_mob">
             <div class="close">
                 <i class="fa-solid fa-xmark" id="icon_close"></i>
             </div>
@@ -34,7 +34,7 @@
             <a href="Activites.html" class="underline-hover">Activites</a>
             <a href="Soutenez-nous.html" class="underline-hover">Soutenez-nous</a>
             <a href="Inscription.html" class="underline-hover">Inscription</a>
-        </nav> --}}
+        </nav>
 
 
         <div class=" header-div1">
@@ -51,10 +51,10 @@
                 </div>
             </div>
             <div class="row Logo container">
-                <div class="col-6 logo_definition wow right-animation">
-                    <p class="logo_p1">Fondation</p>
-                    <p class="logo_p2">Oriental</p>
-                    <p class="logo_p3">Figuig</p>
+                <div class="col-5.5 logo_definition wow right-animation">
+                    <p class="row col logo_p1">Fondation</p>
+                    <p class="row col logo_p2">Oriental</p>
+                    <p class="row col logo_p3">Figuig</p>
                 </div>
             </div>
         </div>

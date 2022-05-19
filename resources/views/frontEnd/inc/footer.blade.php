@@ -11,14 +11,13 @@
                 <a href="{{route('getInsc')}}" class="underline-hover">Inscription</a>
             </nav>
         </div>
-        <div class="container row">
-            <div class="slide col"><img class="icon" src="{{asset("assets/images/SECTION/Ellipse 2.png")}}" alt="logo"></div>
-            <div class="slide col"><img class="icon" src="{{asset("assets/images/SECTION/Ellipse 2.png")}}" alt="logo"></div>
-            <div class="slide col"><img class="icon" src="{{asset("assets/images/SECTION/Ellipse 2.png")}}" alt="logo"></div>
-            <div class="slide col"><img class="icon" src="{{asset("assets/images/SECTION/Ellipse 2.png")}}" alt="logo"></div>
-            <div class="slide col"><img class="icon" src="{{asset("assets/images/SECTION/Ellipse 2.png")}}" alt="logo"></div>
-            <div class="slide col"><img class="icon" src="{{asset("assets/images/SECTION/Ellipse 2.png")}}" alt="logo"></div>
-        </div>
+        <div class="media container row">
+            <div class="social col"><a href="#"><img class="icon" target="_blank" src="assets/images/social-media/fb.png" alt="logo"></a></div>
+            <div class="social col"><a href="#" target="_blank"><img class="icon" src="assets/images/social-media/insta.png" alt="logo"></a></div>
+            <div class="social col"><a href="#"><img class="icon" src="assets/images/social-media/whatssap.png" alt="logo" target="_blank"></a></div>
+            <div class="social col"><a href="#"><img class="icon" src="assets/images/social-media/twitter.png" alt="logo" target="_blank"></a></div>
+            <div class="social col"><a href="#"><img class="icon" src="assets/images/social-media/linkdin.png" alt="logo" target="_blank"></a></div>
+      </div>
     </div>
 </footer>
 <footer>
@@ -29,6 +28,8 @@
 
 <!-- Wow Animation JS Link -->
 <script src="{{asset("assets/js/jquery.min.js")}}"></script>
+<script src="{{asset("assets/js/materialize.min.js")}}"></script>
+<script src="{{asset("assets/js/simplePagination.js")}}"></script>
 <!-- Banner Moving Js Link -->
 <script src="{{asset("assets/js/bootstrap.min.js")}}"></script>
 <!-- Slick Slider JS Link -->
