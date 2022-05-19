@@ -29,7 +29,6 @@ class Home extends Controller
             ]);
         }
 
-        
         $Info = info::all()->first();
         if ($Info==null) {
             $Info = info::create();
@@ -41,7 +40,6 @@ class Home extends Controller
         $partenaire= Partenaire::all();
         return view('frontEnd.home')->with('info',$Info)->with('Acts',$Acts)->with('Projet',$Projet)->with('Part',$partenaire)->with("Presse",$Presse)->with('Axes',$Axes);
     }
-
 
     public function about()
     {

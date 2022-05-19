@@ -17,7 +17,16 @@
     font-family: 'JosefinSans';
     font-weight: bold;
 }
-
+iframe {
+    border-radius: 40px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+form {
+    margin-bottom: 130px;
+}
 img {
     border-radius: 50px;
 }
@@ -44,50 +53,53 @@ td {
 
 /*******************pagination**************/
 
-.page-content {
-    margin-bottom: 40px;
+/*******************pagination**************/
+
+
+.list-wrapper {
+	overflow: hidden;
+  margin: 50px 0px;
+  padding: 20px;
 }
 
+.list-wrapper img{
+    width: 100%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    height: 274px;
 
-/* Copy the following code to Blogger */
-
-.pagination-container {
-    display: flex;
-    justify-content: center;
 }
 
-.pagination-container .page-numbers-container {
-    display: flex;
-    font-size: 18px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.simple-pagination ul {
+	margin: -21px 0 20px;
+	list-style: none;
+	text-align: center;
 }
 
-.page-numbers-container .page-number {
-    padding: 8px 24px;
-    transition: all 400ms;
+.simple-pagination li {
+	display: inline-block;
+	margin-right: 5px;
 }
 
-.page-numbers-container .page-number:hover {
-    background: #c5c5e9;
-    cursor: pointer;
+.simple-pagination li a,
+.simple-pagination li span {
+	color: #666;
+	padding: 5px 10px;
+	text-decoration: none;
+	border: 1px solid #EEE;
+	background-color: #FFF;
+	box-shadow: 0px 0px 10px 0px #EEE;
 }
 
-.page-numbers-container .page-number.active {
-    background: linear-gradient(to right, #3EC4CD, #2A6F74);
-    color: #fff;
+.simple-pagination .current {
+	color: #FFF;
+	background-color: #0EBCE2;
+	border-color: #0EBCE2;
 }
 
-
-/* Page Content */
-
-.page-content .page {
-    display: none;
-}
-
-.page-content .page.active {
-    display: contents;
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+	background: #0EBCE2;
 }
 
 
@@ -292,7 +304,7 @@ section {
 h1 {
     font-size: 40px;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
 }
 
 h2 {
@@ -316,7 +328,7 @@ h3 {
 h4 {
     font-size: 25px;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
 }
 
 h5 {
@@ -365,7 +377,6 @@ span.up.show {
 
 
 /*==========Projects CSS Start==========*/
-
 .slide {
     margin: 10px;
 }
@@ -450,7 +461,8 @@ p.logo_p1 {
 .logo_p3 {
     margin-top: 10px;
     font-size: 34px;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logo_definition p {
@@ -462,6 +474,13 @@ p.logo_p1 {
 
 
 /*--seaction1*/
+.a_la_une img {height: 140px;border-radius: 20px;object-fit: cover;}
+
+.col.a_la_une_content_div {align-self: center;}
+
+.a_la_une_content{overflow: hidden;height: 549px;}
+
+.a_la_une_grid{ margin-bottom: 0px;    align-self: center;}
 
 .about {
     position: relative;
@@ -477,7 +496,7 @@ p.logo_p1 {
     text-decoration: none;
     color: white;
     background: linear-gradient(to right, #3EC4CD, #2A6F74);
-    padding: 12px 28px;
+    padding: 12px 26px;
     font-size: 15px;
     display: inline-block;
     float: right;
@@ -500,7 +519,7 @@ p.logo_p1 {
     position: absolute;
     background-color: white;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
-    height: 650px;
+    height: 653px;
     margin-top: -199px;
     padding: 30px;
     width: 100%;
@@ -525,7 +544,7 @@ section.sec1 {
 
 section.sec2 {
     position: relative;
-    margin: 60px 0px;
+    margin: 100px 0px;
 }
 
 .sec2_title {
@@ -557,6 +576,7 @@ section.sec2 {
 
 .sec2_blog1 img {
     width: 100%;
+    height: 274px;
     margin-bottom: 20px;
 }
 
@@ -569,6 +589,9 @@ section.sec2 {
     margin-left: 20px;
 }
 
+.card_div {
+    padding: 10px 20px;
+}
 
 /*section3*/
 
@@ -584,6 +607,14 @@ section.sec2 {
     border-radius: 55px;
 }
 
+.grid-1.axe img{
+
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+
 
 /*section4*/
 
@@ -593,6 +624,12 @@ section.sec2 {
     margin-top: 60px;
     padding: 50px;
     background-color: #F9F9F9;
+}
+
+.partenaire img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
 
 
@@ -654,14 +691,31 @@ input.Textbox {
 
 .sec7_blog1 {
     box-shadow: 0px 11px 14px rgb(0 0 0 / 15%);
-    padding: 42px;
     position: relative;
-    text-align: center;
+    border-radius: 40px;
+}
+.pro_content{
+    padding: 24px;
+
+}
+.pro_content h3{
+    font-size: 25px ;
+    font-weight: 900;
+
+}
+.press {padding: 20px;}
+
+.Media_Presse {
+    padding: 48px;
 }
 
+.press h3 {font-size: 20px;font-weight: 900;}
+
 .sec7 img {
-    width: 45%;
-    margin: 23px;
+    width: 137px;
+    height: 137px;
+    border-radius: 100%;
+
 }
 
 .sec7 div {
@@ -683,13 +737,18 @@ footer {
     background: rgba(216, 216, 216, 0.86);
     height: 80px;
 }
-
+.container.row.media {
+    width: 550px;
+}
+.container.row.media img {
+    width: 58px;
+}
 img.icon {
     width: 75px;
 }
 
 .footer {
-    background-color: #F7F7F7;
+    background-color: rgba(216, 216, 216, 0.86);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -737,7 +796,7 @@ p.about_us_p {
 }
 
 .carousel_equipe {
-    margin-bottom: -81px;
+    height: 310px;
 }
 
 .About_title {
@@ -841,7 +900,7 @@ section.sec2_about {
 }
 
 .temp {
-    width: 800px;
+    width: 50%;
 }
 
 .sec_Information {
@@ -881,11 +940,18 @@ section.sec2_about {
     width: 1000px;
 }
 
+.img-area img {
+    width: 173px;
+    height: 173px;
+    border-radius: 100%;
+}
+
 .carousel {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 326px;
+    margin-top: 0px;
     -webkit-perspective: 500px;
     perspective: 500px;
     -webkit-transform-style: preserve-3d;
@@ -934,6 +1000,7 @@ section.sec2_about {
 .carousel .carousel-item {
     visibility: visible;
     width: 600px;
+    margin-top: 36px;
     height: 366px;
     position: absolute;
     top: 0;
@@ -1090,7 +1157,9 @@ section.sec2_about {
 .btn_insc {
     padding: 50px;
 }
-
+button.about_link {
+    border: none;
+}
 .link_insc {
     text-decoration: none;
     background-color: #C4C4C4;
@@ -1151,6 +1220,9 @@ section.sec2_about {
         color: white;
         font-size: 30px;
     }
+    .temp {
+        width: 70%;
+    }
     p.logo_p1 {
         font-size: 49px;
         margin: 20px 81px;
@@ -1183,7 +1255,7 @@ section.sec2_about {
     h1 {
         font-size: 35px;
         font-weight: 800;
-        margin-bottom: 10px;
+        margin-bottom: 31px;
     }
     h2 {
         font-size: 25px;
@@ -1218,6 +1290,12 @@ section.sec2_about {
     .sec3 img {
         width: 100%;
     }
+    .container.row.media {
+        width: 460px;
+    }
+    .container.row.media img {
+        width: 46px;
+    }
     .grid-3 {
         grid-template-columns: 1fr;
     }
@@ -1237,18 +1315,17 @@ section.sec2_about {
         margin: 3px 68px;
     }
     p.logo_p2 {
-        margin: 8px 0px;
+        margin: 20px 0px;
         font-size: 87px;
     }
     p.about_us_p {
         font-size: 47px;
     }
     .logo_p3 {
-        margin-top: -1px;
         font-size: 17px;
     }
     h1 {
-        font-size: 32px;
+        font-size: 29px;
         font-weight: 800;
         margin-bottom: 10px;
     }
@@ -1302,8 +1379,19 @@ section.sec2_about {
     .footer .icon {
         width: 37px;
     }
+
+    .temp {
+        width: 100%;
+    }
     .grid-3 {
         grid-template-columns: 1fr;
+    }
+
+    .container.row.media {
+        width: 340px;
+    }
+    .container.row.media img {
+        width: 34px;
     }
     .carousel .carousel-item {
         width: 100%;
@@ -1346,5 +1434,17 @@ section.sec2_about {
 @media screen and (max-width: 375px) {
     section.sec2 {
         margin-top: 200px;
+    }
+    .container.row.media img {
+        width: 25px;
+    }
+    .container.row.media {
+        width: 299px;
+    }
+    p.logo_p2 {
+        font-size: 77px;
+    }
+    p.logo_p1 {
+        font-size: 25px;
     }
 }

@@ -23,43 +23,46 @@
     <section class="container sec5 wow fadeup-animation">
       <h1 class="sec2_title">Nos Activités</h1>
       {{-- <h4 class="sec2_Suntitle">Soldats invisibles</h4> --}}
-      <div class="grid-3 sec2_div page-content">
 
-        <div class="page active">
+        <div class="grid-3 sec2_div list-wrapper">
           @php
               $i=0;
           @endphp
           @foreach ($Activites as $item)
             @if ($i!=0)
-              <a href="{{route('showActivite',$Activites->first()->id)}}">
-                <div class="col slide">
-                  <div class=" card">
-                    <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
-                    <h3>{{$item->name}}</h3>
-                    <p>{{$item->lieu}} / {{$item->date_debut}}</p>
-                    <p class="activite_desc">
-                      {{$item->detail}}
-                    </p>
-                  </div>
-                </div>
-              </a>
+            <div class="sec7_blog1 list-item">
+                <a href="{{route('showActivite',$Activites->first()->id)}}">
+                    <div class="col slide">
+                      <div class=" card">
+                        <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
+                        <h3>{{$item->name}}</h3>
+                        <p>{{$item->lieu}} / {{$item->date_debut}}</p>
+                        <p class="activite_desc">
+                          {{$item->detail}}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+
             @endif
             @php
                 $i++;
             @endphp
           @endforeach
-         
-          
+
+
         </div>
-        
-        
+        <div id="pagination-container"></div>
+
+
       </div>
       <div class="pagination-container">
         <div class="page-numbers-container">
-            
+
         </div>
       </div>
-    </section> 
+    </section>
 
     <section class="container wow fadeup-animation categoriee">
       <div class="categorie">
@@ -72,12 +75,12 @@
           @foreach ($Axes as $item)
               <button class="activite_cate">{{$item->nom}}</button>
           @endforeach
-          
-         
+
+
         </div>
-        
+
       </div>
-      
+
     </section>
   </main>
   @include('frontEnd.inc.footer')

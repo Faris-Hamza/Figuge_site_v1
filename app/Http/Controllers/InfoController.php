@@ -18,7 +18,10 @@ class InfoController extends Controller
     }
 
     public function edit()
-    {
+    {   $info = info::first();
+        if ($info == null) {
+            Info::create();
+        }
         return view('infos.edit')->with('info', $info);
     }
 
