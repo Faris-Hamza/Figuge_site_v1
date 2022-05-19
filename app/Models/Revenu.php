@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Revenu extends Model
 {
-    protected $fillable = ['id', 'libelle', 'date', 'montant', 'source'];
+    protected $fillable = [ 'libelle', 'date', 'montant', 'source'];
 }

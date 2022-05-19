@@ -33,6 +33,7 @@ Route::post('demande/store', [App\Http\Controllers\DemandeController::class, 'st
 Route::get('demande/edit/{id}', [App\Http\Controllers\DemandeController::class, 'edit'])->name('demande/edit');
 Route::post('demande/update/{id}', [App\Http\Controllers\DemandeController::class, 'update'])->name('demande/update');
 Route::get('demande/destroy/{id}', [App\Http\Controllers\DemandeController::class, 'destroy'])->name('demande/destroy');
+Route::get('demande/pdfDemande/{id}', [App\Http\Controllers\DemandeController::class, 'pdfDemande'])->name('demande/pdfDemande');
 
 // Axe Routes
 Route::get('Axe', [App\Http\Controllers\AxesController::class, 'index'])->name('Axe');
@@ -60,7 +61,7 @@ Route::get('projet/edit/{id}', [App\Http\Controllers\ProjetsController::class, '
 Route::post('projet/update/{id}', [App\Http\Controllers\ProjetsController::class, 'update'])->name('projet/update');
 Route::get('projet/destroy/{id}', [App\Http\Controllers\ProjetsController::class, 'destroy'])->name('projet/destroy');
 
-//projet _ routes
+//revenu _ routes
 Route::get('revenus', [App\Http\Controllers\RevenuController::class, 'index'])->name('revenus');
 Route::get('revenu/create', [App\Http\Controllers\RevenuController::class, 'create'])->name('revenu/create');
 Route::post('revenu/store', [App\Http\Controllers\RevenuController::class, 'store'])->name('revenu/store');
@@ -68,6 +69,17 @@ Route::get('revenu/show/{id}', [App\Http\Controllers\RevenuController::class, 's
 Route::get('revenu/edit/{id}', [App\Http\Controllers\RevenuController::class, 'edit'])->name('revenu/edit');
 Route::post('revenu/update/{id}', [App\Http\Controllers\RevenuController::class, 'update'])->name('revenu/update');
 Route::get('revenu/destroy/{id}', [App\Http\Controllers\RevenuController::class, 'destroy'])->name('revenu/destroy');
+Route::get('revenu/pdfRevenu', [App\Http\Controllers\RevenuController::class, 'pdfRevenu'])->name('revenu/pdfRevenu');
+
+//depense _ routes
+Route::get('depenses', [App\Http\Controllers\DepenseController::class, 'index'])->name('depenses');
+Route::get('depense/create', [App\Http\Controllers\DepenseController::class, 'create'])->name('depense/create');
+Route::post('depense/store', [App\Http\Controllers\DepenseController::class, 'store'])->name('depense/store');
+Route::get('depense/show/{id}', [App\Http\Controllers\DepenseController::class, 'show'])->name('depense/show');
+Route::get('depense/edit/{id}', [App\Http\Controllers\DepenseController::class, 'edit'])->name('depense/edit');
+Route::post('depense/update/{id}', [App\Http\Controllers\DepenseController::class, 'update'])->name('depense/update');
+Route::get('depense/destroy/{id}', [App\Http\Controllers\DepenseController::class, 'destroy'])->name('depense/destroy');
+Route::get('depense/pdfDepense', [App\Http\Controllers\DepenseController::class, 'pdfDepense'])->name('depense/pdfDepense');
 
 //activite_routes
  Route::get('activite', [App\Http\Controllers\ActiviteController::class, 'index'])->name('activite');
@@ -95,6 +107,15 @@ Route::get('revenu/destroy/{id}', [App\Http\Controllers\RevenuController::class,
   Route::get('mail/edit/{id}', [App\Http\Controllers\MailsController::class, 'edit'])->name('mail/edit');
   Route::post('mail/update/{id}', [App\Http\Controllers\MailsController::class, 'update'])->name('mail/update');
   Route::get('mail/destroy/{id}', [App\Http\Controllers\MailsController::class, 'destroy'])->name('mail/destroy');
+
+  //Mail _routes
+  Route::get('rapports', [App\Http\Controllers\RapportActiviteController::class, 'index'])->name('rapports');
+  Route::get('rapport/create', [App\Http\Controllers\RapportActiviteController::class, 'create'])->name('rapport/create');
+  Route::post('rapport/store', [App\Http\Controllers\RapportActiviteController::class, 'store'])->name('rapport/store');
+  Route::get('rapport/show/{id}', [App\Http\Controllers\RapportActiviteController::class, 'show'])->name('rapport/show');
+  Route::get('rapport/edit/{id}', [App\Http\Controllers\RapportActiviteController::class, 'edit'])->name('rapport/edit');
+  Route::post('rapport/update/{id}', [App\Http\Controllers\RapportActiviteController::class, 'update'])->name('rapport/update');
+  Route::get('rapport/destroy/{id}', [App\Http\Controllers\RapportActiviteController::class, 'destroy'])->name('rapport/destroy');
  
 Auth::routes();
 

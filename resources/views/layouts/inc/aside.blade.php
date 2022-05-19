@@ -275,6 +275,15 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{{route('depenses')}}">
+            <div
+              class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-user-hair" style="color: #130F26;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Depenses</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{{route('revenus')}}">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -305,6 +314,15 @@
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g id="Outline_ok" data-name="Outline ok"><path d="M62,63H2a1,1,0,0,1-1-1V27a1,1,0,0,1,.359-.769l6-5a1,1,0,1,1,1.282,1.538L3,27.469V61H61V27.469l-5.641-4.7a1,1,0,1,1,1.282-1.538l6,5A1,1,0,0,1,63,27V62A1,1,0,0,1,62,63Z" style="fill:#231f20"/><path d="M32,47a1.007,1.007,0,0,1-.524-.148l-26-16a1,1,0,0,1,1.048-1.7L32,44.826,57.476,29.148a1,1,0,1,1,1.048,1.7l-26,16A1.007,1.007,0,0,1,32,47Z" style="fill:#231f20"/><path d="M6,59a1,1,0,0,1-.608-1.794l17-13a1,1,0,0,1,1.214,1.588l-17,13A.991.991,0,0,1,6,59Z" style="fill:#231f20"/><path d="M58,59a.991.991,0,0,1-.606-.206l-17-13a1,1,0,1,1,1.214-1.588l17,13A1,1,0,0,1,58,59Z" style="fill:#231f20"/><path d="M8,32a1,1,0,0,1-1-1V2A1,1,0,0,1,8,1H47a1,1,0,0,1,0,2H9V31A1,1,0,0,1,8,32Z" style="fill:#231f20"/><path d="M56,32a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0V31A1,1,0,0,1,56,32Z" style="fill:#231f20"/><path d="M56,12H47a1,1,0,0,1-1-1V2a1,1,0,0,1,1.707-.707l9,9A1,1,0,0,1,56,12Zm-8-2h5.586L48,4.414Z" style="fill:#231f20"/><path d="M48,27H16a1,1,0,0,1,0-2H48a1,1,0,0,1,0,2Z" style="fill:#231f20"/><path d="M48,32H16a1,1,0,0,1,0-2H48a1,1,0,0,1,0,2Z" style="fill:#231f20"/><path d="M39,37H25a1,1,0,0,1,0-2H39a1,1,0,0,1,0,2Z" style="fill:#231f20"/><path d="M32,22a1,1,0,0,1-1-1V19a1,1,0,0,1,2,0v2A1,1,0,0,1,32,22Z" style="fill:#231f20"/><path d="M32,10a1,1,0,0,1-1-1V7a1,1,0,0,1,2,0V9A1,1,0,0,1,32,10Z" style="fill:#231f20"/><path d="M31.937,20a3.81,3.81,0,0,1-3.651-2.166,1,1,0,1,1,1.84-.785A1.986,1.986,0,0,0,31.985,18c.787-.009,2.026-.4,2.015-1.406-.009-.84-.548-1.13-2.276-1.633-1.564-.455-3.7-1.075-3.724-3.534C27.977,9.245,30.034,8.033,31.983,8a3.862,3.862,0,0,1,3.74,2.166,1,1,0,1,1-1.84.785A1.941,1.941,0,0,0,32.015,10c-.784.013-2.026.406-2.015,1.406.009.84.548,1.13,2.276,1.633,1.564.455,3.7,1.075,3.724,3.534.023,2.2-2.037,3.406-3.989,3.427Z" style="fill:#231f20"/></g></svg>            </div>
             <span class="nav-link-text ms-1">Demandes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="{{route('rapports')}}">
+            <div
+              class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-user-hair" style="color: #130F26;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Rapports</span>
           </a>
         </li>
         <li class="nav-item">

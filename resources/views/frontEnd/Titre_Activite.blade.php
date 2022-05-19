@@ -1,4 +1,4 @@
-@include('frontEnd.inc.headerMin', ['name' => 'txt'] )
+@include('frontEnd.inc.headerMin', ['name' => $Activite->name] )
  
   <!--main-->
   <main class="container"> 

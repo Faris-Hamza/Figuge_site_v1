@@ -27,7 +27,7 @@
         <form action="{{route('revenu/store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label for="libelle" class="form-label">libellé</label>
+                    <label for="libelle" class="form-label">Libellé</label>
                     <input type="text" class="form-control" name="libelle"  >
                 </div>
                 <div class="mb-3">

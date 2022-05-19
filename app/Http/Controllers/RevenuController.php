@@ -4,14 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\Revenu;
 use Illuminate\Http\Request;
+use PDF;
 
 class RevenuController extends Controller
 {
-   
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function pdfRevenu()
+    {
+        $Revenus = Revenu::all();
+       $pdf = PDF::loadView('revenus/pdfRevenu', compact('Revenus'));
+       $pdf->setPaper('A4', 'landscape');
+       return $pdf->stream('Rp_des_depense.pdf');
+       
+    }
+
     public function index()
     {
         $Revenus = Revenu::all();
-
         return view('revenus.index')->with('revenus', $Revenus);
     }
 
@@ -25,7 +38,6 @@ class RevenuController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'id'      =>'required',  
             'libelle' =>'required',
             'date'    =>'required', 
             'montant' =>'required',
@@ -33,7 +45,6 @@ class RevenuController extends Controller
         ]);
 
         $Revenu = Revenu::create($request->all());
-        
         return redirect()->back();
     }
 
@@ -53,23 +64,25 @@ class RevenuController extends Controller
     public function update(Request $request, $id)
     {
         $Revenu = Revenu::where('id', $id)->first();
-        $this->validate($request,[
-            'id'      =>'required',  
+        $this->validate($request,[  
             'libelle' =>'required',
             'date'    =>'required', 
             'montant' =>'required',
             'source'  =>'required'
         ]);
 
-        $Revenu = Revenu::upadate($request->all());
-        
+        $Revenu->libelle = $request->libelle;
+        $Revenu->date = $request->date;
+        $Revenu->montant = $request->montant;
+        $Revenu->source = $request->source;
+        $Revenu->save();
+
         return redirect()->back();
     }
 
     
-    public function destroy(Revenu $revenu)
+    public function destroy( $id)
     {
-        
         $Revenu = Revenu::where('id', $id)->first();
         $Revenu->forceDelete();
         return redirect()->back();

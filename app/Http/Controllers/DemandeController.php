@@ -5,14 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Demande;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 39070fbd29eeddf50cbed5a756947d5c4feecf6b
-
+use PDF;
 class DemandeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function pdfDemande($id)
+    {
+        $Demande = Demande::where('id',$id)->first();
+        $pdf = PDF::loadView('demandes/pdfDemande', compact('Demande'));
+        $pdf->setPaper('A4');
+       return $pdf->stream("Demande".$Demande->nom.'.pdf');
+       
+    }
+
     public function index()
     {
        $demandes = Demande::all();
