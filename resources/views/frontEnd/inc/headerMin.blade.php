@@ -27,12 +27,12 @@
         <div class="close">
           <i class="fa-solid fa-xmark" id="icon_close"></i>
         </div>
-            <a href="Index.html" class="underline-hover">Accueil</a>
-            <a href="About.html" class="underline-hover">Qui somme Nous?</a>
-            <a href="Project.html" class="underline-hover">Projets</a>
-            <a href="Activites.html" class="underline-hover">Activites</a>
-            <a href="Soutenez-nous.html" class="underline-hover">Soutenez-nous</a>
-            <a href="Inscription.html" class="underline-hover">Inscription</a>
+        <a href="{{route('Accuiel')}}"class="underline-hover">Accueil</a>
+        <a href="{{route('about')}}" class="underline-hover">Qui somme Nous?</a>
+        <a href="{{route('p_rojet')}}"class="underline-hover">Projets</a>
+        <a href="{{route('activites')}}"class="underline-hover">Activites</a>
+        <a href="{{route('soutenezNous')}}"class="underline-hover">Soutenez-nous</a>
+        <a href="{{route('getInsc')}}"class="underline-hover">Demande de soutien</a>
       </nav>
 
 

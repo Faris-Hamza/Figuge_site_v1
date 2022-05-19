@@ -47,6 +47,12 @@ label {
 }
 
 .search .button_save .btn {
-  margin: 0rem !important; 
+  margin: 0rem !important;
   margin-bottom: 1rem !important;
+}
+
+.grid-1 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
 }

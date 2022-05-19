@@ -476,11 +476,20 @@ p.logo_p1 {
 /*--seaction1*/
 .a_la_une img {height: 140px;border-radius: 20px;object-fit: cover;}
 
-.col.a_la_une_content_div {align-self: center;}
+.col.a_la_une_content_div {align-self: center;overflow: hidden;}
 
-.a_la_une_content{overflow: hidden;height: 549px;}
+.a_la_une_content{overflow: hidden;padding: 10px;overflow: hidden; height: 507px;}
 
-.a_la_une_grid{ margin-bottom: 0px;    align-self: center;}
+.a_la_une_grid{ margin-bottom: 0px;    align-self: center;    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;}
+
+.fifty-chars {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .about {
     position: relative;
@@ -516,6 +525,7 @@ p.logo_p1 {
 }
 
 .sec1_blog_div {
+    overflow: hidden;
     position: absolute;
     background-color: white;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
@@ -1053,6 +1063,11 @@ section.sec2_about {
     box-shadow: 0px 20px 50px rgb(0 0 0 / 15%);
 }
 
+img.big_img_acvt {
+    height: 350px;
+    object-fit: cover;
+}
+
 .grand_activite a {
     text-decoration: none;
     color: black;
@@ -1065,7 +1080,8 @@ section.sec2_about {
 .activite_cate {
     background: rgba(92, 153, 181, 0.44);
     padding: 8px 20px;
-    width: 79px;
+    text-align: -webkit-center;
+    width: 100px;
     border-radius: 18px;
     color: #5C8AB5;
     border: none;

@@ -26,7 +26,7 @@
                                 <div class="col a_la_une_content_div">
                                     <h3>{{ $item->name }}</h3>
                                     <p>{{ $item->date_debut }} - {{ $item->lieu }}</p>
-                                    <p>{{ $item->detail }}</p>
+                                    <p class="fifty-chars">{{ $item->detail }}</p>
                                 </div>
                             </div>
                         @endforeach
@@ -60,7 +60,7 @@
                                 <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}" alt="">
                                 <div class="card_div">
                                     <h3>{{ $item->titre }}</h3>
-                                    <p>{{ $item->lieu }} / {{ $item->date_debut }}</p>
+                                    <p >{{ $item->lieu }} / {{ $item->date_debut }}</p>
                                 </div>
                             </div>
                         </div>
