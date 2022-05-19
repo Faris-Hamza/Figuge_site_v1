@@ -54,8 +54,8 @@
                   <div class="img-area">
                       <img src="{{ asset($item->photo) }}">
                   </div>
-                  <h2>{{$item->nom}}</h2>
-                  <p>{{ $item->statu }}</p>
+                  <h2 style="width: 300px;" class="fifty-chars">{{$item->nom}}</h2>
+                  <p style="width: 300px;" class="fifty-chars">{{ $item->statu }}</p>
               </div>
             </div>
             @endforeach

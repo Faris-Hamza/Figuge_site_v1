@@ -6,45 +6,44 @@
 
     <section class="container grand_activite">
       <div >
-        <a class="grid-2" href="{{route('showActivite',$Activites->first()->id)}}">
-          <img src="{{asset($Activites->first()->Media->where('types','photo')->first()->URL)}}" alt="">
-          <div class="activite_info">
-            <p class="activite_cate">{{$Activites->first()->Axes->first()->nom}}</p>
-            <h2 class="activite_title">{{$Activites->first()->titre}}</h2>
-            <p class="activite_date">{{$Activites->first()->lieu}} / {{$Activites->first()->date_debut}}</p>
-            <p class="activite_desc">
-              {{$Activites->first()->detail}}
-            </p>
-          </div>
+        <a class="" href="{{route('showActivite',$Activites->first()->id)}}">
+            <div class="sec7_blog1 grid-2">
+                <img class="big_img_acvt" src="{{asset($Activites->first()->Media->where('types','photo')->first()->URL)}}" alt="">
+                <div class="activite_info pro_content">
+                  <p class="activite_cate fifty-chars">{{$Activites->first()->Axes->first()->nom}}</p>
+                  <h2 class="activite_title fifty-chars">{{$Activites->first()->titre}}</h2>
+                  <p class="activite_date fifty-chars">{{$Activites->first()->lieu}} / {{$Activites->first()->date_debut}}</p>
+                  <p class="activite_desc big_act ">
+                    {{$Activites->first()->detail}}
+                  </p>
+                </div>
+            </div>
+
         </a>
       </div>
     </section>
 
     <section class="container sec5 wow fadeup-animation">
       <h1 class="sec2_title">Nos Activités</h1>
-      {{-- <h4 class="sec2_Suntitle">Soldats invisibles</h4> --}}
-
         <div class="grid-3 sec2_div list-wrapper">
           @php
               $i=0;
           @endphp
           @foreach ($Activites as $item)
             @if ($i!=0)
+            <a href="{{route('showActivite',$Activites->first()->id)}}">
             <div class="sec7_blog1 list-item">
-                <a href="{{route('showActivite',$Activites->first()->id)}}">
-                    <div class="col slide">
-                      <div class=" card">
-                        <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
-                        <h3>{{$item->name}}</h3>
-                        <p>{{$item->lieu}} / {{$item->date_debut}}</p>
-                        <p class="activite_desc">
+                <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
+                      <div class="pro_content">
+                        <h3 class="fifty-chars">{{$item->name}}</h3>
+                        <p class="fifty-chars">{{$item->lieu}} / {{$item->date_debut}}</p>
+                        <p class="activite_desc  fifty-chars">
                           {{$item->detail}}
                         </p>
-                      </div>
                     </div>
-                  </a>
-            </div>
 
+            </div>
+            </a>
             @endif
             @php
                 $i++;
@@ -73,7 +72,7 @@
         </div>
         <div class="type_cate grid-2">
           @foreach ($Axes as $item)
-              <button class="activite_cate">{{$item->nom}}</button>
+            <a class="activite_cate" href="#">{{$item->nom}}</a>
           @endforeach
 
 

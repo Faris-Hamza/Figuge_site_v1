@@ -16,9 +16,9 @@
                     <div class="sec7_blog1 list-item">
                                 <img src="{{ $item->Media()->where('types', 'photo')->first()->URL }}" alt="photo">
                                 <div class="pro_content">
-                                    <h3>{{ $item->titre }}</h3>
-                                    <p>{{ $item->lieu }} / {{ $item->date_debut }}</p>
-                                    <p class="activite_desc">
+                                    <h3 class="fifty-chars">{{ $item->titre }}</h3>
+                                    <p class="fifty-chars">{{ $item->lieu }} / {{ $item->date_debut }}</p>
+                                    <p class="activite_desc fifty-chars">
                                         {{ $item->detail }}
                                     </p>
                                 </div>
@@ -48,7 +48,10 @@
             </div>
             <div class="type_cate grid-2">
                 @foreach ($Axes as $item)
+                 <a href="#">
                     <button class="activite_cate">{{ $item->nom }}</button>
+                 </a>
+
                 @endforeach
 
 
