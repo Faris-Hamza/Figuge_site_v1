@@ -7,7 +7,7 @@
             <div class="about wow right-animation">
                 <h2 cl>A Propos Oriental</h2>
                 <h5>Oriental en quelques mots</h5>
-                <p class="about_p">
+                <p class="about_p" >
                     {{ $info->bienvenu }}
                 </p>
                 <a class="about_link" href="{{ route('about') }}">EN SAVOIR PLUS <i
