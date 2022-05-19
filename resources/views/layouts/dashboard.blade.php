@@ -9,7 +9,7 @@
   @auth
     @include('layouts.inc.aside')
   @endauth
-  
+
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     @include('layouts.inc.nav')
@@ -99,7 +99,6 @@
   </div>
   <!--   Core JS Files   -->
   <script src="{{asset('assets_dashboard/js/core/popper.min.js')}}"></script>
-  <script src="{{asset('assets_dashboard/js/core/bootstrap.min.js')}}"></script>
   <script src="{{asset('assets_dashboard/js/plugins/perfect-scrollbar.min.js')}}"></script>
   <script src="{{asset('assets_dashboard/js/plugins/smooth-scrollbar.min.js')}}"></script>
   <script src="{{asset('assets_dashboard/js/plugins/chartjs.min.js')}}"></script>
