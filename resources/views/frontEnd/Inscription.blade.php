@@ -48,7 +48,10 @@
                     <input class="text_insc wow right-animation" type="text" placeholder="Montant demandé">
                     <input class="text_insc wow left-animation" type="file" placeholder="Joindre les pièces justificatives ">
           </div> 
-          <button type="submit" class="about_link">Demandez</button>
+          <a href="{{route('demande/pdfDemande', 1)}}">
+            <button type="submit" class="about_link">Demandez</button>
+          </a>
+          
         </form>      
       </div>
       

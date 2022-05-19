@@ -1,61 +1,79 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style>
-      body{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-          }
-       td{
-        border: 0.5px solid ;
-        height: 30px;
-       }
-      
-       th{
-          border: 0.5px solid ;
-       }
 
-       
-       h6{
-        text-align: right;
-        font-size: 20px;
-       }
-       .total{
-         width: 100%;
-         text-align: right;
-       }
-       .btn{
-         width: 200px;
-         height: 20px;
-         background: transparent;
-         text-align: left;
-       }
-     
-    </style>
-  </head>
-  <body>
-    {{-- <img src="assets\images\LOGO\logo.png" width="50px" alt=""> --}}
-    <h4 style="text-align: center">Fondation Oriental Figug</h4>
-    <h1 style="text-align: center">Rapport des Revenus</h1>
-    <h6 >{{date('Y-m-d')}}</h6>
-    <table style="width: 100%;  text-align: center;">
-      <thead>
-        <tr>
-         
-          <th style="width: 30px">..</th>
-          <th style="width: 150px">Date</th>
-          <th style="width: 250px">Libellé</th>
-          <th >Monatant</th>
-          <th >Source</th>
-          
-        </tr>
-      </thead>
+<head>
+    <title>Demande</title>
+    <style>
+        body {
+            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+
+
+        .container{
+          padding: 0 30px ;
+        }
+
+        strong{
+          font-size: 15px;
+        }
+        div{
+          padding: 8px;
+        }
       
-    </table>
-    <div class="total">
-      <button class="btn" type="button" >
-      Total :
-    </button>
-  </body>
+
+        .date {
+            text-align: center;
+        }
+
+        .date_ {
+            text-align: right;
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="container">
+           
+
+        <div class="date">
+            <img class="" src="assets\images\LOGO\logo.png" width="10%" alt="">
+            <h5>Fondation Oriental Figug</h5>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="date_">
+            <h4>
+                Date : {{ Date('d/m/yy') }}
+            </h4>
+        </div>
+
+        <div class="date">
+            <h2>Demande N° : 0000{{ $Demande->id }}</h2>
+        </div>
+
+        <h3>Information personelle :</h3>
+        <div class="container">
+            <div> <strong>Nom :</strong> {{ $Demande->nom }}</div>
+            <div> <strong>Prénom :</strong> {{ $Demande->prenom }}</div>
+            <div> <strong>Cin :</strong> {{ $Demande->cin }}</div>
+            <div><strong>N° de carte RAMED :</strong> {{ $Demande->nbrRamed }}</div>
+            <div><strong>Genre d'aide demandé :</strong> {{ $Demande->genreDemande }}</div>
+            <div><strong>Montant demandé :</strong> {{ $Demande->montant }} MAD</div>
+        </div>
+        <h3>Information pour le contact :</h3>
+        <div class="container">
+            <div><strong>Adresse :</strong> {{ $Demande->adresse }}</div>
+            <div><strong>Téléphone :</strong> {{ $Demande->Tel }}</div>
+            <div><strong>Email :</strong> {{ $Demande->email }}</div>
+        </div>
+
+
+    </div>
+
+</body>
+
 </html>
