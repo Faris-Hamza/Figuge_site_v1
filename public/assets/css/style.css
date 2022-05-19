@@ -1400,6 +1400,14 @@ button.about_link {
     nav.About_Menu {
         font-size: 17px;
     }
+    .fifty-chars {
+        width: 100px;}
+    .about_link {
+        font-size: 9px;
+        padding: 8px 26px;
+    }
+    input.Textbox {
+        width: 100%;}
 }
 
 @media screen and (max-width: 552px) {
@@ -1458,9 +1466,6 @@ button.about_link {
     }
     nav.About_Menu {
         font-size: 12px;
-    }
-    section.sec2 {
-        margin-top: 280px;
     }
 }
 
