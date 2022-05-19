@@ -33,7 +33,7 @@ class Home extends Controller
         if ($Info==null) {
             $Info = info::create();
         }
-        $Acts = Activite::all();
+        $Acts = Activite::paginate(3);
         $Axes = Axes::all();
         $Presse = Presse::all();
         $Projet = Projets::all();
