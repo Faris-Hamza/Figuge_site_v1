@@ -7,22 +7,32 @@
             <div class="about wow right-animation">
                 <h2 cl>A Propos Oriental</h2>
                 <h5>Oriental en quelques mots</h5>
-                <p class="about_p">
+                <p style="overflow: hidden; text-overflow: ellipsis; height:276.3px" class="about_p">
                     {{ $info->bienvenu }}
                 </p>
-                <a class="about_link" href="{{ route('about') }}">EN SAVOIR PLUS <i
+
+                <a class="about_link" style="margin: 30px 0" href="{{ route('about') }}">EN SAVOIR PLUS <i
                         class="fa-solid fa-right-long"></i></a>
             </div>
             <div class="sec1_blog">
-                <div class="sec1_blog_div wow left-animation a_la_une">
+                <div class="sec1_blog_div wow left-animation a_la_une" >
                     <h2>À LA UNE</h2>
                     <div class="grid-1 a_la_une_content">
-                        @foreach ($Acts as $item)
-                            <div class="row a_la_une_grid">
-                                <div class="col">
-                                    <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}"
-                                        alt="">
+                        @if ($Acts!=null)
+                            @foreach ($Acts as $item)
+                                <div class="row img-une" >
+                                    <div class="col-lg-4 col-sm-1" >
+                                        <img width="100%"  src="{{ $item->Media()->where('types', 'photo')->first()->URL }}"
+                                            alt="">
+                                    </div>
+                                    <div class="col" style="margin: 12px 0 ">
+                                        <h3 style="width:230px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0 10px 0 -1px" >{{ $item->name }}</h3>
+
+                                        <p style="">{{ $item->date_debut }} - {{ $item->lieu }}</p>
+                                        <p style="height:50px; overflow: hidden; text-overflow: ellipsis;">{{ $item->detail }}</p>
+                                    </div>
                                 </div>
+
                                 <div class="col a_la_une_content_div">
                                     <h3>{{ $item->name }}</h3>
                                     <p>{{ $item->date_debut }} - {{ $item->lieu }}</p>
@@ -30,6 +40,8 @@
                                 </div>
                             </div>
                         @endforeach
+                        @endif
+
 
 
                     </div>
@@ -54,6 +66,7 @@
             </div>
             <div class="main-testimonial-slider">
                 <div class="row servece-slider">
+
                     @foreach ($Projet as $item)
                         <div class="col slide">
                             <div class="sec2_blog1 card">
@@ -61,10 +74,24 @@
                                 <div class="card_div">
                                     <h3>{{ $item->titre }}</h3>
                                     <p >{{ $item->lieu }} / {{ $item->date_debut }}</p>
+
+                    @if ($Projet!=null)
+                        @foreach ($Projet as $item)
+                            @php
+                                $photo = $item->Media()->where('types', 'photo')->first();
+                            @endphp
+                            <div class="col slide">
+                                <div class="sec2_blog1 card">
+                                    <img width="100%" src="{{ $photo->URL }}" alt="">
+                                    <div class="card_div">
+                                        <h3 style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $item->titre }}</h3>
+                                        <p>{{ $item->lieu }} / {{ $item->date_debut }}</p>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    @endif
                 </div>
 
             </div>
