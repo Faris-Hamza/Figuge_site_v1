@@ -34,8 +34,8 @@
             <div class="sec7_blog1 list-item">
                 <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
                       <div class="pro_content">
-                        <h3>{{$item->name}}</h3>
-                        <p>{{$item->lieu}} / {{$item->date_debut}}</p>
+                        <h3 class="fifty-chars">{{$item->name}}</h3>
+                        <p class="fifty-chars">{{$item->lieu}} / {{$item->date_debut}}</p>
                         <p class="activite_desc fifty-chars">
                           {{$item->detail}}
                         </p>

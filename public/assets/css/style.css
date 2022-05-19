@@ -485,7 +485,6 @@ p.logo_p1 {
     grid-template-columns: 1fr 1fr;}
 
 .fifty-chars {
-    width: 200px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -496,6 +495,11 @@ p.logo_p1 {
 }
 
 .about_p {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-top: 20px;
     font-size: 18px;
     text-align: justify;
@@ -510,6 +514,7 @@ p.logo_p1 {
     display: inline-block;
     float: right;
     border-radius: 119px;
+    margin-top: 20px;
 }
 
 .sec1_row1 {
@@ -615,6 +620,8 @@ section.sec2 {
     background: #F5F5F5;
     padding: 60px;
     border-radius: 55px;
+    text-align: -webkit-center;
+
 }
 
 .grid-1.axe img{
@@ -971,6 +978,7 @@ section.sec2_about {
     width: 173px;
     height: 173px;
     border-radius: 100%;
+    margin-bottom: 20px;
 }
 
 .carousel {
@@ -1400,8 +1408,6 @@ button.about_link {
     nav.About_Menu {
         font-size: 17px;
     }
-    .fifty-chars {
-        width: 100px;}
     .about_link {
         font-size: 9px;
         padding: 8px 26px;

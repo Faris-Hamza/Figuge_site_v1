@@ -7,9 +7,12 @@
             <div class="about wow right-animation">
                 <h2 cl>A Propos Oriental</h2>
                 <h5>Oriental en quelques mots</h5>
-                <p class="about_p">
-                    {{ $info->bienvenu }}
-                </p>
+                <div>
+                    <p  class="about_p ">
+                        {{ $info->bienvenu }}
+                    </p>
+                </div>
+
                 <a class="about_link" href="{{ route('about') }}">EN SAVOIR PLUS <i
                         class="fa-solid fa-right-long"></i></a>
             </div>
@@ -24,8 +27,8 @@
                                         alt="">
                                 </div>
                                 <div class="col a_la_une_content_div">
-                                    <h3>{{ $item->name }}</h3>
-                                    <p>{{ $item->date_debut }} - {{ $item->lieu }}</p>
+                                    <h3 class="fifty-chars">{{ $item->name }}</h3>
+                                    <p class="fifty-chars">{{ $item->date_debut }} - {{ $item->lieu }}</p>
                                     <p class="fifty-chars">{{ $item->detail }}</p>
                                 </div>
                             </div>
@@ -59,8 +62,8 @@
                             <div class="sec2_blog1 card">
                                 <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}" alt="">
                                 <div class="card_div">
-                                    <h3>{{ $item->titre }}</h3>
-                                    <p>{{ $item->lieu }} / {{ $item->date_debut }}</p>
+                                    <h3 class="fifty-chars">{{ $item->titre }}</h3>
+                                    <p class="fifty-chars">{{ $item->lieu }} / {{ $item->date_debut }}</p>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +88,7 @@
                 @foreach ($Axes as $item)
                     <div class="grid-1 axe">
                         <img width="100%" src="{{ asset($item->icon) }}" alt="">
-                        <h2>{{ $item->nom }}</h2>
+                        <h2 class="fifty-chars">{{ $item->nom }}</h2>
                     </div>
                 @endforeach
 
@@ -143,8 +146,8 @@
                             <div class="sec7_blog1 Media_Presse">
                                 <img src="{{ asset($item->logo) }}" alt="photo">
                                 <div class="press">
-                                    <h3 class="sec2_title">{{ $item->name }}</h3>
-                                    <p class="sec2_Suntitle">{{ $item->lieu }} / {{ $item->date }}</p>
+                                    <h3 class="sec2_title fifty-chars">{{ $item->name }}</h3>
+                                    <p  class="sec2_Suntitle fifty-chars">{{ $item->lieu }} / {{ $item->date }}</p>
                                     <a href="{{ $item->lieu }}">URL d’article</a>
 
                                 </div>
