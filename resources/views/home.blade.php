@@ -153,7 +153,7 @@
                             <span class="mask bg-gradient-dark"></span>
                             <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                                 <h5 class="text-white font-weight-bolder mb-4 pt-2">Gestion des demandes</h5>
-                                <div class="row" style="gap: 30px;">
+                                <div class="row gitnotification_dom">
                                     <div class="col-12  mb-xl-0 mb-4">
                                         <div class="card">
                                             <div class="card-body p-3">
@@ -163,7 +163,6 @@
                                                             <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
                                                             <h5 class="font-weight-bolder mb-0">
                                                                 $53,000
-                                                                <span class="text-sm font-weight-bolder">+55%</span>
                                                             </h5>
                                                         </div>
                                                     </div>
@@ -180,7 +179,6 @@
                                                             <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
                                                             <h5 class="font-weight-bolder mb-0">
                                                                 $53,000
-                                                                <span class="text-sm font-weight-bolder">+55%</span>
                                                             </h5>
                                                         </div>
                                                     </div>
@@ -197,7 +195,6 @@
                                                             <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
                                                             <h5 class="font-weight-bolder mb-0">
                                                                 $53,000
-                                                                <span class="text-sm font-weight-bolder">+55%</span>
                                                             </h5>
                                                         </div>
                                                     </div>

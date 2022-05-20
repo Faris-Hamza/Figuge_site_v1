@@ -73,3 +73,13 @@ label {
 ul.navbar-nav.margine-nav {
     margin-bottom: auto;
 }
+
+.notification_dom{
+    gap: 30px;
+}
+
+@media screen and (max-width: 1199.98px){
+    .notification_dom{
+        gap: 0px;
+    }
+}
