@@ -1,7 +1,6 @@
 @extends('layouts.dashboard')
 
 @section('Content')
-<<<<<<< HEAD
     <div class="container">
         <div class="row justify-content-center">
             <div class="row">
@@ -93,25 +92,18 @@
                         </div>
                     </div>
                 </div>
-=======
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                
->>>>>>> 13c2affb886ecd1cadd29261a3e37effdf231955
             </div>
             <div class="row mt-4">
                 <div class="col-lg-7 mb-lg-0 mb-4">
                     <div class="card">
                         <div class="card-body p-3">
-                            <div class="container row">
+                            <div class="row">
                                 <div class="col-lg">
                                     <div class="d-flex flex-column h-100">
                                         <p class="mb-1 pt-2 text-bold">Built by developers</p>
                                         <div class="row" style="margin-top: 20px;">
-                                            <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
-                                            <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
+                                            <div class="col-12 col-lg-6 row"><p class="col-3 ">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
+                                            <div class="col-12 col-lg-6 row"><p class="col-3 ">au :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
 
                                         </div>
                                         <div class="btn-rpt">
@@ -120,8 +112,8 @@
                                         </div>
                                         <p class="mb-1 pt-2 text-bold">Built by developers</p>
                                         <div class="row" style="margin-top: 20px;">
-                                            <div class="col row"><p class="col-2">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
-                                            <div class="col row"><p class="col-2">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
+                                            <div class="col-12 col-lg-6 row"><p class="col-3">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
+                                            <div class="col-12 col-lg-6 row"><p class="col-3">au :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
 
                                         </div>
                                         <div class="btn-rpt">
