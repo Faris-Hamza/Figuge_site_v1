@@ -13,7 +13,6 @@
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
                                         <h5 class="font-weight-bolder mb-0">
                                             $53,000
-                                            <span class="text-sm font-weight-bolder">+55%</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -35,7 +34,6 @@
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des activites</p>
                                         <h5 class="font-weight-bolder mb-0">
                                             2,300
-                                            <span class=" text-sm font-weight-bolder">+3%</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -57,7 +55,6 @@
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale dépense</p>
                                         <h5 class="font-weight-bolder mb-0">
                                             +3,462
-                                            <span class=" text-sm font-weight-bolder">-2%</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -79,7 +76,6 @@
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des revenues</p>
                                         <h5 class="font-weight-bolder mb-0">
                                             $103,430
-                                            <span class=" text-sm font-weight-bolder">+5%</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -105,7 +101,7 @@
                                         <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
 
                                         <form action="{{route('rapport/pdfRapportParDate')}}" method="POST">
-                                            @csrf  
+                                            @csrf
                                             @method("POST")
                                             <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
@@ -126,14 +122,14 @@
                                         <h5 class="font-weight-bolder">Rapport Moral par period </h5>
                                         <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
                                         <form action="#" method="POST">
-                                            @csrf 
+                                            @csrf
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
-                                                <p class="col-3">de :</p> 
+                                                <p class="col-3">de :</p>
                                                 <input class="col-9" type="date" class="form-control" name="date_fin">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
-                                                <p class="col-3">au :</p> 
+                                                <p class="col-3">au :</p>
                                                 <input class="col-9" type="date" class="form-control" name="date_fin">
                                             </div>
 
@@ -144,7 +140,7 @@
                                         </form>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -156,8 +152,60 @@
                             <span class="mask bg-gradient-dark"></span>
                             <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                                 <h5 class="text-white font-weight-bolder mb-4 pt-2">Gestion des demandes</h5>
-                                <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. It
-                                    is all about who take the opportunity first.</p>
+                                <div class="row" style="gap: 30px;">
+                                    <div class="col-12  mb-xl-0 mb-4">
+                                        <div class="card">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="numbers">
+                                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
+                                                            <h5 class="font-weight-bolder mb-0">
+                                                                $53,000
+                                                                <span class="text-sm font-weight-bolder">+55%</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  mb-xl-0 mb-4">
+                                        <div class="card">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="numbers">
+                                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
+                                                            <h5 class="font-weight-bolder mb-0">
+                                                                $53,000
+                                                                <span class="text-sm font-weight-bolder">+55%</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  mb-xl-0 mb-4">
+                                        <div class="card">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="numbers">
+                                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
+                                                            <h5 class="font-weight-bolder mb-0">
+                                                                $53,000
+                                                                <span class="text-sm font-weight-bolder">+55%</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
                                     href="{{ route('demandes') }}">
                                     Read More
