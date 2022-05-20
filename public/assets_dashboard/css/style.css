@@ -56,3 +56,15 @@ label {
     gap: 30px;
     grid-template-columns: 1fr;
 }
+
+.grid-2 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0px;
+}
+
+.btn-rpt{
+    width: 168px;
+    align-self: flex-end;
+}
