@@ -12,7 +12,7 @@
                                     <div class="numbers">
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
                                         <h5 class="font-weight-bolder mb-0">
-                                           {{$demandes}} Dossier(s)
+                                           {{$nbrDemandes}} Dossier(s)
                                         </h5>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@
                                 <div class="col-lg">
                                     <div class="d-flex flex-column h-100">
 
-                                        <h5 class="font-weight-bolder">Rapport financier par period</h5>
+                                        <h5 class="font-weight-bolder">Rapport Moral par period</h5>
                                         <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
 
                                         <form action="{{route('rapport/pdfRapportParDate')}}" method="POST">
@@ -154,54 +154,26 @@
                             <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                                 <h5 class="text-white font-weight-bolder mb-4 pt-2">Gestion des demandes</h5>
                                 <div class="row gitnotification_dom">
-                                    <div class="col-12  mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-body p-3">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
-                                                            <h5 class="font-weight-bolder mb-0">
-                                                                $53,000
-                                                            </h5>
+                                    @foreach ($Demandes as $item)
+                                         <div class="col-12  mb-xl-0 mb-4">
+                                            <div class="card">
+                                                <div class="card-body p-3">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <div class="numbers">
+                                                                <p class="text-sm mb-0 text-capitalize font-weight-bold">{{$item->nom}} {{$item->prenom}}</p>
+                                                                <h5 class="font-weight-bolder mb-0">
+                                                                    {{$item->montant}} MAD
+                                                                </h5>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-12  mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-body p-3">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
-                                                            <h5 class="font-weight-bolder mb-0">
-                                                                $53,000
-                                                            </h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12  mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-body p-3">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div class="numbers">
-                                                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
-                                                            <h5 class="font-weight-bolder mb-0">
-                                                                $53,000
-                                                            </h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+                                   
+                                    
                                 </div>
 
                                 <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
