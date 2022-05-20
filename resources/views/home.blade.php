@@ -119,7 +119,7 @@
                                             </div>
                                         </form>
 
-                                        <h5 class="font-weight-bolder">Rapport Moral par period </h5>
+                                        {{-- <h5 class="font-weight-bolder">Rapport Moral par period </h5>
                                         <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
                                         <form action="#" method="POST">
                                             @csrf
@@ -138,7 +138,7 @@
                                         <div class="btn-rpt">
                                             <button class="btn  bg-gradient-primary mt-3 w-100" type="submit">Générer </button>
                                         </div>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                 </div>
 
