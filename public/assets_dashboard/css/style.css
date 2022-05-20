@@ -68,3 +68,8 @@ label {
     width: 168px;
     align-self: flex-end;
 }
+
+
+ul.navbar-nav.margine-nav {
+    margin-bottom: auto;
+}
