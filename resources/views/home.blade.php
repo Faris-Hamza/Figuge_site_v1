@@ -12,7 +12,7 @@
                                     <div class="numbers">
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des demande</p>
                                         <h5 class="font-weight-bolder mb-0">
-                                            $53,000
+                                           {{$demandes}} Dossier(s)
                                         </h5>
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@
                                     <div class="numbers">
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des activites</p>
                                         <h5 class="font-weight-bolder mb-0">
-                                            2,300
+                                            {{$activites}} Activté réalisé
                                         </h5>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                     <div class="numbers">
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale dépense</p>
                                         <h5 class="font-weight-bolder mb-0">
-                                            +3,462
+                                            {{$depense}} MAD
                                         </h5>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                     <div class="numbers">
                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Totale des revenues</p>
                                         <h5 class="font-weight-bolder mb-0">
-                                            $103,430
+                                            {{$revunu}} MAD
                                         </h5>
                                     </div>
                                 </div>
@@ -106,11 +106,11 @@
                                             <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3 ">de :</p>
-                                                <input class="col-9" type="date" class="form-control" name="dateD">
+                                                <input  type="date" class="form-control col-9" name="dateD">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3 ">au :</p>
-                                                <input class="col-9" type="date" class="form-control" name="dateF">
+                                                <input  type="date" class="form-control col-9" name="dateF">
                                             </div>
 
                                             </div>
@@ -119,25 +119,26 @@
                                             </div>
                                         </form>
 
-                                        <h5 class="font-weight-bolder">Rapport Moral par period </h5>
+                                        {{-- <h5 class="font-weight-bolder">Rapport Moral par period </h5>
                                         <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
                                         <form action="#" method="POST">
                                             @csrf
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
-                                                <p class="col-3">de :</p>
-                                                <input class="col-9" type="date" class="form-control" name="date_fin">
+
+                                                <p class="col-3">de :</p> 
+                                                <input  type="date" class="form-control col-9" name="dateD">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
-                                                <p class="col-3">au :</p>
-                                                <input class="col-9" type="date" class="form-control" name="date_fin">
-                                            </div>
+                                                <p class="col-3">au :</p> 
+                                                <input  type="date" class="form-control col-9" name="dateF">
+
 
                                         </div>
                                         <div class="btn-rpt">
                                             <button class="btn  bg-gradient-primary mt-3 w-100" type="submit">Générer </button>
                                         </div>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                 </div>
 

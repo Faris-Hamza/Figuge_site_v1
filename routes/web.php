@@ -119,12 +119,12 @@ Route::get('depense/pdfDepense', [App\Http\Controllers\DepenseController::class,
   Route::get('rapport/pdfRapport/{id}', [App\Http\Controllers\RapportActiviteController::class, 'pdfRapport'])->name('rapport/pdfRapport');
 
 // dashboard _routes
-  Route::get('rapport/pdfRapportParDate', [App\Http\Controllers\DashboardController::class, 'pdfRapportParDate'])->name('rapport/pdfRapportParDate');
+  Route::post('rapport/pdfRapportParDate', [App\Http\Controllers\DashboardController::class, 'pdfRapportParDate'])->name('rapport/pdfRapportParDate');
  
 Auth::routes();
 
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashbord', [App\Http\Controllers\HomeController::class, 'dashbord'])->name('dashbord');
+Route::get('/dashbord', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashbord');
 Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
 
 Route::get('notification/show/{type}/{c_ount}', [App\Http\Controllers\NotificationsController::class,'show'])->name('notification/show');
