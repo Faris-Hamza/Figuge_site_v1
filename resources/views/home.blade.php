@@ -110,11 +110,11 @@
                                             <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3 ">de :</p>
-                                                <input class="col-9" type="date" class="form-control" name="dateD">
+                                                <input  type="date" class="form-control col-9" name="dateD">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3 ">au :</p>
-                                                <input class="col-9" type="date" class="form-control" name="dateF">
+                                                <input  type="date" class="form-control col-9" name="dateF">
                                             </div>
 
                                             </div>
@@ -130,11 +130,11 @@
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3">de :</p> 
-                                                <input class="col-9" type="date" class="form-control" name="date_fin">
+                                                <input  type="date" class="form-control col-9" name="dateD">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3">au :</p> 
-                                                <input class="col-9" type="date" class="form-control" name="date_fin">
+                                                <input  type="date" class="form-control col-9" name="dateF">
                                             </div>
 
                                         </div>

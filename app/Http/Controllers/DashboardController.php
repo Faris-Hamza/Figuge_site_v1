@@ -21,8 +21,9 @@ class DashboardController extends Controller
 
     public function index()
     {
-       $demandes = Demande::all();
-       return view('demandes.index')->with('demandes', $demandes);
+       $demandes = count(Demande::all());
+       $demandes = count(Demande::all());
+       return view('home');
     }
 
 

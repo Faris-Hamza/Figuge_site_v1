@@ -119,7 +119,7 @@ Route::get('depense/pdfDepense', [App\Http\Controllers\DepenseController::class,
   Route::get('rapport/pdfRapport/{id}', [App\Http\Controllers\RapportActiviteController::class, 'pdfRapport'])->name('rapport/pdfRapport');
 
 // dashboard _routes
-  Route::get('rapport/pdfRapportParDate', [App\Http\Controllers\DashboardController::class, 'pdfRapportParDate'])->name('rapport/pdfRapportParDate');
+  Route::post('rapport/pdfRapportParDate', [App\Http\Controllers\DashboardController::class, 'pdfRapportParDate'])->name('rapport/pdfRapportParDate');
  
 Auth::routes();
 
