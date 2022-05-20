@@ -106,11 +106,11 @@
                                             <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3 ">de :</p>
-                                                <input  type="date" class="form-control col-9" name="dateD">
+                                                <input class="col-9 "  type="date" class="form-control col-9" name="dateD">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
                                                 <p class="col-3 ">au :</p>
-                                                <input  type="date" class="form-control col-9" name="dateF">
+                                                <input class="col-9 "  type="date" class="form-control col-9" name="dateF">
                                             </div>
 
                                             </div>
@@ -126,11 +126,11 @@
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-12 col-lg-6 row">
 
-                                                <p class="col-3">de :</p> 
+                                                <p class="col-3">de :</p>
                                                 <input  type="date" class="form-control col-9" name="dateD">
                                             </div>
                                             <div class="col-12 col-lg-6 row">
-                                                <p class="col-3">au :</p> 
+                                                <p class="col-3">au :</p>
                                                 <input  type="date" class="form-control col-9" name="dateF">
 
 
