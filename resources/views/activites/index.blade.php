@@ -1,6 +1,12 @@
 @extends('layouts.dashboard')
 
 @section('Content')
+<style>
+    td, th {
+        text-align: center;
+    }
+
+</style>
     <div class="container">
         <div class="row">
 

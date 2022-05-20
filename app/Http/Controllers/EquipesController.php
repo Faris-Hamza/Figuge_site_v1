@@ -68,7 +68,7 @@ class EquipesController extends Controller
         $this->validate($request, [
             'nom' => 'required',
             'statu'      => 'required',
-            'photo'      => 'required|image|mimes:jpg,png,jpeg|max:2048|'
+            'photo'      => 'image|mimes:jpg,png,jpeg|max:2048|'
         ]);
 
         if ($request->has('photo')) {

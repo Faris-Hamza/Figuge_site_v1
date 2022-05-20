@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('Content')
+<<<<<<< HEAD
     <div class="container">
         <div class="row justify-content-center">
             <div class="row">
@@ -92,6 +93,13 @@
                         </div>
                     </div>
                 </div>
+=======
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                
+>>>>>>> 13c2affb886ecd1cadd29261a3e37effdf231955
             </div>
             <div class="row mt-4">
                 <div class="col-lg-7 mb-lg-0 mb-4">

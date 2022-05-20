@@ -26,20 +26,31 @@
          text-align: right;
        }
        .btn{
-         width: 200px;
-         height: 20px;
+         width: 340px;
+         padding: 10px;
+         margin: 40px 0;
+         border: 1px solid black;
          background: transparent;
          text-align: left;
+       }
+       .Content-center{
+         text-align: center;
+         width: 100%;
        }
      
     </style>
   </head>
   <body>
-    {{-- <img src="assets\images\LOGO\logo.png" width="50px" alt=""> --}}
-    <h4 style="text-align: center">Fondation Oriental Figug</h4>
-    <h1 style="text-align: center">Rapport des Revenus</h1>
-    <h6 >{{date('Y-m-d')}}</h6>
-    <table style="width: 100%;  text-align: center;">
+    <div class="Content-center">
+       <img  src="{{public_path('assets\images\LOGO\logo.png')}}" width="50px" alt="">
+       <h4 >Fondation Oriental Figug</h4>
+       <br>
+       <h1 >Rapport des Revenus</h1>
+    </div>
+    
+    
+    <p >Date : {{date('Y-m-d')}}</p>
+    <table style="width: 100%;  text-align: center; border-collapse: collapse; border: 1px solid ;">
       <thead>
         <tr>
          
@@ -79,7 +90,7 @@
     </table>
     <div class="total">
       <button class="btn" type="button" >
-      Total : {{$total}}
+      <strong> Total des revenus : </strong>{{$total}} MAD
     </button>
   </body>
 </html>

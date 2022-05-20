@@ -31,18 +31,24 @@ class ActiviteController extends Controller
 
     public function store(Request $request)
     {
-        if (count($request->photo)>5) {
-            return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
-        }
+
         $this->validate($request, [
+<<<<<<< HEAD
             'name'           => 'required',
             'detail'         => 'required',
             'lieu'           => 'required',
+=======
+            'name'           => 'required|string|max:30',
+            'detail'         => 'required|string|max:1000',
+            'lieu'           => 'required|string|max:30',
+>>>>>>> 0bd2232012a644eba80fd370d06e305932d618f4
             'date_debut'     => 'required',
             'date_fin'       => 'required',
-            'photo.*'          => 'max:2048'
+            'photo.*'        => 'required|max:2048'
         ]);
-
+        if (count($request->photo)>5) {
+            return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
+        }
 
         $activite = Activite::create([
 
@@ -95,14 +101,14 @@ class ActiviteController extends Controller
     
     public function update(Request $request,$id)
     {
-        if (count($request->photo)>5) {
+        if ($request->has('photo') && count($request->photo)>5) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
         }
         $activite = Activite::where('id', $id)->first();
         $this->validate($request, [
-            'name'           => 'required',
-            'detail'         => 'required',
-            'lieu'           => 'required',
+            'name'           => 'required|string|max:30',
+            'detail'         => 'required|string|max:1000',
+            'lieu'           => 'required|string|max:30',
             'date_debut'     => 'required',
             'date_fin'       => 'required',
             'photo.*'        => 'max:2048'

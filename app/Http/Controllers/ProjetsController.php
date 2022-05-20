@@ -33,7 +33,7 @@ class ProjetsController extends Controller
 
     public function store(Request $request)
     {
-        if (count($request->photo)>5) {
+        if ($request->has('photo') &&count($request->photo)>5) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
         }
         $this->validate($request, [
@@ -104,7 +104,7 @@ class ProjetsController extends Controller
 
     public function update(Request $request,$id)
     {
-        if (count($request->photo)>5) {
+        if ($request->has('photo') && count($request->photo)>5) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
         }
         $projet = Projets::where('id', $id)->first();

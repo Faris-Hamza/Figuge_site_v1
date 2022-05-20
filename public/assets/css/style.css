@@ -649,23 +649,6 @@ section.sec2 {
     border-radius: 100%;
 }
 
-.img-une{
-    height: 9rem;
-}
-@media screen and (max-width:462px) {
-    .img-une{
-        height: 17rem;
-    }
-
-    .sec1_blog_div{
-        margin-bottom: 1000px;
-    }
-
-    .a_la_une_content{
-        height: 500px;
-        overflow: hidden;
-    }
-}
 
 /*section5*/
 
@@ -1482,6 +1465,12 @@ button.about_link {
     nav.About_Menu {
         font-size: 12px;
     }
+<<<<<<< HEAD
+    section.sec2 {
+        margin-top: 120px;
+    }
+=======
+>>>>>>> 0bd2232012a644eba80fd370d06e305932d618f4
 }
 
 @media screen and (max-width: 375px) {

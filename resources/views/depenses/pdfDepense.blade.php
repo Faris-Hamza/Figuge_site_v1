@@ -42,7 +42,8 @@
     <h4 style="text-align: center">Fondation Oriental Figug</h4>
     <h1 style="text-align: center">Rapport des dépenses</h1>
     <h6 >{{date('Y-m-d')}}</h6>
-    <table style="width: 100%;  text-align: center;">
+    <table style="width: 100%;  text-align: center; border-collapse: collapse;
+    border: 1px solid;">
       <thead>
         <tr>
          
@@ -52,7 +53,7 @@
           <th style="width: 150px">Contarante</th>
           <th >Bénéficiaire</th>
           <th >Mode de payment</th>
-          <th >Monatant</th>
+          <th >Monatant (MAD)</th>
           
         </tr>
       </thead>
@@ -86,7 +87,7 @@
     </table>
     <div class="total">
       <button class="btn" type="button" >
-      Total : {{$total}}
+      Total : {{$total}} MAD
     </button>
   </div>
   </body>

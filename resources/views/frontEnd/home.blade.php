@@ -13,6 +13,7 @@
                     </p>
                 </div>
 
+
                 <a class="about_link" href="{{ route('about') }}">EN SAVOIR PLUS <i
                         class="fa-solid fa-right-long"></i></a>
             </div>
@@ -27,9 +28,11 @@
                                         alt="">
                                 </div>
                                 <div class="col a_la_une_content_div">
+
                                     <h3 class="fifty-chars">{{ $item->name }}</h3>
                                     <p class="fifty-chars">{{ $item->date_debut }} - {{ $item->lieu }}</p>
                                     <p class="fifty-chars">{{ $item->detail }}</p>
+
                                 </div>
                             </div>
                         @endforeach
@@ -62,8 +65,11 @@
                             <div class="sec2_blog1 card">
                                 <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}" alt="">
                                 <div class="card_div">
+
+
                                     <h3 class="fifty-chars">{{ $item->titre }}</h3>
                                     <p class="fifty-chars">{{ $item->lieu }} / {{ $item->date_debut }}</p>
+
                                 </div>
                             </div>
                         </div>

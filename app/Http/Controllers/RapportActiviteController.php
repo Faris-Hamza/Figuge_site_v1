@@ -2,11 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\Rapport_Activite;
+use App\Models\Activite;
+use App\Models\Projet;
 use Illuminate\Http\Request;
 
 class RapportActiviteController extends Controller
 {
+
+    public function pdfRapport($id)
+    {
+        $Rapport = Rapport_Activite::where('id',$id)->first();
+      
+        //   dd($Rapport->activite->projet);
+        $Photos = $Rapport->activite->Media->where('types','photo');  
+       
+        $pdf = PDF::loadView('rapports/pdfRapport',compact('Rapport','Photos'));
+        $pdf->setPaper('A4');
+       return $pdf->stream("rapport".$Rapport->activite()->first()->name.'.pdf');
+       
+    }
+
+    
     
     public function index()
     {
@@ -16,11 +34,12 @@ class RapportActiviteController extends Controller
 
     public function create()
     {
-        return view('rapports.create');
+        $Activites = Activite::all();
+        return view('rapports.create')->with('activites',$Activites);
     }
 
   
-    public function store($id)
+    public function store(Request $request)
     {
        $this->validate($request, [
         'id_act'    => 'required',  
@@ -29,7 +48,7 @@ class RapportActiviteController extends Controller
         'date'     => 'required', 
         'nbr_femme'=> 'required',
         'nbr_homme' => 'required', 
-        'reference' => 'required6 max:5000'
+        'reference' => 'required|max:5000'
        ]);
 
         $newFile = time().$request->reference->getClientOriginalName();
@@ -56,8 +75,9 @@ class RapportActiviteController extends Controller
 
     public function edit($id)
     {
+        $Activites = Activite::all();
         $Rapport = Rapport_Activite::where('id', $id)->first();
-        return view('rapports.edit')->with('rapport',$Rapport);
+        return view('rapports.edit')->with('rapport',$Rapport)->with('activites',$Activites);
     }
 
   
