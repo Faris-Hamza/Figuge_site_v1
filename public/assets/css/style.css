@@ -1465,12 +1465,11 @@ button.about_link {
     nav.About_Menu {
         font-size: 12px;
     }
-<<<<<<< HEAD
+
     section.sec2 {
         margin-top: 120px;
     }
-=======
->>>>>>> 0bd2232012a644eba80fd370d06e305932d618f4
+
 }
 
 @media screen and (max-width: 375px) {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Demande;
+use App\Models\Rapport_Activite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use PDF;
@@ -25,16 +26,21 @@ class DashboardController extends Controller
     }
 
 
-    public function pdfRapportParDate(Date $dateD, Date $dateF)
+    public function pdfRapportParDate(Request $request )
     {
-        $Rapport = Rapport_Activite::where([
-            [$Rapport->activite->date_debut, '>=', $dateD],
-            [$Rapport->activite->date_fin, '>=', $dateF],
-            
+        $this->validate($request, [
+            "dateD" => 'required',
+            "dateF" => 'required'
         ]);
-        $pdf = PDF::loadView('rapports/pdfRapport',compact('Rapport'));
+
+      
+       
+        $Rapports = Rapport_Activite::where( [['date', '>=', $request->dateD],['date', '<=', $request->dateF] ])->paginate(50);
+
+        // dd(count( $Rapports) );
+        $pdf = PDF::loadView('rapports/pdfRapportParDate',compact('Rapports'));
         $pdf->setPaper('A4');
-       return $pdf->stream("rapport".$Rapport->activite()->first()->name.'.pdf');
+       return $pdf->stream("rapport".'.pdf');
        
     }
 

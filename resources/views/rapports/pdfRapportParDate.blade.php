@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Rapport de {{$Rapport->activite()->first()->name}}</title>
+    <title>Rapports</title>
 </head>
 
 <body>
@@ -77,12 +77,15 @@
         </div>
 
         <div class="content-center">
-            <h2>Rapport<br> <span class="title_"> Activité {{ $Rapport->activite()->first()->name }}</span></h2>
+            <h2>Rapport </h2>
         </div>
+
+        @foreach ($Rapports as $Rapport)
+       
 
        
         <div class="title">
-            <h2>Résumé d'activité :</h2>
+            <h2>Résumé d'activité {{ $Rapport->activite()->first()->name }} :</h2>
         </div>
         <div class="para">
            <p> {{ $Rapport->activite()->first()->detail }}</p>
@@ -110,7 +113,12 @@
                   
                </thead>
                <tbody>
-                   <td> {{ $Rapport->activite->projet->titre }}</td>
+                   @if ($Rapport->activite->projet!=null)
+                        <td> {{ $Rapport->activite->projet->titre }}</td>
+                    @else
+                        <td>--</td>
+                   @endif
+                  
                    <td> {{ $Rapport->activite->name }}</td>
                    <td> {{ $Rapport->activite->lieu }}</td>
                    <td> {{ $Rapport->activite->date_debut }}</td>
@@ -131,7 +139,9 @@
         <div class="title">
             <h2>Quelque Photos :</h2>
         </div>
-
+        @php
+             $Photos = $Rapport->activite->Media->where('types','photo'); 
+        @endphp
         <div class="container">
             <div class="grid-container">
                @foreach ($Photos as $item)
@@ -140,6 +150,7 @@
             </div>
            
         </div> 
+        @endforeach
 
 
 

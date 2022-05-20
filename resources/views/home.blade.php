@@ -1,7 +1,6 @@
 @extends('layouts.dashboard')
 
 @section('Content')
-<<<<<<< HEAD
     <div class="container">
         <div class="row justify-content-center">
             <div class="row">
@@ -93,13 +92,7 @@
                         </div>
                     </div>
                 </div>
-=======
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                
->>>>>>> 13c2affb886ecd1cadd29261a3e37effdf231955
+
             </div>
             <div class="row mt-4">
                 <div class="col-lg-7 mb-lg-0 mb-4">
@@ -109,15 +102,18 @@
                                 <div class="col-lg">
                                     <div class="d-flex flex-column h-100">
                                         <p class="mb-1 pt-2 text-bold">Built by developers</p>
-                                        <div class="row" style="margin-top: 20px;">
-                                            <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
-                                            <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
+                                        <form action="{{route('rapport/pdfRapportParDate')}}" @method("POST")>
+                                         @csrf   
+                                            <div class="row" style="margin-top: 20px;">
+                                                <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="dateD"></div>
+                                                <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="dateF"></div>
 
-                                        </div>
-                                        <div class="btn-rpt">
-                                            <a class="btn  bg-gradient-primary mt-3 w-100" href="http://127.0.0.1:8000/equipes/create">Nouveau
-                                                Membre</a>
-                                        </div>
+                                            </div>
+                                            <div class="btn-rpt">
+                                                <button class="btn bg-gradient-primary mt-3 w-100" type="submit">Nouveau
+                                                    Membre</button>
+                                            </div>
+                                        </form>
                                         <p class="mb-1 pt-2 text-bold">Built by developers</p>
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col row"><p class="col-2">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>

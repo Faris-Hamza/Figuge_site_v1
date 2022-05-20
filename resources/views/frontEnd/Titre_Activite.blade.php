@@ -24,123 +24,102 @@
         <h1 class="sec2_title">Galerie de photos</h1>
         <h4 class="sec2_Suntitle"></h4>
         <div class="grid-1">
-            @switch(count($Photos))
-                @case(5)
-                    <div class="module_1">
-                      <div class="row">
-                        <div class="col-4">
-                          
-                          <img src="{{asset($Photos[0]->URL)}}" alt="photo">
-                        </div>
-                        <div class="col">
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col">
-                                  <div class="row " style="height: 100%;">
-                                    <div class="col-12">
-                                      <img src="{{asset($Photos[1]->URL)}}" alt="photo">
-                                    </div>
-                                    <div class="col-12">
-                                      <img src="{{asset($Photos->URL)}}" alt="photo">
-                                    </div>
-                                  </div>
-      
-                                </div>
-                                <div class="col">
-                                  <img src="{{asset($Photos->URL)}}" alt="photo">
-                                </div>
+          @switch(count($Photos))
+          @case(5)
+              <div class="module_1">
+                <div class="row">
+                  <div class="col-4">
+                    
+                    <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col">
+                            <div class="row " style="height: 100%;">
+                              <div class="col-12">
+                                <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
                               </div>
-      
-                            </div>
-                            <div class="col-12">
-                              <img src="{{asset($Photos->URL)}}" alt="photo">
-                            </div>
-                          </div>
-      
-                        </div>
-                      </div>
-                    </div>
-                    @break
-                @case(4)
-                    <div class="module_2">
-                      <div class="row">
-                        <div class="col-4">
-                          <img src="{{asset($Photos[0]->URL)}}" alt="photo">
-                        </div>
-                        <div class="col">
-                          <div class="row" style="height: 100%;">
-                            <div class="col-12">
-                              <div class="row " style="height: 100%;">
-                                <div class="col">
-                                  <div class="row " style="height: 100%;">
-                                    <div class="col-6">
-                                      <img src="{{asset($Photos[1]->URL)}}" alt="photo">
-                                    </div>
-                                    <div class="col">
-                                      <img src="{{asset($Photos[2]->URL)}}" alt="photo">
-                                    </div>
-                                  </div>
-      
-                                </div>
+                              <div class="col-12">
+                                <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
                               </div>
-      
                             </div>
-                            <div class="col-12">
-                              <img src="{{asset($Photos[3]->URL)}}" alt="photo">
-                            </div>
+
                           </div>
-      
+                          <div class="col">
+                            <img src="{{asset($Photos->nth(1)[3]->URL)}}" alt="photo">
+                          </div>
                         </div>
+
+                      </div>
+                      <div class="col-12">
+                        <img src="{{asset($Photos->nth(1)[4]->URL)}}" alt="photo">
                       </div>
                     </div>
-                    @break
-                @case(3)
-                    <div class="module_3">
-                      <div class="row">
-                        <div class="col-6">
-                          <img src="{{asset($Photos[0]->URL)}}" alt="photo">
+
+                  </div>
+                </div>
+              </div>
+              @break
+          @case(4)
+              <div class="module_2">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
+                  </div>
+                  <div class="col">
+                    <div class="row" style="height: 100%;">
+                      <div class="col-12">
+                        <div class="row " style="height: 100%;">
+                          <div class="col">
+                            <div class="row " style="height: 100%;">
+                              <div class="col-6">
+                                <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
+                              </div>
+                              <div class="col">
+                                <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
+                              </div>
+                            </div>
+
+                          </div>
                         </div>
-                        <div class="col">
-                                  <div class="row " style="height: 100%;">
-                                    <div class="col-12">
-                                      <img src="{{asset($Photos[0]->URL)}}" alt="photo">
-                                    </div>
-                                    <div class="col-12">
-                                      <img src="{{asset($Photos[1]->URL)}}" alt="photo">
-                                    </div>
-                                  </div>
-      
-                        </div>
-      
+
+                      </div>
+                      <div class="col-12">
+                        <img src="{{asset($Photos->nth(1)[3]->URL)}}" alt="photo">
                       </div>
                     </div>
-                    @break
-                @case(2)
-                    <div class="module_4">
-                      <div class="row">
-                        <div class="col-6">
-                          <img src="{{asset($Photos[0]->URL->URL)}}" alt="photo">
-                        </div>
-                        <div class="col">
-                          <img src="{{asset($Photos[1]->URL->URL)}}" alt="photo">
-                        </div>
-                      </div>
-                    </div>
-                    @break
-                @case(1)
-                    <div class="module_5" style="text-align: -webkit-center;">
-                      <div class="row">
-                        <div class="col-12">
-                          <img style="width: 72%;" src="{{asset($Photos[1]->URL)}}" alt="photo">
-                        </div>
-                      </div>
-                      </div>
-                    </div>
-                    @break
-      
-      
-            @endswitch
+
+                  </div>
+                </div>
+              </div>
+              @break
+          @case(3)
+              <div class="module_3">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
+                  </div>
+                  <div class="col">
+                            <div class="row " style="height: 100%;">
+                              <div class="col-12">
+                                <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
+                              </div>
+                              <div class="col-12">
+                                <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
+                              </div>
+                            </div>
+
+                  </div>
+
+                </div>
+              </div>
+              @break
+         
+
+
+      @endswitch
         </div>
       </section>
     @endif

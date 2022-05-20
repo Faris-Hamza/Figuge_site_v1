@@ -68,7 +68,7 @@
                                                 <h6 class="mb-0 text-sm">{{ $item->name }}</h6>
                                             </td>
                                             <td>
-                                                @if ($item->Axes->first()->nom != '')
+                                                @if ($item->Axes != '')
                                                     <span class="mb-0 text-sm">{{ $item->Axes->first()->nom }}</span>
                                                 @else
                                                     <span class="mb-0 text-sm">---</span>
@@ -76,7 +76,7 @@
 
                                             </td>
                                             <td class="align-middle text-center text-sm">
-                                                @if ($item->projet->first()->titre != '')
+                                                @if ($item->projet != '')
                                                     <span class="mb-0 text-sm">{{ $item->projet->first()->titre }}</span>
                                                 @else
                                                     <span class="mb-0 text-sm">---</span>

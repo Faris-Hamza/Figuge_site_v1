@@ -117,6 +117,9 @@ Route::get('depense/pdfDepense', [App\Http\Controllers\DepenseController::class,
   Route::post('rapport/update/{id}', [App\Http\Controllers\RapportActiviteController::class, 'update'])->name('rapport/update');
   Route::get('rapport/destroy/{id}', [App\Http\Controllers\RapportActiviteController::class, 'destroy'])->name('rapport/destroy');
   Route::get('rapport/pdfRapport/{id}', [App\Http\Controllers\RapportActiviteController::class, 'pdfRapport'])->name('rapport/pdfRapport');
+
+// dashboard _routes
+  Route::get('rapport/pdfRapportParDate', [App\Http\Controllers\DashboardController::class, 'pdfRapportParDate'])->name('rapport/pdfRapportParDate');
  
 Auth::routes();
 

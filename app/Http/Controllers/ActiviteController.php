@@ -33,15 +33,9 @@ class ActiviteController extends Controller
     {
 
         $this->validate($request, [
-<<<<<<< HEAD
-            'name'           => 'required',
-            'detail'         => 'required',
-            'lieu'           => 'required',
-=======
             'name'           => 'required|string|max:30',
             'detail'         => 'required|string|max:1000',
             'lieu'           => 'required|string|max:30',
->>>>>>> 0bd2232012a644eba80fd370d06e305932d618f4
             'date_debut'     => 'required',
             'date_fin'       => 'required',
             'photo.*'        => 'required|max:2048'

@@ -5,14 +5,14 @@
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
     <section class="container sec1_about wow fadeup-animation">
       <nav class="About_Menu">
-        <a href="#About_us" >Apropos anassr</a>
+        <a href="#About_us" >Apropos Oriental</a>
         <a href="#équipe" >Notre équipe</a>
       </nav>
     </section>
 
     <section class="sec2_about " id="About_us">
-      <h1 class="sec2_title wow fadeup-animation">A propos anassr</h1>
-      <h4 class="sec2_Suntitle wow fadeup-animation">Anassr en détail</h4>
+      <h1 class="sec2_title wow fadeup-animation">A propos oriental</h1>
+      <h4 class="sec2_Suntitle wow fadeup-animation">Oriental en détail</h4>
       <div class="container wow right-animation" data-wow-delay="0.4s">
         <div >
           <h2>Welcome </h2>
