@@ -92,52 +92,59 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="row mt-4">
                 <div class="col-lg-7 mb-lg-0 mb-4">
                     <div class="card">
                         <div class="card-body p-3">
-                            <div class="container row">
+                            <div class="row">
                                 <div class="col-lg">
                                     <div class="d-flex flex-column h-100">
-                                        <p class="mb-1 pt-2 text-bold">Built by developers</p>
-                                        <form action="{{route('rapport/pdfRapportParDate')}}" @method("POST")>
-                                         @csrf   
+
+                                        <h5 class="font-weight-bolder">Rapport financier par period</h5>
+                                        <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
+
+                                        <form action="{{route('rapport/pdfRapportParDate')}}" method="POST">
+                                            @csrf  
+                                            @method("POST")
                                             <div class="row" style="margin-top: 20px;">
-                                                <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="dateD"></div>
-                                                <div class="col row"><p class="col-2 ">de :</p> <input class="col-9" type="date" class="form-control" name="dateF"></div>
+                                            <div class="col-12 col-lg-6 row">
+                                                <p class="col-3 ">de :</p>
+                                                <input class="col-9" type="date" class="form-control" name="dateD">
+                                            </div>
+                                            <div class="col-12 col-lg-6 row">
+                                                <p class="col-3 ">au :</p>
+                                                <input class="col-9" type="date" class="form-control" name="dateF">
+                                            </div>
 
                                             </div>
                                             <div class="btn-rpt">
-                                                <button class="btn bg-gradient-primary mt-3 w-100" type="submit">Nouveau
-                                                    Membre</button>
+                                                <button class="btn  bg-gradient-primary mt-3 w-100" type="submit">Générer </button>
                                             </div>
                                         </form>
-                                        <p class="mb-1 pt-2 text-bold">Built by developers</p>
+
+                                        <h5 class="font-weight-bolder">Rapport Moral par period </h5>
+                                        <p class="mb-1 pt-2 text-bold">Choizer la périod</p>
+                                        <form action="#" method="POST">
+                                            @csrf 
                                         <div class="row" style="margin-top: 20px;">
-                                            <div class="col row"><p class="col-2">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
-                                            <div class="col row"><p class="col-2">de :</p> <input class="col-9" type="date" class="form-control" name="date_fin"></div>
+                                            <div class="col-12 col-lg-6 row">
+                                                <p class="col-3">de :</p> 
+                                                <input class="col-9" type="date" class="form-control" name="date_fin">
+                                            </div>
+                                            <div class="col-12 col-lg-6 row">
+                                                <p class="col-3">au :</p> 
+                                                <input class="col-9" type="date" class="form-control" name="date_fin">
+                                            </div>
 
                                         </div>
                                         <div class="btn-rpt">
-                                            <a class="btn  bg-gradient-primary mt-3 w-100" href="http://127.0.0.1:8000/equipes/create">Nouveau
-                                                Membre</a>
+                                            <button class="btn  bg-gradient-primary mt-3 w-100" type="submit">Générer </button>
                                         </div>
-
+                                        </form>
                                     </div>
                                 </div>
-                                <!--<div class="col-lg-4 ms-auto text-center mt-5 mt-lg-0">
-                                    <div class="bg-gradient-primary border-radius-lg h-100">
-                                        <img src="{{asset('assets/img/shapes/printing-test.png')}}"
-                                            class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
-                                        <div
-                                            class="position-relative d-flex align-items-center justify-content-center h-100">
-                                            <img class="w-100 position-relative z-index-2 pt-4"
-                                                src="{{asset('assets/img/shapes/printing-test.png')}}" alt="rocket">
-                                        </div>
-                                    </div>
-                                </div>-->
+                               
                             </div>
                         </div>
                     </div>
@@ -148,7 +155,7 @@
                             style="background-image: url('../assets/img/ivancik.jpg');">
                             <span class="mask bg-gradient-dark"></span>
                             <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-                                <h5 class="text-white font-weight-bolder mb-4 pt-2">Work with the rockets</h5>
+                                <h5 class="text-white font-weight-bolder mb-4 pt-2">Gestion des demandes</h5>
                                 <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. It
                                     is all about who take the opportunity first.</p>
                                 <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"
