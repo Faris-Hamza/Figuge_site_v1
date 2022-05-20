@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Demande;
 use App\Models\Rapport_Activite;
+use App\Models\Activite;
+use App\Models\Revenu;
+use App\Models\Depense;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use PDF;
@@ -22,8 +25,19 @@ class DashboardController extends Controller
     public function index()
     {
        $demandes = count(Demande::all());
-       $demandes = count(Demande::all());
-       return view('home');
+       $activites = count(Activite::all());
+       $revunus = Revenu::all();
+       $revunu=0;
+       $depense=0;
+       foreach ($revunus as $key) {
+           $revunu +=  $key->montant;
+       }
+       $depenses = Depense::all();
+       foreach ($depenses as $key) {
+           $depense +=  $key->montant;
+       }
+
+       return view('home')->with('demandes',$demandes)->with('activites',$activites)->with('revunu',$revunu)->with('depense',$depense);
     }
 
 
