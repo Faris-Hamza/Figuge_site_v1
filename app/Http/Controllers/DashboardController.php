@@ -24,7 +24,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-       $demandes = count(Demande::all());
+       $nbrDemandes = count(Demande::all());
+       $Demandes = Demande::latest()->paginate(3);
        $activites = count(Activite::all());
        $revunus = Revenu::all();
        $revunu=0;
@@ -37,7 +38,7 @@ class DashboardController extends Controller
            $depense +=  $key->montant;
        }
 
-       return view('home')->with('demandes',$demandes)->with('activites',$activites)->with('revunu',$revunu)->with('depense',$depense);
+       return view('home')->with('nbrDemandes',$nbrDemandes)->with('activites',$activites)->with('Demandes',$Demandes)->with('revunu',$revunu)->with('depense',$depense);
     }
 
 
