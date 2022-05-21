@@ -154,7 +154,7 @@
                             <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                                 <h5 class="text-white font-weight-bolder mb-4 pt-2">Gestion des demandes</h5>
 
-                                <div class="row gitnotification_dom">
+                                <div class="row notification_dom">
                                     @foreach ($Demandes as $item)
                                          <div class="col-12  mb-xl-0 mb-4">
                                             <div class="card">
