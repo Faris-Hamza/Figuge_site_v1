@@ -56,3 +56,30 @@ label {
     gap: 30px;
     grid-template-columns: 1fr;
 }
+
+.grid-2 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0px;
+}
+
+.btn-rpt{
+    width: 168px;
+    float: right;
+}
+
+
+ul.navbar-nav.margine-nav {
+    margin-bottom: auto;
+}
+
+.notification_dom{
+    gap: 30px;
+}
+
+@media screen and (max-width: 1199.98px){
+    .notification_dom{
+        gap: 0px;
+    }
+}

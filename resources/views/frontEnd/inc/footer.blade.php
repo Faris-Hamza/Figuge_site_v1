@@ -12,11 +12,19 @@
             </nav>
         </div>
         <div class="media container row">
+<<<<<<< HEAD
             <div class="social col"><a href="#"><img class="icon" target="_blank" src="{{asset("assets/images/social-media/fb.png")}}" alt="logo"></a></div>
             <div class="social col"><a href="#" target="_blank"><img class="icon" src="{{asset("assets/images/social-media/insta.png")}}" alt="logo"></a></div>
             <div class="social col"><a href="#"><img class="icon" src="{{asset("assets/images/social-media/whatssap.png")}}" alt="logo" target="_blank"></a></div>
             <div class="social col"><a href="#"><img class="icon" src="{{asset("assets/images/social-media/twitter.png")}}" alt="logo" target="_blank"></a></div>
             <div class="social col"><a href="#"><img class="icon" src="{{asset("assets/images/social-media/linkdin.png")}}" alt="logo" target="_blank"></a></div>
+=======
+            <div class="social col"><a href="#"><img class="icon" target="_blank" src="{{asset('assets/images/social-media/fb.png')}}" alt="logo"></a></div>
+            <div class="social col"><a href="#" target="_blank"><img class="icon" src="{{asset('assets/images/social-media/insta.png')}}" alt="logo"></a></div>
+            <div class="social col"><a href="#"><img class="icon" src="{{asset('assets/images/social-media/whatssap.png')}}" alt="logo" target="_blank"></a></div>
+            <div class="social col"><a href="#"><img class="icon" src="{{asset('assets/images/social-media/twitter.png')}}" alt="logo" target="_blank"></a></div>
+            {{-- <div class="social col"><a href="#"><img class="icon" src="{{asset('assets/images/social-media/linkdin.png')}}" alt="logo" target="_blank"></a></div> --}}
+>>>>>>> 697ea8d75a286f5feb4c4ef95da5ee5c8c3a43fa
       </div>
     </div>
 </footer>

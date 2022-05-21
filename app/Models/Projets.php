@@ -26,6 +26,11 @@ class Projets extends Model
         return $this->hasMany(Media::class,'id_proj');
     }
 
+    public function activites()
+    {
+        return $this->hasMany(Activite::class,'id_proj');
+    }
+
    
 
 }

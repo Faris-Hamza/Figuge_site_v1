@@ -8,8 +8,6 @@ $(document).ready(function(){
     $('.carousel').carousel({
         slidesToShow: 3,
         slidesToScroll: 1,
-        indicators:true,
-        indicators:false,
         responsive: [
             {
                 breakpoint: 992,

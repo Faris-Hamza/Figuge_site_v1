@@ -19,7 +19,7 @@ class Activite extends Model
      
     public function projet()
     {
-        return $this->belongsTo(Projets::class,'id_proj');
+        return $this->belongsTo(Projets::class,'id_proj', 'id');
     }
     public function Axes()
     {
@@ -31,8 +31,9 @@ class Activite extends Model
         return $this->hasMany(Media::class,'id_activite');
     }
 
-    public function rapport()
+    public function rapports()
     {
-        return $this->hasOne(Rapport_Activite::class);
+        return $this->hasMany(activite::class,'id_act');
     }
+    
  }

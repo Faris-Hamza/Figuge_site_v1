@@ -30,6 +30,8 @@ class DemandeController extends Controller
        return view('demandes.index')->with('demandes', $demandes);
     }
 
+    
+
 
     public function create()
     {
