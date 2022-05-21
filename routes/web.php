@@ -108,7 +108,7 @@ Route::get('depense/pdfDepense', [App\Http\Controllers\DepenseController::class,
   Route::post('mail/update/{id}', [App\Http\Controllers\MailsController::class, 'update'])->name('mail/update');
   Route::get('mail/destroy/{id}', [App\Http\Controllers\MailsController::class, 'destroy'])->name('mail/destroy');
 
-  //Mail _routes
+  //rapports _routes
   Route::get('rapports', [App\Http\Controllers\RapportActiviteController::class, 'index'])->name('rapports');
   Route::get('rapport/create', [App\Http\Controllers\RapportActiviteController::class, 'create'])->name('rapport/create');
   Route::post('rapport/store', [App\Http\Controllers\RapportActiviteController::class, 'store'])->name('rapport/store');
@@ -123,4 +123,6 @@ Auth::routes();
 Route::get('/dashbord', [App\Http\Controllers\HomeController::class, 'dashbord'])->name('dashbord');
 Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
 
-Route::get('notification/show/{type}/{c_ount}', [App\Http\Controllers\NotificationsController::class,'show'])->name('notification/show');
+// Route::notification
+Route::get('notification/show/{type}',[App\Http\Controllers\NotificationsController::class,'show'])->name('notification/show');
+Route::get('notification/store', [App\Http\Controllers\NotificationsController::class,'store'])->name('notification/store');

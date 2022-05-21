@@ -118,7 +118,7 @@
                 <div class="main-testimonial-slider wow fadeup-right">
                     <div class="row servece-slider1 partenaire">
                         @foreach ($Part as $item)
-                            <a class="col slide" href="$item->url">
+                            <a class="col slide" href="{{$item->url}}">
                                 <div>
                                     <img width="100%" src="{{ asset($item->logo) }}" alt="photo">
                                 </div>
@@ -144,7 +144,7 @@
                     @foreach ($Presse as $item)
                         <div class="col slide ">
                             <div class="sec7_blog1 Media_Presse">
-                                <img src="{{ asset($item->logo) }}" alt="photo">
+                                <img src="{{asset($item->logo)}}" alt="photo">
                                 <div class="press">
                                     <h3 class="sec2_title fifty-chars">{{ $item->name }}</h3>
                                     <p  class="sec2_Suntitle fifty-chars">{{ $item->lieu }} / {{ $item->date }}</p>
@@ -164,13 +164,16 @@
     </section>
 
     <section class="sec6 wow fadeup-animation">
+     <form action="{{route('mail/store')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('POST')
         <h1 class="sec2_title">Nos Actualités</h1>
         <h4 class="sec2_Suntitle">S’abonner au bulletin d’information</h4>
         <div>
-            <input class="Textbox" type="text" placeholder="Entrer votre Email">
-            <a class="about_link" href="#">EN SAVOIR PLUS</a>
+            <input class="Textbox" name="mail" type="mail" placeholder="Entrer votre Email">
+             <input class="about_link" type="submit" text="ABONNÉ">
         </div>
-
+     </form>
     </section>
 
 </main>

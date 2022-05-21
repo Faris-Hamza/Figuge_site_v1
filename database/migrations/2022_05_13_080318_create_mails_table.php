@@ -12,6 +12,7 @@ class CreateMailsTable extends Migration
         Schema::create('mails', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mail')->unique();
+            $table->boolean('Veu')->default(0);
             $table->timestamps();
         });
     }

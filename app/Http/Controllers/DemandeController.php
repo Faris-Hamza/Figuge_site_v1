@@ -6,6 +6,7 @@ use App\Models\Demande;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use PDF;
+use Illuminate\Support\Facades\DB;
 class DemandeController extends Controller
 {
     public function __construct()
@@ -25,6 +26,7 @@ class DemandeController extends Controller
     public function index()
     {
        $demandes = Demande::all();
+       $affected = DB::update('update demandes set Veu = 1');
        return view('demandes.index')->with('demandes', $demandes);
     }
 
@@ -50,8 +52,8 @@ class DemandeController extends Controller
        ]);
 
         if ($request->has('pieceJustifs')) {
-            $newPhoto = time().$request->pieceJustifs->getClientOriginalName();
-            $request->pieceJustifs->move('uploads/Justifs',$newPhoto);
+            $piece = time().$request->pieceJustifs->getClientOriginalName();
+            $request->pieceJustifs->move('uploads/Justifs',$piece);
         }
 
         $demande = Demande::create([
@@ -64,8 +66,7 @@ class DemandeController extends Controller
             'nbrRamed'     =>$request->nbrRamed,
             'genreDemande' =>$request->genreDemande,
             'montant'      =>$request->montant,
-            'pieceJustifs' =>'uploads/Justifs/'.$newPhoto,
-        
+            'pieceJustifs' =>'uploads/Justifs/'.$piece,
         ]);
         return redirect()->back();
     }

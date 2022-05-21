@@ -25,6 +25,7 @@ class CreateDemandesTable extends Migration
             $table->string('genreDemande');
             $table->string('montant');
             $table->string('pieceJustifs');
+            $table->boolean('Veu')->default(0);
             $table->timestamps();
         });
     }

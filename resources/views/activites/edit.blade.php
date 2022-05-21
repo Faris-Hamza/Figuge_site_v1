@@ -57,7 +57,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="id_Axe" class="form-label fw-bold">Activite</label>
+                    <label for="id_Axe" class="form-label fw-bold">Axe</label>
                     <select name="id_Axe"  class="form-control">
                       @foreach ($Axes as $item)
                          <option value="{{$item->id}}" {{($item->id==$activite->id_Axe)? "selected": ""}}>{{$item->nom}}</option>

@@ -27,7 +27,7 @@
             </thead>
             <tbody>
              @foreach ($mail as $item)
-             <tr >
+             <tr {{($item->Veu==0)?"style=background-color:#D5E5EA":""}}>
                 <th class="align-middle" scope="row">{{$i++}}</th>
                 <td class="align-middle">{{$item->mail}}</td>
                 <td class="align-middle"><a href="{{route('mail/edit',$item->id)}}" class="btn btn-primary"><i class='bx bxs-edit-alt'></i></a></td>

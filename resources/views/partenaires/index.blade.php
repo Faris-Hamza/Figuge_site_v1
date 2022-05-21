@@ -73,14 +73,14 @@
                                       </td>
 
                                       <td class="align-middle">
-                                          <a href="{{ route('equipes/edit', $item->id) }}"
+                                          <a href="{{ route('partenaire/edit', $item->id) }}"
                                               class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                                               data-original-title="Edit user">
                                               Modifie
                                           </a>
                                       </td>
                                       <td class="align-middle">
-                                          <a href="{{ route('equipes/destroy', $item->id) }}"
+                                          <a href="{{ route('partenaire/destroy', $item->id) }}"
                                               class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                                               data-original-title="Edit user">
                                               Supprimer

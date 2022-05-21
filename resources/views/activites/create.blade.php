@@ -28,7 +28,7 @@
                 @method('POST')
                 <div class="mb-3">
                     <label for="name" class="form-label fw-bold">Titre d'activité</label>
-                    <input type="text" class="form-control"name="name">
+                    <input type="text" class="form-control" name="name">
                 </div>
                 <div class="mb-3">
                     <label for="detail" class="form-label fw-bold">Bréf description</label>
@@ -55,7 +55,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="id_Axe" class="form-label fw-bold">Projet</label>
+                    <label for="id_Axe" class="form-label fw-bold">Axe</label>
                     <select name="id_Axe"  class="form-control">
                       @foreach ($Axes as $item)
                          <option value="{{$item->id}}">{{$item->nom}}</option>

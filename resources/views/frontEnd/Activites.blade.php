@@ -41,7 +41,6 @@
                           {{$item->detail}}
                         </p>
                     </div>
-
             </div>
             </a>
             @endif
@@ -50,10 +49,8 @@
             @endphp
           @endforeach
 
-
         </div>
         <div id="pagination-container"></div>
-
 
       </div>
       <div class="pagination-container">
@@ -74,7 +71,6 @@
           @foreach ($Axes as $item)
             <a class="activite_cate" href="#">{{$item->nom}}</a>
           @endforeach
-
 
         </div>
 

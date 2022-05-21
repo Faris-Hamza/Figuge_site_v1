@@ -87,7 +87,7 @@
                                             </td>
 
                                             <td class="align-middle">
-                                                <a href="{{ route('activite/edit', $item->id) }}"
+                                                <a href="{{ route('activite/edit', $item->id)}}"
                                                     class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                                                     data-original-title="Edit user">
                                                     Modifie

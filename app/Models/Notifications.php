@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Notifications extends Model
 {
-    protected $fillable = ['Type','Veu'];
+    protected $fillable = ['C_ount','Type'];
 }

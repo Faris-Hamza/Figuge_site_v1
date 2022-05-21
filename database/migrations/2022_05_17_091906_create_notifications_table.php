@@ -16,7 +16,7 @@ class CreateNotificationsTable extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->increments('id');           
              $table->string('Type');
-             $table->boolean('Veu')->default(0);;
+             $table->boolean('C_ount')->default(0);
             $table->timestamps();
         });
     }

@@ -90,7 +90,7 @@
                         </thead>
                         <tbody>
                             @foreach ($demandes as $item)
-                                <tr>
+                                <tr {{($item->Veu==0)?"style=background-color:#D5E5EA":""}}>
                                     
                                     <td>
                                         <h6 class="mb-0 text-sm">{{ $item->nom }}</h6>

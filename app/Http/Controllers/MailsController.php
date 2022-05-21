@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MailsController extends Controller
 {
@@ -14,6 +15,7 @@ class MailsController extends Controller
     public function index()
     {
         $mail = Mails::all();
+        $affected = DB::update('update mails set Veu = 1');
         return view('mail.index')->with('mail',$mail);
     }
 
@@ -29,10 +31,13 @@ class MailsController extends Controller
         $this->validate($request, [
             'mail'=>'required|email'            
         ]);
-         $mail = Mails::create([
-            'mail'  => $request->mail
-        ]);
-        NotificationsController::store("mail");
+        try {
+            $mail = Mails::create([
+                'mail'  => $request->mail
+            ]);
+        } catch (\Throwable $th) {
+            return redirect()->back();
+        }
         return redirect()->back();
     }
 

@@ -18,35 +18,49 @@
     </section>
 
     <section class="container insc1">
-      <div>
+      <div>    
+       @if($errors->any())
+            <div class="">
+                <p style="background-color: #FA5B39;padding:10px"><strong>Opps Something went wrong</strong></p>
+                <ul style="background-color: #FA5B39;padding:10px">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+                </ul>
+            </div>
+        @endif
+        <br>
         <h1>Information Personnelle</h1>
         {{-- <h4>SubTitle</h4> --}}
 
-        <form action="">
+        <form action="{{route('demande/store')}}" method="POST" enctype="multipart/form-data">
+          @csrf
+          @method('POST')
           <div class="grid-2">
-                    <input class="text_insc wow right-animation" type="text" placeholder="Nom">
-                    <input class="text_insc wow left-animation" type="text" placeholder="Prenom">
-                    <input class="text_insc wow right-animation" type="text" placeholder="Identification de carte national(CIN)">
-                    <input class="text_insc wow left-animation" type="text" placeholder="N° carte RAMED">
+                    <input class="text_insc wow right-animation" name="nom" type="text" placeholder="Nom">
+                    <input class="text_insc wow left-animation"  name="prenom" type="text" placeholder="Prenom">
+                    <input class="text_insc wow right-animation" name="cin" type="text" placeholder="Identification de carte national(CIN)">
+                    <input class="text_insc wow left-animation"  name="nbrRamed" type="text" placeholder="N° carte RAMED">
+                    <input class="text_insc wow left-animation"  name="Tel" type="text" placeholder="Tel">
+                    <input class="text_insc wow left-animation"  name="email" type="email" placeholder="E-mail">
           </div>
           <div class="grid-1 wow fadeup-animation">
-              <input class="col-12 text_insc" type="text" placeholder="Adresse">
+              <input class="col-12 text_insc" type="text" name="adresse" placeholder="Adresse">
           </div>
           <div class="grid-2">
-
-
                     <div class="wow left-animation">
-                      <select class="select_insc text_insc " name="cars" id="cars">
-                        <option value="volvo" hidden>Genre d’aide demandée</option>
-                        <option value="saab">Achat médicaments</option>
-                        <option value="mercedes">Intervention chirurgicale</option>
-                        <option value="audi">Frais de transport</option>
-                        <option value="audi">Articles de parapharmacie</option>
-                        <option value="audi">Analyses </option>
+                      <select class="select_insc text_insc " name="genreDemande" id="cars">
+                        <option value="" hidden>Genre d’aide demandée</option>
+                        <option value="Achat médicaments">Achat médicaments</option>
+                        <option value="Intervention chirurgicale">Intervention chirurgicale</option>
+                        <option value="Frais de transport">Frais de transport</option>
+                        <option value="Articles de parapharmacie">Articles de parapharmacie</option>
+                        <option value="Analyses">Analyses </option>
                       </select>
                     </div>
-                    <input class="text_insc wow right-animation" type="text" placeholder="Montant demandé">
-                    <input class="text_insc wow left-animation " style="padding-left: 0;" type="file" placeholder="Joindre les pièces justificatives ">
+                    <input class="text_insc wow right-animation" name="montant" type="text" placeholder="Montant demandé">
+                    {{-- <input class="text_insc wow left-animation" name="pieceJustifs"  style="padding-left: 0;" type="file" accept=".pdf" placeholder="Joindre les pièces justificatives "> --}}
+                    <input type="file"  class="text_insc wow left-animation" name="pieceJustifs" placeholder="Joindre les pièces justificatives" style="padding-left: 0;" >
           </div>
           <button type="submit" class="about_link">Demandez</button>
         </form>
