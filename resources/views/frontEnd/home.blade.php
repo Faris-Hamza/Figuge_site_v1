@@ -24,8 +24,11 @@
                         @foreach ($Acts as $item)
                             <div class="row a_la_une_grid">
                                 <div class="col">
-                                    <img width="100%" src="{{ $item->Media->where('types', 'photo')->first()->URL }}"
-                                        alt="">
+                                    @if ($item->Media->where('types','photo')->first()!=null)
+                                    <img width="100%" src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo"> 
+                               @else
+                                   <img  width="100%" src="{{asset("assets\images\LOGO\\nocontentyet.jpg")}}" alt="photo"> 
+                               @endif
                                 </div>
                                 <div class="col a_la_une_content_div">
 

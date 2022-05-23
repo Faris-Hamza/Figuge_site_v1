@@ -4,7 +4,7 @@
   <main class="">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
 
-    <section class="container grand_activite">
+    {{-- <section class="container grand_activite">
       <div >
         <a class="" href="{{route('showActivite',$Activites->first()->id)}}">
             <div class="sec7_blog1 grid-2">
@@ -21,19 +21,24 @@
 
         </a>
       </div>
-    </section>
+    </section> --}}
 
     <section class="container sec5 wow fadeup-animation">
       <h1 class="sec2_title">Nos Activités</h1>
         <div class="grid-3 sec2_div list-wrapper">
-          @php
+          {{-- @php
               $i=0;
-          @endphp
+          @endphp --}}
           @foreach ($Activites as $item)
-            @if ($i!=0)
-            <a href="{{route('showActivite',$Activites->first()->id)}}">
+           
+            <a href="{{route('showActivite',$item->id)}}">
             <div class="sec7_blog1 list-item">
-                <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
+              @if ($item->Media->where('types','photo')->first()!=null)
+                   <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo"> 
+              @else
+                  <img src="{{asset("assets\images\LOGO\\nocontentyet.jpg")}}" alt="photo"> 
+              @endif
+                     
                       <div class="pro_content">
                         <h3 class="fifty-chars">{{$item->name}}</h3>
                         <p class="fifty-chars">{{$item->lieu}} / {{$item->date_debut}}</p>
@@ -43,24 +48,17 @@
                     </div>
             </div>
             </a>
-            @endif
-            @php
-                $i++;
-            @endphp
+            
           @endforeach
 
         </div>
-        <div id="pagination-container"></div>
-
-      </div>
-      <div class="pagination-container">
-        <div class="page-numbers-container">
-
-        </div>
-      </div>
+        
     </section>
+      <div  style="text-align: center; width:100%;">
+          {{ $Activites->links() }}
+      </div>
 
-    <section class="container wow fadeup-animation categoriee">
+    {{-- <section class="container wow fadeup-animation categoriee">
       <div class="categorie">
         <div class="row categorie_div">
           <img class="col-2" width="20px" src="assets/images/SECTION/Vector (1).png" alt="">
@@ -76,6 +74,6 @@
 
       </div>
 
-    </section>
+    </section> --}}
   </main>
   @include('frontEnd.inc.footer')

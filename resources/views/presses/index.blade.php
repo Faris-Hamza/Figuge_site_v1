@@ -111,6 +111,9 @@
                       </table>
                   </div>
               </div>
+              <div style="width:100%; text-align: center;">
+                {{$presses->links()}}
+            </div>
           </div>
       </div>
   </div>

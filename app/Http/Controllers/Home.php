@@ -56,14 +56,14 @@ class Home extends Controller
 
     public function activites()
     {
-        $Acts = Activite::paginate(9);
+        $Acts = Activite::latest()->paginate(3);
         $Axes = Axes::paginate(9);
         return view('frontEnd.Activites')->with('Activites',$Acts)->with('Axes',$Axes);
     }
 
     public function projets()
     {
-        $projets = Projets::paginate(9);
+        $projets = Projets::latest()->paginate(3);
         $Axes = Axes::paginate(5);
         return view('frontEnd.Project')->with('projets',$projets)->with('Axes',$Axes);
     }

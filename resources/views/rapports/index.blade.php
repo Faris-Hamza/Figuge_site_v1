@@ -119,6 +119,9 @@
                         </div>
                     </div>
                 </div>
+                <div style="width:100%; text-align: center;">
+                    {{$rapports->links()}}
+                </div>
             </div>
         </div>
 

@@ -98,11 +98,15 @@
            
             </div>
             </div>
+                  <div style="width:100%; text-align: center;">
+                      {{$depenses->links()}}
+                  </div>
             <div class="col search">
                 <div class="button_save">
                     <a class="btn bg-gradient-success mt-3 w-100" href="{{route("depense/pdfDepense")}}">Rapport des dépenses</a>
                 </div>
             </div>
+
     </div>
     
 @endsection

@@ -8,6 +8,7 @@ use App\Models\Projets;
 use App\Models\Media;
 use App\Models\Axes;
 use Illuminate\Support\Facades\File;
+use Image;
 
 class ActiviteController extends Controller
 {
@@ -18,7 +19,7 @@ class ActiviteController extends Controller
   
     public function index()
     {
-        $activite = Activite::all();
+        $activite = Activite::latest()->paginate(10);
         return view('activites.index')->with('activite', $activite);
     }
 
@@ -40,7 +41,8 @@ class ActiviteController extends Controller
             'date_fin'       => 'required',
             'photo.*'        => 'required|max:2048'
         ]);
-        if (count($request->photo)>5) {
+
+        if (count($request->photo)>5 && count($request->photo)<=2 ) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
         }
 
@@ -65,17 +67,32 @@ class ActiviteController extends Controller
             ]);
         }
         foreach ($request->photo as $item) {
-            $photo=$item;
-            $newPhoto = time().$photo->getClientOriginalName();
-            $photo->move('uploads/activites',$newPhoto);
-            $photo=Media::create([
+            
+            
+            $image_name = ActiviteController::resize($item);
+            
+            $item=Media::create([
                 'id_activite'=>$activite->id,
                 'id_proj'=>0,
-                'URL'=>'uploads/activites/'.$newPhoto,
+                'URL'=>'uploads/activites/'.$image_name,
                 'types'=>'photo'
             ]);
         }
         return redirect()->back();
+    }
+
+    public function resize($item){
+        $image = Image::make($item);
+            
+            $image->resize( 300, 180);
+            $image_path = public_path('/uploads/activites/');
+            if (!File::exists($image_path)) {
+                File::makeDirectory($image_path);
+            }
+
+            $image_name = time().$item->getClientOriginalName();
+            $image->save($image_path.$image_name);
+            return $image_name;
     }
 
     public function show($id)
@@ -95,7 +112,7 @@ class ActiviteController extends Controller
     
     public function update(Request $request,$id)
     {
-        if ($request->has('photo') && count($request->photo)>5) {
+        if ($request->has('photo') && (count($request->photo)>5 || count($request->photo)<=2)) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
         }
         $activite = Activite::where('id', $id)->first();
@@ -116,13 +133,11 @@ class ActiviteController extends Controller
                 $item->forceDelete();
             }
             foreach ($request->photo as $item) {
-                $newPhoto = time().$item->getClientOriginalName();
-                $item->move('uploads/activites',$newPhoto);
-                $item->URL = 'uploads/activites/'.$newPhoto;
+                $image_name = ActiviteController::resize($item);
                 $item=Media::create([
                     'id_activite'=>$activite->id,
                     'id_proj'=>0,
-                    'URL'=>'uploads/activites/'.$newPhoto,
+                    'URL'=>'uploads/activites/'.$image_name,
                     'types'=>'photo'
                 ]);
                 

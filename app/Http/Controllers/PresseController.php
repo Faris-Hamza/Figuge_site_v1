@@ -15,7 +15,7 @@ class PresseController extends Controller
 
     public function index()
     {
-        $presses = Presse::all();
+        $presses = Presse::latest()->paginate(10);
         return view('presses.index')->with('presses',$presses);
     }
 

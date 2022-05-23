@@ -20,7 +20,7 @@ class ProjetsController extends Controller
 
     public function index()
     {
-        $projet = Projets::all();
+        $projet = Projets::latest()->paginate(10);
         return view('projets.index')->with('projets', $projet);
     }
 
@@ -44,7 +44,7 @@ class ProjetsController extends Controller
             'photo.*'     => 'required|max:2048'
         ]);
 
-        if ($request->has('photo') || count($request->photo)>5 || count($request->photo)<3) {
+        if ($request->has('photo') && (count($request->photo)>5 || count($request->photo)<=2)) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre de photos autorisé est entre 3 et 5']);
         }
 
@@ -106,7 +106,7 @@ class ProjetsController extends Controller
 
     public function update(Request $request,$id)
     {
-        if ($request->has('photo') || count($request->photo)>5 || count($request->photo)<3) {
+        if ($request->has('photo') && (count($request->photo)>5 || count($request->photo)<=2)) {
             return Redirect::back()->withErrors(['msg' => 'Le nombre maximum de photos autorisé est de 5']);
         }
         $projet = Projets::where('id', $id)->first();

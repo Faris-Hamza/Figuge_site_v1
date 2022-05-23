@@ -16,7 +16,7 @@ class AxesController extends Controller
 
     public function index()
     {
-        $axes = Axes::all();
+        $axes = Axes::latest()->paginate(10);
         return view('axe.index')->with('axes', $axes);
     }
 

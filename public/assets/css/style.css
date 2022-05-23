@@ -1,3 +1,13 @@
+body {
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
 /*grnerale*/
 
 @font-face {
@@ -17,16 +27,20 @@
     font-family: 'JosefinSans';
     font-weight: bold;
 }
+
 iframe {
     border-radius: 40px;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 form {
     margin-bottom: 130px;
 }
+
 img {
     border-radius: 50px;
 }
@@ -53,53 +67,52 @@ td {
 
 /*******************pagination**************/
 
+
 /*******************pagination**************/
 
-
 .list-wrapper {
-	overflow: hidden;
-  margin: 50px 0px;
-  padding: 20px;
+    overflow: hidden;
+    margin: 50px 0px;
+    padding: 20px;
 }
 
-.list-wrapper img{
+.list-wrapper img {
     width: 100%;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     height: 274px;
-
 }
 
 .simple-pagination ul {
-	margin: -21px 0 20px;
-	list-style: none;
-	text-align: center;
+    margin: -21px 0 20px;
+    list-style: none;
+    text-align: center;
 }
 
 .simple-pagination li {
-	display: inline-block;
-	margin-right: 5px;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .simple-pagination li a,
 .simple-pagination li span {
-	color: #666;
-	padding: 5px 10px;
-	text-decoration: none;
-	border: 1px solid #EEE;
-	background-color: #FFF;
-	box-shadow: 0px 0px 10px 0px #EEE;
+    color: #666;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #EEE;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 0px #EEE;
 }
 
 .simple-pagination .current {
-	color: #FFF;
-	background-color: #0EBCE2;
-	border-color: #0EBCE2;
+    color: #FFF;
+    background-color: #0EBCE2;
+    border-color: #0EBCE2;
 }
 
 .simple-pagination .prev.current,
 .simple-pagination .next.current {
-	background: #0EBCE2;
+    background: #0EBCE2;
 }
 
 
@@ -377,6 +390,7 @@ span.up.show {
 
 
 /*==========Projects CSS Start==========*/
+
 .slide {
     margin: 10px;
 }
@@ -474,15 +488,32 @@ p.logo_p1 {
 
 
 /*--seaction1*/
-.a_la_une img {height: 140px;border-radius: 20px;object-fit: cover;}
 
-.col.a_la_une_content_div {align-self: center;overflow: hidden;}
+.a_la_une img {
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+}
 
-.a_la_une_content{overflow: hidden;padding: 10px;overflow: hidden; height: 507px;}
+.col.a_la_une_content_div {
+    align-self: center;
+    overflow: hidden;
+}
 
-.a_la_une_grid{ margin-bottom: 0px;    align-self: center;    display: grid;
+.a_la_une_content {
+    overflow: hidden;
+    padding: 10px;
+    overflow: hidden;
+    height: 507px;
+}
+
+.a_la_une_grid {
+    margin-bottom: 0px;
+    align-self: center;
+    display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;}
+    grid-template-columns: 1fr 1fr;
+}
 
 .fifty-chars {
     overflow: hidden;
@@ -608,6 +639,7 @@ section.sec2 {
     padding: 10px 20px;
 }
 
+
 /*section3*/
 
 .sec3 {
@@ -621,16 +653,13 @@ section.sec2 {
     padding: 60px;
     border-radius: 55px;
     text-align: -webkit-center;
-
 }
 
-.grid-1.axe img{
-
+.grid-1.axe img {
     border-radius: 100%;
     width: 150px;
     height: 150px;
 }
-
 
 
 /*section4*/
@@ -712,29 +741,34 @@ input.Textbox {
     border-radius: 40px;
     overflow: hidden;
 }
-.pro_content{
+
+.pro_content {
     display: grid;
     padding: 24px;
-
 }
-.pro_content h3{
-    font-size: 25px ;
+
+.pro_content h3 {
+    font-size: 25px;
     font-weight: 900;
-
 }
-.press {padding: 20px;}
+
+.press {
+    padding: 20px;
+}
 
 .Media_Presse {
     padding: 48px;
 }
 
-.press h3 {font-size: 20px;font-weight: 900;}
+.press h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
 
 .sec7 img {
     width: 137px;
     height: 137px;
     border-radius: 100%;
-
 }
 
 .sec7 div {
@@ -756,12 +790,15 @@ footer {
     background: rgba(216, 216, 216, 0.86);
     height: 80px;
 }
+
 .container.row.media {
     width: 550px;
 }
+
 .container.row.media img {
     width: 58px;
 }
+
 img.icon {
     width: 75px;
 }
@@ -965,7 +1002,8 @@ section.sec2_about {
     border-radius: 100%;
     margin-bottom: 20px;
 }
-.big_act{
+
+.big_act {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -1077,7 +1115,7 @@ section.sec2_about {
 .grand_activite img {
     width: 100%;
     border-radius: 0px;
-   /* box-shadow: 0px 20px 50px rgb(0 0 0 / 15%);*/
+    /* box-shadow: 0px 20px 50px rgb(0 0 0 / 15%);*/
 }
 
 img.big_img_acvt {
@@ -1190,9 +1228,11 @@ img.big_img_acvt {
 .btn_insc {
     padding: 50px;
 }
+
 button.about_link {
     border: none;
 }
+
 .link_insc {
     text-decoration: none;
     background-color: #C4C4C4;
@@ -1405,7 +1445,8 @@ button.about_link {
         padding: 8px 26px;
     }
     input.Textbox {
-        width: 100%;}
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 552px) {
@@ -1418,14 +1459,12 @@ button.about_link {
     .footer .icon {
         width: 37px;
     }
-
     .temp {
         width: 100%;
     }
     .grid-3 {
         grid-template-columns: 1fr;
     }
-
     .container.row.media {
         width: 340px;
     }
@@ -1465,11 +1504,9 @@ button.about_link {
     nav.About_Menu {
         font-size: 12px;
     }
-
     section.sec2 {
         margin-top: 120px;
     }
-
 }
 
 @media screen and (max-width: 375px) {

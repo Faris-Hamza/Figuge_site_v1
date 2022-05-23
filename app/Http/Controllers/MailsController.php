@@ -6,6 +6,7 @@ use App\Models\Mails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class MailsController extends Controller
 {
     public function __construct()
@@ -14,7 +15,7 @@ class MailsController extends Controller
     }
     public function index()
     {
-        $mail = Mails::all();
+        $mail = Mails::latest()->paginate(10);
         $affected = DB::update('update mails set Veu = 1');
         return view('mail.index')->with('mail',$mail);
     }

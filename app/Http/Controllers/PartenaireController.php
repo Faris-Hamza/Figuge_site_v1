@@ -16,7 +16,7 @@ class PartenaireController extends Controller
     
     public function index()
     {
-        $partenaire = Partenaire:: all();
+        $partenaire = Partenaire:: latest()->paginate(10);
         return view('partenaires.index')->with('partenaires', $partenaire);
     }
 

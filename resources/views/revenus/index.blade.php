@@ -87,7 +87,11 @@
                     </table>
                   </div>
                 </div>
+
               </div>
+                <div style="width:100%; text-align: center;">
+                  {{$revenus->links()}}
+                </div>   
             </div>
             <div class="col search">
               <div class="button_save">

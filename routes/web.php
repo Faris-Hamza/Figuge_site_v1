@@ -1,6 +1,6 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InterventionController;
 
 // Home Route
 Route::get('/',[App\Http\Controllers\Home::class, 'index'])->name('Accuiel');
@@ -126,7 +126,3 @@ Auth::routes();
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashbord', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashbord');
 Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
-
-// Route::notification
-Route::get('notification/show/{type}',[App\Http\Controllers\NotificationsController::class,'show'])->name('notification/show');
-Route::get('notification/store', [App\Http\Controllers\NotificationsController::class,'store'])->name('notification/store');

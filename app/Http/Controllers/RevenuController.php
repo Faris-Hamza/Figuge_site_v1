@@ -24,7 +24,7 @@ class RevenuController extends Controller
 
     public function index()
     {
-        $Revenus = Revenu::all();
+        $Revenus = Revenu::latest()->paginate(10);
         return view('revenus.index')->with('revenus', $Revenus);
     }
 

@@ -26,7 +26,30 @@
         <div class="grid-1">
           @switch(count($Photos))
           @case(5)
-              <div class="module_1">
+          <div class="gallerie">
+            <div class="row ">
+              <div class="col-4">
+                <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
+              </div>
+              <div class="col-4">
+                <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
+              </div>
+    
+              <div class="col">
+                <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <img src="{{asset($Photos->nth(1)[3]->URL)}}" alt="photo">
+              </div>
+              <div class="col">
+                <img src="{{asset($Photos->nth(1)[4]->URL)}}" alt="photo">
+              </div>
+            </div>
+          </div>
+
+              {{-- <div class="module_1">
                 <div class="row">
                   <div class="col-4">
                     
@@ -60,10 +83,30 @@
 
                   </div>
                 </div>
-              </div>
+              </div> --}}
               @break
           @case(4)
-              <div class="module_2">
+          <div class="gallerie">
+            <div class="row ">
+              <div class="col-4">
+                <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
+              </div>
+              <div class="col-4">
+                <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
+              </div>
+    
+              <div class="col">
+                <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <img src="{{asset($Photos->nth(1)[3]->URL)}}" alt="photo">
+              </div>
+            </div>
+          </div>
+
+              {{-- <div class="module_2">
                 <div class="row">
                   <div class="col-4">
                     <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
@@ -93,10 +136,25 @@
 
                   </div>
                 </div>
-              </div>
+              </div> --}}
               @break
           @case(3)
-              <div class="module_3">
+          <div class="gallerie">
+            <div class="row ">
+              <div class="col-4">
+                <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
+              </div>
+              <div class="col-4">
+                <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
+              </div>
+    
+              <div class="col">
+                <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
+              </div>
+            </div>
+          </div>
+
+              {{-- <div class="module_3">
                 <div class="row">
                   <div class="col-6">
                     <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
@@ -114,17 +172,14 @@
                   </div>
 
                 </div>
-              </div>
+              </div> --}}
               @break
          
-
-
       @endswitch
         </div>
       </section>
     @endif
-   
-    
+  
     <section class="container pic wow fadeup-animation">
         <h1 class="sec2_title">Video</h1>
         <h4 class="sec2_Suntitle"></h4>

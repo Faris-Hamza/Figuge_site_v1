@@ -25,7 +25,7 @@ class DemandeController extends Controller
 
     public function index()
     {
-       $demandes = Demande::all();
+       $demandes = Demande::latest()->paginate(10);
        $affected = DB::update('update demandes set Veu = 1');
        return view('demandes.index')->with('demandes', $demandes);
     }

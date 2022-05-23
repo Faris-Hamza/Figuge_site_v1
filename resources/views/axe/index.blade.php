@@ -62,8 +62,6 @@
                                             <h6 class="mb-0 text-sm">{{ $item->nom }}</h6>
                                         </td>
   
-                                       
-  
                                         <td class="align-middle">
                                             <a href="{{ route('Axe/edit', $item->id) }}"
                                                 class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
@@ -84,6 +82,9 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <div style="width:100%; text-align: center;">
+                {{$axes->links()}}
             </div>
         </div>
     </div>

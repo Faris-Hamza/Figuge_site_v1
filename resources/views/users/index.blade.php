@@ -43,16 +43,6 @@
               <tbody>
                 @foreach ($users as $item)
                   <tr>
-                    {{-- <td>
-                      <div class="d-flex px-2 py-1">
-                        <div>
-                          <img src="{{asset($item->photo)}}" class="avatar avatar-sm me-3" alt="user1">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          
-                        </div>
-                      </div>
-                    </td> --}}
                     <td>
                       <h6 class="mb-0 text-sm">{{$item->name}}</h6>
                     </td>
@@ -63,17 +53,6 @@
                       <span class="badge badge-sm bg-gradient-success">{{$item->password}}</span>
                     </td>
                    
-                   
-                    {{-- <td class="align-middle">
-                      <a href="{{route('team/edit',$item->id)}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                        Modifie
-                      </a>
-                    </td>
-                    <td class="align-middle">
-                      <a href="{{route('team/destroy',$item->id)}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                        Supprimer
-                      </a>
-                    </td> --}}
                   </tr>
                 @endforeach
               
@@ -82,6 +61,9 @@
             </table>
           </div>
         </div>
+        <div style="width:100%; text-align: center;">
+          {{$users->links()}}
+      </div>
       </div>
     </div>
   </div>

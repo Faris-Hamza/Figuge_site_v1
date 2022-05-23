@@ -27,19 +27,13 @@
             @endforeach
 
         </div>
-        <div id="pagination-container"></div>
-
-
-
-        </div>
-        <div class="pagination-container">
-            <div class="page-numbers-container">
-
-            </div>
+       
+        <div style="width:100%; text-align: center;">
+            {{$projets->links()}}
         </div>
     </section>
 
-    <section class="container wow fadeup-animation categoriee">
+    {{-- <section class="container wow fadeup-animation categoriee">
         <div class="categorie">
             <div class="row categorie_div">
                 <img class="col-2" width="20px" src="assets/images/SECTION/Vector (1).png" alt="">
@@ -59,6 +53,6 @@
 
         </div>
 
-    </section>
+    </section> --}}
 </main>
 @include('frontEnd.inc.footer')

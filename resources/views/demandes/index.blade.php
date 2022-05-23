@@ -90,7 +90,7 @@
                         </thead>
                         <tbody>
                             @foreach ($demandes as $item)
-                                <tr {{($item->Veu==0)?"style=background-color:#D5E5EA":""}}>
+                                <tr {{($item->Veu==0)?"style=background-color:#AEFF76":""}}>
                                     
                                     <td>
                                         <h6 class="mb-0 text-sm">{{ $item->nom }}</h6>
@@ -150,6 +150,9 @@
                     </table>
                 </div>
             </div>
+        </div>
+        <div style="width:100%; text-align: center;">
+            {{$demandes->links()}}
         </div>
     </div>
 </div>

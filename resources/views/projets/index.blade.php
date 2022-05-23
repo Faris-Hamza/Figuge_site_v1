@@ -104,6 +104,9 @@
                                 </table>
                             </div>
                         </div>
+                        <div style="width:100%; text-align: center;">
+                            {{$projets->links()}}
+                        </div>
                     </div>
                 </div>
             </div>

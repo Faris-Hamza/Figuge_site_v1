@@ -32,9 +32,9 @@
                 @endphp
               <li class="nav-item dropdown pe-2 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="true">
-                    @if (!empty($Mails) || !empty($Demande))
+                    @if (count($Mails)!=0|| count($Demande)!=0)
                      {{-- @php 
-                        dd($Mails)
+                        dd($Mails->first())
                     @endphp --}}
                       <img src="{{asset("assets/images/LOGO/notification.png")}}"/>
                     @else
@@ -51,12 +51,12 @@
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                           <h6 class="text-sm font-weight-normal mb-1">
-                                        <span class="font-weight-bold">New {{count($Mails)}} Email</span>
+                                        <span class="font-weight-bold">nouveau {{count($Mails)}} email(s)  </span>
                                       </h6>
                                       <p class="text-xs text-secondary mb-0 ">
                                         @php 
                                          
-                                          $date = (\Carbon\Carbon::now()->diff(\Carbon\Carbon::parse($Mails[0]->created_at))); 
+                                          $date = (\Carbon\Carbon::now()->diff(\Carbon\Carbon::parse($Mails->first()->created_at))); 
                                         @endphp
                                         <i class="fa fa-clock me-1"></i>
                                         Il y a {{$date->format('%i')}} minute(s)
@@ -75,15 +75,15 @@
                                       </div>
                                       <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal mb-1">
-                                     <span class="font-weight-bold">New {{count($Demande)}} Demande</span>
+                                     <span class="font-weight-bold">nouveau {{count($Demande)}} Demande(s)</span>
                                   </h6>
                                   <p class="text-xs text-secondary mb-0 ">
                                     @php 
-                                      $date = (\Carbon\Carbon::now()->diff(\Carbon\Carbon::parse($Demande[1]->created_at))); 
+                                      $date = (\Carbon\Carbon::now()->diff(\Carbon\Carbon::parse($Demande->first()->created_at))); 
                                       
                                     @endphp
                                     <i class="fa fa-clock me-1"></i>
-                                    Il y a {{$date->format('%i')}} minute(s)
+                                       Il y a {{$date->format('%i')}} minute(s)
                                   </p>
                                     </div>
                                   </div>

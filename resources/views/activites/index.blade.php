@@ -18,8 +18,6 @@
                     <hr>
                 </div>
             </div>
-
-
         </div>
 
         <div class="row">
@@ -114,6 +112,10 @@
                             </table>
                         </div>
                     </div>
+                </div>
+
+                <div style="width:100%; text-align: center;">
+                    {{$activite->links()}}
                 </div>
             </div>
         </div>

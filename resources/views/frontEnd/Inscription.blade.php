@@ -71,12 +71,16 @@
 
 
     <section class="container sec6 wow fadeup-animation">
-      <h1 class="sec2_title">Nos Actualités</h1>
-      <h4 class="sec2_Suntitle">S’abonner au bulletin d’information</h4>
+      <form action="{{route('mail/store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('POST')
+    <h1 class="sec2_title">Nos Actualités</h1>
+    <h4 class="sec2_Suntitle">S’abonner au bulletin d’information</h4>
       <div>
-        <input class="Textbox" type="text" placeholder="Entrer votre Email">
-        <a class="about_link" href="#">En savoir plus</a>
+        <input class="Textbox" name="mail" type="mail" placeholder="Entrer votre Email">
+         <input class="about_link" type="submit" text="ABONNÉ">
       </div>
+      </form>
 
     </section>
   </main>

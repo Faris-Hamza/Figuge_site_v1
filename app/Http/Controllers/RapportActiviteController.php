@@ -24,11 +24,9 @@ class RapportActiviteController extends Controller
        
     }
 
-    
-    
     public function index()
     {
-        $Rapports = Rapport_Activite::all();
+        $Rapports = Rapport_Activite::latest()->paginate(10);
         return view('rapports.index')->with('rapports',$Rapports);
     }
 
@@ -38,7 +36,6 @@ class RapportActiviteController extends Controller
         return view('rapports.create')->with('activites',$Activites);
     }
 
-  
     public function store(Request $request)
     {
        $this->validate($request, [

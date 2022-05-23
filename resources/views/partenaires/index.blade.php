@@ -92,6 +92,9 @@
                       </table>
                   </div>
               </div>
+            <div style="width:100%; text-align: center;">
+                {{$partenaires->links()}}
+            </div>
           </div>
       </div>
   </div>

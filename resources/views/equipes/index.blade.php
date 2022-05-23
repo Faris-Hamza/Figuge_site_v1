@@ -91,6 +91,9 @@
                         </table>
                     </div>
                 </div>
+                <div style="width:100%; text-align: center;">
+                    {{$equipes->links()}}
+                </div>
             </div>
         </div>
     </div>
