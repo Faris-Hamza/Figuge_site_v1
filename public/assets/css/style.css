@@ -986,6 +986,12 @@ section.sec2_about {
     height: 100%;
 }
 
+.gallerie img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+  }
+
 .Project_Title {
     margin-bottom: 100px;
     justify-items: center;

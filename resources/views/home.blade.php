@@ -174,8 +174,8 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                   
-                                    
+
+
                                 </div>
 
                                 <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto"

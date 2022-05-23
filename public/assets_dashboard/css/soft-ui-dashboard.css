@@ -170,7 +170,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h6,
@@ -24394,7 +24394,7 @@ h4,
 h5,
 .h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.375;
 }
 
@@ -24493,7 +24493,7 @@ p,
 }
 
 .text-sm {
-  font-size: 0.875rem !important;
+  font-size: 0.8rem !important;
 }
 
 .text-xs {
