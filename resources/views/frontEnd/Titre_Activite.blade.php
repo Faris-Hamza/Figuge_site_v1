@@ -1,7 +1,7 @@
 @include('frontEnd.inc.headerMin', ['name' => $Activite->name] )
- 
+
   <!--main-->
-  <main class="container"> 
+  <main class="container">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
 
     <section class="">
@@ -9,14 +9,14 @@
         <div class="about wow right-animation">
           <h2>{{$Activite->name}}</h2>
           <h5>{{$Activite->date_debut}} | {{$Activite->date_fin}}</h5>
-          <p class="about_p" >
+          <p class="" >
             {{$Activite->detail}}
           </p>
         </div>
-       
-    
+
+
       </div>
-    </section> 
+    </section>
 
     {{-- //Section for Galerie --}}
     @if ($Activite->Media()!=null)
@@ -34,7 +34,7 @@
               <div class="col-4">
                 <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
               </div>
-    
+
               <div class="col">
                 <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
               </div>
@@ -52,7 +52,7 @@
               {{-- <div class="module_1">
                 <div class="row">
                   <div class="col-4">
-                    
+
                     <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
                   </div>
                   <div class="col">
@@ -94,7 +94,7 @@
               <div class="col-4">
                 <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
               </div>
-    
+
               <div class="col">
                 <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
               </div>
@@ -147,7 +147,7 @@
               <div class="col-4">
                 <img src="{{asset($Photos->nth(1)[1]->URL)}}" alt="photo">
               </div>
-    
+
               <div class="col">
                 <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
               </div>
@@ -174,12 +174,12 @@
                 </div>
               </div> --}}
               @break
-         
+
       @endswitch
         </div>
       </section>
     @endif
-  
+
     <section class="container pic wow fadeup-animation">
         <h1 class="sec2_title">Video</h1>
         <h4 class="sec2_Suntitle"></h4>
@@ -190,29 +190,29 @@
                   $i=0;
                   $lien =  "https://www.youtube.com/embed/"
               @endphp
-    
+
               @if ($item->URL !='')
               @foreach(explode('/', $item->URL) as $item)
-    
+
                   @if ($i==3)
                       @php
                           $lien =$lien . $item
                       @endphp
-    
+
                   @endif
                   @php
                       $i++
                   @endphp
               @endforeach
               @endif
-    
+
               <iframe width="560" height="315" src="{{$lien}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           @endforeach
-         
-        
+
+
         </div>
-    
+
     </section>
   </main>
   @include('frontEnd.inc.footer')
