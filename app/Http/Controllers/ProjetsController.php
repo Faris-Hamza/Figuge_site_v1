@@ -35,10 +35,10 @@ class ProjetsController extends Controller
     {
         
         $this->validate($request, [
-            'titre'       => 'required',         
-            'detail'     => 'required',
-            'responsable' => 'required',
-            'lieu'        => 'required',
+            'titre'       => 'required|max:30',         
+            'detail'     => 'required|max:1000',
+            'responsable' => 'required|max:30',
+            'lieu'        => 'required|max:30',
             'date_debut'  => 'required',
             'date_fin'    => 'required',
             'photo.*'     => 'required|max:2048'

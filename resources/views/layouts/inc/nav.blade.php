@@ -30,19 +30,18 @@
                   $Demande = \App\Models\Demande::all()->where('Veu',0);
                   $Mails = \App\Models\Mails::all()->where('Veu',0);
                 @endphp
+             
+
               <li class="nav-item dropdown pe-2 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="true">
-                    @if (count($Mails)!=0|| count($Demande)!=0)
-                     {{-- @php 
-                        dd($Mails->first())
-                    @endphp --}}
+                    @if (count($Mails)!=0 || count($Demande)!=0)
                       <img src="{{asset("assets/images/LOGO/notification.png")}}"/>
                     @else
                       <img src="{{asset("assets/images/LOGO/notification2.png")}}"/>                    
                     @endif
                 </a>
-                <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                           @if (count($Mails)!=0)
+                  <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                          @if (count($Mails)!=0)
                                   <li class="mb-2">
                                     <a class="dropdown-item border-radius-md" href="{{route('mail')}}">
                                       <div class="d-flex py-1">
@@ -91,9 +90,8 @@
                                 </li> 
                           @endif
                 
-                </ul>
+                  </ul>
               </li>
-
             </ul>
             <ul class="navbar-nav ">
               <!-- Authentication Links -->
@@ -103,12 +101,6 @@
                           <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                       </li>
                   @endif
-
-                  {{-- @if (Route::has('register'))
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                      </li>
-                  @endif --}}
               @else
                   <li class="nav-item dropdown">
                       <div class="" aria-labelledby="navbarDropdown">
