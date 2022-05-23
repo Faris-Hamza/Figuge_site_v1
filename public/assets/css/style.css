@@ -70,49 +70,18 @@ td {
 
 /*******************pagination**************/
 
-.list-wrapper {
-    overflow: hidden;
-    margin: 50px 0px;
-    padding: 20px;
+.page_actP .page-item {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 0px 6px;
+    box-shadow: 0px 11px 14px rgb(0 0 0 / 15%);
+    margin-top: 40px;
 }
 
-.list-wrapper img {
-    width: 100%;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    height: 274px;
-}
-
-.simple-pagination ul {
-    margin: -21px 0 20px;
-    list-style: none;
-    text-align: center;
-}
-
-.simple-pagination li {
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.simple-pagination li a,
-.simple-pagination li span {
-    color: #666;
-    padding: 5px 10px;
-    text-decoration: none;
-    border: 1px solid #EEE;
-    background-color: #FFF;
-    box-shadow: 0px 0px 10px 0px #EEE;
-}
-
-.simple-pagination .current {
-    color: #FFF;
-    background-color: #0EBCE2;
-    border-color: #0EBCE2;
-}
-
-.simple-pagination .prev.current,
-.simple-pagination .next.current {
-    background: #0EBCE2;
+.page_actP li.page-item.active {
+    background: linear-gradient(to right, #3EC4CD, #2A6F74);
 }
 
 
@@ -495,14 +464,12 @@ p.logo_p1 {
     object-fit: cover;
 }
 
-<<<<<<< HEAD
 .col.a_la_une_content_div {
     align-self: center;
     overflow: hidden;
 }
-=======
 .a_la_une_content{overflow: hidden;padding: 10px;overflow: hidden; height: 530px;}
->>>>>>> 80e136deafe0398ad94cd25507ca7cf97adc191f
+
 
 .a_la_une_content {
     overflow: hidden;

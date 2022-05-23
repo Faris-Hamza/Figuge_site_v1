@@ -30,15 +30,15 @@
               $i=0;
           @endphp --}}
           @foreach ($Activites as $item)
-           
+
             <a href="{{route('showActivite',$item->id)}}">
             <div class="sec7_blog1 list-item">
               @if ($item->Media->where('types','photo')->first()!=null)
-                   <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo"> 
+                   <img src="{{asset($item->Media->where('types','photo')->first()->URL)}}" alt="photo">
               @else
-                  <img src="{{asset("assets\images\LOGO\\nocontentyet.jpg")}}" alt="photo"> 
+                  <img src="{{asset("assets\images\LOGO\\nocontentyet.jpg")}}" alt="photo">
               @endif
-                     
+
                       <div class="pro_content">
                         <h3 class="fifty-chars">{{$item->name}}</h3>
                         <p class="fifty-chars">{{$item->lieu}} / {{$item->date_debut}}</p>
@@ -48,15 +48,15 @@
                     </div>
             </div>
             </a>
-            
+
           @endforeach
 
         </div>
-        
+        <div class="page_actP"  style="text-align: center; width:100%;">
+            {{ $Activites->links() }}
+        </div>
     </section>
-      <div  style="text-align: center; width:100%;">
-          {{ $Activites->links() }}
-      </div>
+
 
     {{-- <section class="container wow fadeup-animation categoriee">
       <div class="categorie">
