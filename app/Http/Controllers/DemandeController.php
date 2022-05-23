@@ -11,7 +11,7 @@ class DemandeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['store']]);
     }
 
     public function pdfDemande($id)
@@ -29,9 +29,6 @@ class DemandeController extends Controller
        $affected = DB::update('update demandes set Veu = 1');
        return view('demandes.index')->with('demandes', $demandes);
     }
-
-    
-
 
     public function create()
     {
