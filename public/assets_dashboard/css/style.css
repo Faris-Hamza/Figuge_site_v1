@@ -20,6 +20,8 @@ textarea {
   margin: 10px 0px;
 }
 
+
+
 .button_save {
   width: 216px;
   float: right;
@@ -57,6 +59,10 @@ label {
     grid-template-columns: 1fr;
 }
 
+.card-header h6{
+    align-self: center;
+}
+
 .grid-2 {
     display: grid;
     gap: 30px;
@@ -81,5 +87,15 @@ ul.navbar-nav.margine-nav {
 @media screen and (max-width: 1199.98px){
     .notification_dom{
         gap: 0px;
+    }
+}
+
+@media screen and (max-width: 552px){
+    .button_save a {
+        font-size: 0.54rem;
+    }
+    .button_save {
+        width: 100%;
+        float: right;
     }
 }

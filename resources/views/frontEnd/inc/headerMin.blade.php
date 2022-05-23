@@ -8,10 +8,10 @@
   <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
   <meta name="theme-color" content="#db4938" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> --}}
+  <link rel="stylesheet" href="{{asset("assets/css/bootstrap-min.css")}}" />
   <link rel="stylesheet" href="{{asset("assets/css/bootstrap-grid.css")}}" />
   <link rel="stylesheet" href="{{asset("assets/css/style.css")}}" />
-	<link rel="stylesheet" type="text/css" href="{{asset("assets/css/font-awesome.min.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{asset("assets/css/font-awesome.min.css")}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="{{asset("assets/css/animate.css")}}" />
   <title>ASSOCIATION ......</title>

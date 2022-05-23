@@ -1,7 +1,7 @@
 @include('frontEnd.inc.headerMin',['name' => $Projets->titre])
 
   <!--main-->
-  <main class="container"> 
+  <main class="container">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
 
     <section class="sec1">
@@ -9,8 +9,8 @@
         <div class="about wow right-animation">
           <h2>Titre du projet</h2>
           <h5>Détails</h5>
-          <p class="about_p" >
-            {{$Projets->detail}}          
+          <p class="" >
+            {{$Projets->detail}}
           </p>
           {{-- <a class="about_link" href="#">EN SAVOIR PLUS <i class="fa-solid fa-right-long"></i></a> --}}
         </div>
@@ -29,12 +29,12 @@
             </div>
           </div>
         </div>
-    
+
       </div>
-    </section> 
-    
+    </section>
+
     {{-- //Section for Galerie --}}
-    
+
     @if ($Projets->Media()!=null)
       <section class="sec2 pic wow fadeup-animation">
         <h1 class="sec2_title">Galerie de photos</h1>
@@ -45,7 +45,7 @@
                     <div class="module_1">
                       <div class="row">
                         <div class="col-4">
-                          
+
                           <img src="{{asset($Photos->nth(1)[0]->URL)}}" alt="photo">
                         </div>
                         <div class="col">
@@ -61,19 +61,19 @@
                                       <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
                                     </div>
                                   </div>
-      
+
                                 </div>
                                 <div class="col">
                                   <img src="{{asset($Photos->nth(1)[3]->URL)}}" alt="photo">
                                 </div>
                               </div>
-      
+
                             </div>
                             <div class="col-12">
                               <img src="{{asset($Photos->nth(1)[4]->URL)}}" alt="photo">
                             </div>
                           </div>
-      
+
                         </div>
                       </div>
                     </div>
@@ -97,16 +97,16 @@
                                       <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
                                     </div>
                                   </div>
-      
+
                                 </div>
                               </div>
-      
+
                             </div>
                             <div class="col-12">
                               <img src="{{asset($Photos->nth(1)[3]->URL)}}" alt="photo">
                             </div>
                           </div>
-      
+
                         </div>
                       </div>
                     </div>
@@ -126,22 +126,22 @@
                                       <img src="{{asset($Photos->nth(1)[2]->URL)}}" alt="photo">
                                     </div>
                                   </div>
-      
+
                         </div>
-      
+
                       </div>
                     </div>
                     @break
-               
-      
-      
+
+
+
             @endswitch
         </div>
       </section>
     @endif
 
-    
-    
+
+
     <section class="container pic wow fadeup-animation">
       <h1 class="sec2_title">Video</h1>
       <h4 class="sec2_Suntitle"></h4>
@@ -152,29 +152,29 @@
                 $i=0;
                 $lien =  "https://www.youtube.com/embed/"
             @endphp
-  
+
             @if ($item->URL !='')
             @foreach(explode('/', $item->URL) as $item)
-  
+
                 @if ($i==3)
                     @php
                         $lien =$lien . $item
                     @endphp
-  
+
                 @endif
                 @php
                     $i++
                 @endphp
             @endforeach
             @endif
-  
+
             <iframe width="560" height="315" src="{{$lien}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         @endforeach
-       
-      
+
+
       </div>
-  
+
   </section>
   </main>
   @include('frontEnd.inc.footer')

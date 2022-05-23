@@ -16,10 +16,10 @@ class ActiviteController extends Controller
     {
         $this->middleware('auth');
     }
-  
+
     public function index()
     {
-        $activite = Activite::latest()->paginate(10);
+        $activite = Activite::latest()->paginate(2);
         return view('activites.index')->with('activite', $activite);
     }
 
@@ -34,7 +34,7 @@ class ActiviteController extends Controller
     {
 
         $this->validate($request, [
-            'name'           => 'required|string|max:30',
+            'name'           => 'required|string|max:50',
             'detail'         => 'required|string|max:1000',
             'lieu'           => 'required|string|max:30',
             'date_debut'     => 'required',
@@ -55,7 +55,7 @@ class ActiviteController extends Controller
             'lieu'        =>$request->lieu,
             'date_debut'  =>$request->date_debut,
             'date_fin'    =>$request->date_fin,
-            
+
         ]);
         $activite = Activite::latest()->first();
         foreach ($request->video as $item) {
@@ -67,10 +67,10 @@ class ActiviteController extends Controller
             ]);
         }
         foreach ($request->photo as $item) {
-            
-            
+
+
             $image_name = ActiviteController::resize($item);
-            
+
             $item=Media::create([
                 'id_activite'=>$activite->id,
                 'id_proj'=>0,
@@ -83,7 +83,7 @@ class ActiviteController extends Controller
 
     public function resize($item){
         $image = Image::make($item);
-            
+
             $image->resize( 300, 180);
             $image_path = public_path('/uploads/activites/');
             if (!File::exists($image_path)) {
@@ -109,7 +109,7 @@ class ActiviteController extends Controller
         return view('activites.edit')->with('activite',$activite)->with('Axes', $Axes)->with('projets', $projets);
     }
 
-    
+
     public function update(Request $request,$id)
     {
         if ($request->has('photo') && (count($request->photo)>5 || count($request->photo)<=2)) {
@@ -117,7 +117,7 @@ class ActiviteController extends Controller
         }
         $activite = Activite::where('id', $id)->first();
         $this->validate($request, [
-            'name'           => 'required|string|max:30',
+            'name'           => 'required|string|max:50',
             'detail'         => 'required|string|max:1000',
             'lieu'           => 'required|string|max:30',
             'date_debut'     => 'required',
@@ -140,10 +140,10 @@ class ActiviteController extends Controller
                     'URL'=>'uploads/activites/'.$image_name,
                     'types'=>'photo'
                 ]);
-                
+
             }
         }
-        
+
         if ($request->has('video')) {
             foreach ($activite->Media as $item) {
                 $item->forceDelete();
@@ -156,7 +156,7 @@ class ActiviteController extends Controller
                     'types'=>"video"
                 ]);
             }
-        } 
+        }
 
         $activite->name         = $request->name;
         $activite->id_proj      = $request->id_proj;
