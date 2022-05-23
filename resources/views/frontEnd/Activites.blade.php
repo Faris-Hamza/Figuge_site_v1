@@ -72,7 +72,7 @@
         </div>
         <div class="type_cate grid-2">
           @foreach ($Axes as $item)
-            <a class="activite_cate" href="#">{{$item->nom}}</a>
+            <a class="activite_cate fifty-chars" href="#">{{$item->nom}}</a>
           @endforeach
 
 

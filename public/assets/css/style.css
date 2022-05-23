@@ -478,7 +478,7 @@ p.logo_p1 {
 
 .col.a_la_une_content_div {align-self: center;overflow: hidden;}
 
-.a_la_une_content{overflow: hidden;padding: 10px;overflow: hidden; height: 507px;}
+.a_la_une_content{overflow: hidden;padding: 10px;overflow: hidden; height: 530px;}
 
 .a_la_une_grid{ margin-bottom: 0px;    align-self: center;    display: grid;
     gap: 10px;
@@ -1018,6 +1018,10 @@ section.sec2_about {
     position: absolute;
     top: 0;
     left: 0
+}
+
+.carousel-item iframe {
+    width: 100%;
 }
 
 .carousel.carousel-slider .carousel-item h2 {
