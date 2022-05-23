@@ -24,7 +24,7 @@
           <div class="card mb-4">
               <div class="card-header pb-0">
                   <div class="row">
-                      <h6 class="col">Votre Partenaires</h6>
+                      <h6 class="col" style="align-self: center;">Votre Partenaires</h6>
                       <div class="col search">
                           <div class="button_save">
                               <a class="btn bg-gradient-primary mt-3 w-100" href="{{ route('partenaire/create') }}">

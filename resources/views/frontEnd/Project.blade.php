@@ -27,8 +27,8 @@
             @endforeach
 
         </div>
-       
-        <div style="width:100%; text-align: center;">
+
+        <div class="page_actP"  style="width:100%; text-align: center;">
             {{$projets->links()}}
         </div>
     </section>

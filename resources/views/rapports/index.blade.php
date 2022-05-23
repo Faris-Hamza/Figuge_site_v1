@@ -75,7 +75,7 @@
                                             <td>
                                                 <span class="mb-0 text-sm">{{$item->date }}</span>
                                             </td>
-                                            
+
                                             <td class="align-middle text-center">
                                                 <span class="mb-0 text-sm">{{ $item->nbr_femme }}</span>
                                             </td>
@@ -86,7 +86,7 @@
                                             <td class="align-middle text-center">
                                                 <span class="mb-0 text-sm">{{ $item->nbr_homme }}</span>
                                             </td>
-                                            
+
                                            <td class="align-middle">
                                                 <a href="{{ route('rapport/pdfRapport', $item->id) }}"
                                                     class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
@@ -102,7 +102,7 @@
                                                     Modifie
                                                 </a>
                                             </td>
-                                            
+
                                             <td class="align-middle">
                                                 <a href="{{ route('rapport/destroy', $item->id) }}"
                                                     class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"

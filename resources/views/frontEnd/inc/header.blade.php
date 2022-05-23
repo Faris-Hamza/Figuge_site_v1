@@ -20,7 +20,8 @@
 <body>
     <!--header-->
     <header class="headr">
-        <img class="header-image" src="{{asset("assets/images/HEDEAR/header_image.png")}}" alt="">
+        <img class="header-image header-image_web" src="{{asset("assets/images/HEDEAR/headr_mob.jfif")}}" alt="">
+        <img class="header-image header-image_mob" src="{{asset("assets/images/HEDEAR/header_image.png")}}" alt="">
         <div class="nav_Mob">
             <i class="fa-solid fa-bars" id="icon_bar"></i>
         </div>
