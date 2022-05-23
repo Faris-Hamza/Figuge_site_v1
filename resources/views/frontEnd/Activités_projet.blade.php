@@ -7,8 +7,8 @@
     <section class="sec1">
       <div class="grid-2 sec1_row1">
         <div class="about wow right-animation">
-          <h2>Titre du projet</h2>
-          <h5>Détails</h5>
+          <h2 class="fifty-chars">{{$Projets->titre}}</h2>
+          <h5>{{$Projets->responsable}} | {{$Projets->lieu}}</h5>
           <p class="" >
             {{$Projets->detail}}
           </p>
