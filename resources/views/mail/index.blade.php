@@ -44,7 +44,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($mail as $item)
-                                    <tr>
+                                    <tr >
                                         <td>
                                             <h6 class="mb-0 text-sm">{{ $item->mail }}</h6>
                                         </td>

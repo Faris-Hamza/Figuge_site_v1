@@ -34,7 +34,7 @@ class ActiviteController extends Controller
     {
 
         $this->validate($request, [
-            'name'           => 'required|string|max:30',
+            'name'           => 'required|string|max:50',
             'detail'         => 'required|string|max:1000',
             'lieu'           => 'required|string|max:30',
             'date_debut'     => 'required',
@@ -117,7 +117,7 @@ class ActiviteController extends Controller
         }
         $activite = Activite::where('id', $id)->first();
         $this->validate($request, [
-            'name'           => 'required|string|max:30',
+            'name'           => 'required|string|max:50',
             'detail'         => 'required|string|max:1000',
             'lieu'           => 'required|string|max:30',
             'date_debut'     => 'required',
