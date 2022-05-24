@@ -1015,6 +1015,15 @@ section.sec2_about {
     text-align: -webkit-center
 }
 
+.carousel1{
+    margin-top: -90px;
+    height: 505px;
+}
+
+.grid-1.axe h2 {
+    width: 100%;
+}
+
 .carousel.carousel-slider {
     top: 0;
     left: 0

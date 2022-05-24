@@ -183,7 +183,7 @@
     <section class="container pic wow fadeup-animation">
         <h1 class="sec2_title">Video</h1>
         <h4 class="sec2_Suntitle"></h4>
-        <div class="carousel row">
+        <div class="carousel carousel1 row">
           @foreach ($Videos as $item)
             <div class="carousel-item col">
               @php

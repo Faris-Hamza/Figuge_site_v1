@@ -3,11 +3,39 @@ new WOW().init();
 // Wow Animation JS Start
 // Testimonial Slider JS Start
 
-
 $(document).ready(function(){
     $('.carousel').carousel({
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+              breakpoint: 426,
+              settings: {
+                  slidesToShow: 1,
+              }
+          }
+        ]
+        });
+  });
+
+  $(document).ready(function(){
+    $('.carousel1').carousel({
+
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        indicators:true,
         responsive: [
             {
                 breakpoint: 992,
