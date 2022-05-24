@@ -517,6 +517,7 @@ p.logo_p1 {
     background: linear-gradient(to right, #3EC4CD, #2A6F74);
     padding: 12px 26px;
     font-size: 15px;
+    border: none;
     display: inline-block;
     float: right;
     border-radius: 119px;
