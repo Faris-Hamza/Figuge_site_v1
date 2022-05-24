@@ -53,8 +53,7 @@
       </div>
       <div class="row Logo container">
         <div class="col logo_definition About_title">
-          <p class="logo_p2 about_us_p wow fadeup-animation " data-wow-delay="0.2s">{{$name}}</p>
-          <i class="fa-solid fa-arrow-down-from-line"></i>
+          <p class="logo_p2 about_us_p wow fadeup-animation ">{{$name}}</p>
         </div>
       </div>
     </div>

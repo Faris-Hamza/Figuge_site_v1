@@ -4,7 +4,7 @@
   <main class="container">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
 
-    <section class="">
+    <section >
       <div class="grid-1 Project_Title">
         <div class="about wow right-animation">
           <h2>{{$Activite->name}}</h2>
