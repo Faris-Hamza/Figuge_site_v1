@@ -8,8 +8,6 @@
   <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
   <meta name="theme-color" content="#db4938" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  {{-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>  --}}
-
   <link rel="stylesheet" href="{{asset("assets/css/bootstrap-min.css")}}" />
   <link rel="stylesheet" href="{{asset("assets/css/bootstrap-grid.css")}}" />
   <link rel="stylesheet" href="{{asset("assets/css/style.css")}}" />
@@ -55,7 +53,7 @@
       </div>
       <div class="row Logo container">
         <div class="col logo_definition About_title">
-          <p class="logo_p2 about_us_p wow fadeup-animation" data-wow-delay="0.2s">{{$name}}</p>
+          <p class="logo_p2 about_us_p wow fadeup-animation " data-wow-delay="0.2s">{{$name}}</p>
           <i class="fa-solid fa-arrow-down-from-line"></i>
         </div>
       </div>
