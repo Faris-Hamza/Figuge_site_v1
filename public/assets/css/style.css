@@ -832,6 +832,7 @@ p.footer-p1 {
 p.about_us_p {
     text-align: center;
     font-size: 62px;
+    line-height: 60px;
 }
 
 .carousel_equipe {
@@ -979,6 +980,10 @@ section.sec2_about {
 .Project_Title {
     margin-bottom: 100px;
     justify-items: center;
+}
+
+.Project_Title h2{
+    line-height: 60px;
 }
 
 .Project_Title .about {
