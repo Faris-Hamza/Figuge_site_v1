@@ -1055,6 +1055,14 @@ section.sec2_about {
     left: 0
 }
 
+.carousel-item p , .carousel-item h2{
+    display: none;
+}
+
+.carousel-item.active p,.carousel-item.active h2 {
+    display: block;
+}
+
 .carousel-item iframe {
     width: 100%;
 }
@@ -1541,6 +1549,9 @@ button.about_link {
         font-size: 31px;
     }
     p.logo_p1 {
+        font-size: 25px;
+    }
+    h1 {
         font-size: 25px;
     }
 }

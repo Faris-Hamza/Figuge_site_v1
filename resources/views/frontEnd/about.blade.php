@@ -49,13 +49,13 @@
       <h4 class="sec2_Suntitle">Soldats invisibles</h4>
         <div class="carousel row">
             @foreach ($Equipe as $item)
-            <div class="carousel-item  col-7 col-md-6 col-lg-4" href="#">
+            <div class="carousel-item  col-7 col-md-6 col-lg-4" >
               <div class="testi">
                   <div class="img-area">
                       <img src="{{ asset($item->photo) }}">
                   </div>
-                  <h2 style="width: 200px;" class="fifty-chars">{{$item->nom}}</h2>
-                  <p style="width: 200px;" class="fifty-chars">{{ $item->statu }}</p>
+                  <h2 style="width: 100%;" class="fifty-chars">{{$item->nom}}</h2>
+                  <p style="width: 100%;" class="fifty-chars">{{ $item->statu }}</p>
               </div>
             </div>
             @endforeach
