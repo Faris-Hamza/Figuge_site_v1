@@ -3,7 +3,10 @@
   <!--main-->
   <main class="container">
     <span class="up"><i class="fa-solid fa-up-long"></i></span>
-
+    <div  class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+      </div>
     <section class="sec2 wow fadeup-animation">
       {{-- <h1 class="sec2_title">Title</h1>
       <h4 class="sec2_Suntitle">SubTitle</h4> --}}
@@ -18,7 +21,7 @@
     </section>
 
     <section class="container insc1">
-      <div>    
+      <div>
        @if($errors->any())
             <div class="">
                 <p style="background-color: #FA5B39;padding:10px"><strong>Opps Something went wrong</strong></p>

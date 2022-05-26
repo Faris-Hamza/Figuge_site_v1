@@ -1233,6 +1233,27 @@ img.big_img_acvt {
 
 /************************************************************************Inscription*************************************************/
 
+.alert {
+    margin-top: 40px ;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
 .text_insc {
     border: none;
     border-bottom: 1px solid #000000;
